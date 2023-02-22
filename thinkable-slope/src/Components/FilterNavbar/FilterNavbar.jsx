@@ -10,12 +10,12 @@ import {
     Image
   } from '@chakra-ui/react'
 
-const FilterNavbar = () => {
+const FilterNavbar = ({Sidebar}) => {
     return (
         <>
             <div className={styles.FilterNavbar_main_div}>
                 <div className={styles.Filter_Buttn_div}>
-                    <button><ChevronDownIcon />Show filter</button>
+                    <button onClick={Sidebar}><ChevronDownIcon />Show filter</button>
                 </div>
                 <div className={styles.Sort_Button_div}>
                     <p>(144 items)</p>

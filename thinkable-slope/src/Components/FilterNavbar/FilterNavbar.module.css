@@ -1,14 +1,12 @@
 
 .FilterNavbar_main_div{
     height: 90px;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
 }
 .Filter_Buttn_div{
     width: 15%;
     height: 90px;
-    border: 1px solid blue;
     margin-left: 40px;
     display: flex;
     align-items: center;
@@ -17,7 +15,6 @@
 .Sort_Button_div{
     width: 30%;
     height: 90px;
-    border: 1px solid blue;
     margin-right: 40px;
     display: flex;
     align-items: center;
