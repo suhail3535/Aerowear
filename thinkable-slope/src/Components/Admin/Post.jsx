@@ -59,7 +59,7 @@ const dispatch = useDispatch();
                 <div key={ele.id}>
                   <img style={{ width: "40%",padding :"20px" }} src={ele.image} alt="name" />
                   <h1 style={{ textAlign: "left" }}>Title:{ele.name}</h1>
-                  <p style={{ textAlign: "left" }}>Price:${ele.Price}</p>
+                  <p style={{ textAlign: "left" }}>Price:${ele.price}</p>
                 </div>
               );
             })}

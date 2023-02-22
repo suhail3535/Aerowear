@@ -39,7 +39,7 @@ export const postRequest = (payload) => (dispatch) => {
 export const getRequest = () => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .get("http://localhost:8080/women?_limit=2")
+    .get("http://localhost:8080/women")
     .then((res) => {
       console.log(res.data);
       dispatch(getdataSuccess(res.data));
