@@ -1,0 +1,39 @@
+.footer {
+    font-family: "Visuelt Pro", Arial, sans-serif;
+    padding: 80px 0px;
+    height: 2800px;
+}
+.foot-all {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.foot-one {
+    border: 1px solid red;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.foot-one-left {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 18px;
+}
+.foot-one-left > div {
+    border: 1px solid purple;
+}
+.foot-one-left > div > a {
+    border: 1px solid palevioletred;
+    text-decoration: underline;
+}
+
+.foot-two {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+}

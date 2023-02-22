@@ -1,6 +1,7 @@
 
 import './App.css';
 import Post from './Components/Admin/Post';
+import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import MainRoutes from './Pages/MainRoutes';
 
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       <Post />
       <Navbar/>
-      <MainRoutes/>
+      <MainRoutes />
+      <Footer/>
     </div>
   );
 }
