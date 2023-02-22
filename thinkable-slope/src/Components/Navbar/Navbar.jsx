@@ -1,46 +1,281 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Navbar.css";
+import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
+import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded";
+import { RxHamburgerMenu } from "react-icons/rx";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
+import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
+import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
+import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
+
+import { Link } from "react-scroll";
+import {
+    Drawer,
+    DrawerBody,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    useDisclosure,
+    Input,
+} from "@chakra-ui/react";
+import {} from "@mui/material";
 
 const Navbar = () => {
+    const openLink = (url) => {
+        window.open(url);
+    };
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
+    const [iSOpen, setIsOpen] = useState(false);
 
+    const handleMenuClick = () => {
+        setIsOpen(!iSOpen);
+    };
 
     return (
         <div>
             {/* ---PreNavBar--- */}
 
-            <div className="pre-header pj6-padding-y-xs js-pre-header">
-                <div className="pj6-container pj6-max-width-lg pj6-position-relative">
-                    <div className="pj6-text-component pj6-text-center pj6-text-sm pj6-padding-x-lg">
+            <div className="pre-header">
+                <div className="pre-all">
+                    <div className="pre-one">
+                        <NavigateBeforeRoundedIcon />
+                    </div>
+                    <div className="pre-two">
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit.{" "}
+                            Jeans Buy 1, Get 1 Free + Free Shiping
                             <a href="#0" className="pj6-color-inherit">
-                                Learn more
+                                Women
+                            </a>
+                            <a href="#0" className="pj6-color-inherit">
+                                Men
                             </a>
                         </p>
                     </div>
-
-                    {/* <button className="pre-header__close-btn js-pre-header__close-btn js-tab-focus">
-                        <svg
-                            className="pre-header__icon pj6-icon"
-                            viewBox="0 0 20 20">
-                            <title>Close header banner</title>
-                            <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2">
-                                <line x1="4" y1="4" x2="16" y2="16" />
-                                <line x1="16" y1="4" x2="4" y2="16" />
-                            </g>
-                        </svg>
-                    </button> */}
+                    <div className="pre-three">
+                        <NavigateNextRoundedIcon />
+                    </div>
                 </div>
             </div>
 
-            {/* ---PreNavBar--- */}
+            {/* ---NavBar--- */}
+
+            <div id="nav-menu" className="navbar">
+                <div className="wrapper">
+                    <div className="wrapperLeft">
+                        <div>
+                            <Link
+                                to="/women"
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                                className="nav-link Women">
+                                Women
+                            </Link>
+                        </div>
+                        <div>
+                            <Link
+                                to="about"
+                                smooth={true}
+                                offset={-79}
+                                duration={500}
+                                className="nav-link Men">
+                                Men
+                            </Link>
+                        </div>
+                        <div>
+                            <Link
+                                to="skills"
+                                smooth={true}
+                                offset={-79}
+                                duration={500}
+                                className="nav-link Jeans">
+                                Jeans
+                            </Link>
+                        </div>
+                        <div>
+                            <Link
+                                to="projects"
+                                smooth={true}
+                                offset={-79}
+                                duration={500}
+                                className="nav-link Clearance">
+                                Clearance
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="wrapperRight">
+                        <Link
+                            to="home"
+                            smooth={true}
+                            offset={-100}
+                            duration={500}>
+                            <img
+                                src={
+                                    process.env.PUBLIC_URL +
+                                    "./Images/Nav_logo.png"
+                                }
+                                alt="icon"
+                            />
+                        </Link>
+                    </div>
+                    <div className="wrapperProfile">
+                        <Input
+                            title="Search 🔍"
+                            variant="outline"
+                            placeholder="Search"
+                            id="inputSearch"
+                        />
+                        <div className="dropdown-menu">
+                            <button title="User" onClick={handleMenuClick}>
+                                <PersonOutlineOutlinedIcon />
+                            </button>
+                            {iSOpen && (
+                                <ul>
+                                    <li>
+                                        <Link
+                                            title="Login"
+                                            to="/login"
+                                            smooth={true}
+                                            offset={-100}
+                                            duration={500}>
+                                            Log in{" "}
+                                            <LoginOutlinedIcon
+                                                style={{ paddingTop: "10px" }}
+                                            />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            title="Register here"
+                                            to="/signup"
+                                            smooth={true}
+                                            offset={-100}
+                                            duration={500}>
+                                            Register Here
+                                            <CreateOutlinedIcon
+                                                style={{ paddingTop: "10px" }}
+                                            />
+                                        </Link>
+                                    </li>
+                                </ul>
+                            )}
+                        </div>
+                        <div className="navCart">
+                            <Link
+                                title="Cart"
+                                to="/cart"
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                                className="nav-link Women">
+                                <LocalMallOutlinedIcon />
+                            </Link>
+                        </div>
+                        <div className="navAdmin">
+                            <Link
+                                title="Admin"
+                                to="/adminLogin"
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                                className="nav-link Women">
+                                <AdminPanelSettingsOutlinedIcon />
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="responce">
+                        <RxHamburgerMenu onClick={onOpen} />
+                        <Drawer
+                            isOpen={isOpen}
+                            placement="right"
+                            onClose={onClose}>
+                            <DrawerOverlay />
+                            <DrawerContent>
+                                <DrawerCloseButton />
+                                <DrawerBody marginTop={"30px"}>
+                                    <div className="drawerbody">
+                                        <div>
+                                            <Link
+                                                to="home"
+                                                smooth={true}
+                                                offset={-100}
+                                                duration={500}
+                                                onClick={onClose}>
+                                                Home
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link
+                                                to="about"
+                                                smooth={true}
+                                                offset={-79}
+                                                duration={500}
+                                                onClick={onClose}>
+                                                About
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link
+                                                to="skills"
+                                                smooth={true}
+                                                offset={-79}
+                                                duration={500}
+                                                onClick={onClose}>
+                                                Skills
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link
+                                                to="projects"
+                                                smooth={true}
+                                                offset={-79}
+                                                duration={500}
+                                                onClick={onClose}>
+                                                Projects
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link
+                                                to="contact"
+                                                smooth={true}
+                                                offset={-79}
+                                                duration={500}
+                                                onClick={onClose}>
+                                                Contact
+                                            </Link>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </DrawerBody>
+                            </DrawerContent>
+                        </Drawer>
+                    </div>
+                </div>
+            </div>
+
+            {/* ---PostNavBar--- */}
+
+            <div className="post-nav">
+                <div className="post-all">
+                    <div className="post-two">
+                        <p>
+                            Over the last few weeks, we've implemented extra
+                            precautionary measures in our warehouse to ensure
+                            the health and <br /> safety of our customers and
+                            associates. Because of this your shipment may
+                            experience delays. Thank you for your patience and
+                            understanding.
+                        </p>
+                    </div>
+                    <a href="#0" className="pj6-color-inherit">
+                        Learn More and Stay Safe
+                    </a>
+                    <div className="post-three"></div>
+                </div>
+            </div>
         </div>
     );
 };

@@ -1,25 +1,26 @@
-
-.Women_Title_div{
-    border: 1px solid red;
+.Women_Title_div {
+    /* border: 1px solid red; */
     height: 80px;
-    width: 15%;
+    /* width: 15%; */
     display: flex;
     align-items: center;
     justify-content: center;
+    /* margin-left: 4rem; */
 }
-.Navbar2_mainalignment_div{
+.Navbar2_mainalignment_div {
+    margin: auto;
+    /* margin-top: 7rem; */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 92%;
 }
-.Women_Title_div p{
+.Women_Title_div p {
     margin: 0 2rem 0 0;
     padding-bottom: 0;
     font-family: "Visuelt Pro", sans-serif;
     font-size: 1.75rem;
     font-weight: normal;
     line-height: 2.25rem;
-    color: #1d3451
-
+    color: #1d3451;
 }
-
