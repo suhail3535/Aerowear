@@ -1,4 +1,3 @@
-
 {
   "women": [
     {
@@ -36,7 +35,6 @@
       "Price": 79.1,
       "Rating": 5
     },
- 
     {
       "id": 8,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw03b45045/86749372_398_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
@@ -79,7 +77,6 @@
       "Price": 79.11,
       "Rating": 5
     },
-
     {
       "id": 15,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwcf169ad7/80644071_204_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
@@ -122,7 +119,6 @@
       "Price": 79.11,
       "Rating": 5
     },
-   
     {
       "id": 22,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6ba328a2/82739761_366_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
@@ -165,7 +161,6 @@
       "Price": 79.12,
       "Rating": 5
     },
- 
     {
       "id": 29,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw66851338/87019095_962_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
@@ -208,13 +203,82 @@
       "Price": 79.13,
       "Rating": 5
     },
-   
     {
       "id": 36,
       "image": "https://www.aeropostale.com/on/demandware.static/Sites-aeropostale-Site/-/default/dwe7e36450/images/lazy-image-placeholder.png",
       "name": "Aeropostale New York Script Pullover Hoodie",
       "Price": 79.13,
       "Rating": 5
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwb47333b8/81254083_148_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Floral V-Neck Babydoll Dress",
+      "Price": 18,
+      "Rating": 5,
+      "id": 37
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwcf169ad7/80644071_204_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Soft Seamless Mock-Neck Cropped Tank  Seriously Soft Seamless Wear 2 Ways Cropped Baby Tee",
+      "Price": 17.8,
+      "Rating": 4,
+      "id": 38
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw070e46b8/80119447_448_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Seriously Soft Ribbed High-Neck Cropped Cami",
+      "Price": 11.9,
+      "Rating": 4,
+      "id": 39
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwa96e7876/87018076_176_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Super High-Rise Baggy Premium Air Jean",
+      "Price": 64.5,
+      "Rating": "4",
+      "id": 40
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw90e35608/82739726_541_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Checkered Cropped Cardigan",
+      "Price": 50,
+      "Rating": "5",
+      "id": 41
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw32d7500e/82739726_541_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Checkered Cropped Cardigan",
+      "Price": 35,
+      "Rating": "3",
+      "id": 42
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwd76751aa/80548960_461_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Floral Sweetheart Cinched-Tie Mini Dress",
+      "Price": 45,
+      "Rating": "5",
+      "id": 43
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw309fc5a9/80548960_461_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Floral Sweetheart Cinched-Tie Mini Dress",
+      "Price": 150,
+      "Rating": "5",
+      "id": 44
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwf356013a/80119426_047_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Seriously Soft Seamless Mock-Neck Cropped Tank",
+      "Price": 17.25,
+      "Rating": "5",
+      "id": 45
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw03b45045/86749372_398_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "jeans",
+      "Price": 200,
+      "Rating": "5",
+      "id": 46
     }
   ],
   "clearence": [
@@ -223,21 +287,21 @@
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwccc915b3/80086052_052_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Aeropostale 1987 Circle Glitter Graphic Tee",
       "Rating": 0,
-      "Price": ""
+      "Price": "55"
     },
     {
       "id": 2,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwd6a6bf70/87018896_176_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "High-Rise Mom Jean",
       "Rating": 0,
-      "Price": ""
+      "Price": "88"
     },
     {
       "id": 3,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwe9a21f5f/80085999_102_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Aero Script Butterfly Appliqué Graphic Tee",
       "Rating": 0,
-      "Price": ""
+      "Price": "48"
     },
     {
       "id": 4,
