@@ -22,7 +22,6 @@ export const getWomenProducts = () => (dispatch) => {
     axios
         .get("http://localhost:8080/women")
         .then((res) => {
-            // console.log(res);
             dispatch(getProductsSuccessAction(res.data));
         })
         .catch((err) => {
@@ -35,6 +34,8 @@ export const getMenProducts = () => (dispatch) => {
     axios
         .get("http://localhost:8080/men")
         .then((res) => {
+            console.log(res);
+
             dispatch(getProductsSuccessAction(res.data));
         })
         .catch((err) => {

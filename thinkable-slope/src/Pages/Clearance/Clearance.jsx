@@ -26,7 +26,7 @@ const Clearance = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(getClearanceProducts)
+        dispatch(getClearanceProducts())
     }, [])
 
 
@@ -52,11 +52,11 @@ const Clearance = () => {
             {isLoading && <h1>Loading...</h1>}
             {isError && <h1>Error...</h1>}
             <div className={styles.product_sidebar_main_div}>
-               
-                
+
+
                 {sidebar?<div className={styles.sidebar_div}></div>:null}
-                
-                
+
+
                 <div className={styles.product_div}>
                     {
                         products.map((el) => (

@@ -20,14 +20,14 @@ const Men = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getMenProducts);
+        dispatch(getMenProducts());
     }, []);
 
     function Sidebar() {
         setSidebar(!sidebar);
     }
 
-    console.log(products);
+    // console.log(products);
     return (
         <>
             <div className={styles.Navbar2_mainalignment_div}>
