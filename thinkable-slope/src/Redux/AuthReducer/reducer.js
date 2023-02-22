@@ -1,9 +1,8 @@
 import React from 'react'
 
-const reducer = () => {
+export const reducer = () => {
   return (
     <div>reducer</div>
   )
 }
 
-export default reducer
