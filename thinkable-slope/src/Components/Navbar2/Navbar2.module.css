@@ -1,0 +1,20 @@
+
+.Navbar2_maindiv{
+    height: 80px;
+    border: 1px solid red;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    float: right;
+    justify-content:space-around ;
+}
+.Navbar2_maindiv p{
+    padding: 0.5rem;
+    margin-right: 0.875rem;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+    color: #828282;
+    letter-spacing: 0.02rem;
+    cursor: pointer;
+}
