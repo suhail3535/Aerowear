@@ -1,0 +1,44 @@
+
+.limited_Edition_div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.limited_Edition_div img{
+    width: 30px;
+    cursor: pointer;
+}
+.limited_Edition_div p{
+    margin-right: 0.625rem;
+    font-family: "Visuelt Pro", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 0.9375rem;
+    color: #cc1632
+}
+.productCard_name{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #000;
+    font-weight: 700;
+}
+.ProductCard_price_maindiv{
+    height: 25px;
+    display: flex;
+    align-items: center;    
+}
+.productCard_price{
+    color: #000;
+    padding-right: 0.4375rem;
+    font-weight: 600;
+    
+}
+.productCard_price span{
+    font-size: .75rem;
+    line-height: 0.9375rem;
+    color: #828282;
+    padding-left: 10px;
+    font-weight: 400;
+}

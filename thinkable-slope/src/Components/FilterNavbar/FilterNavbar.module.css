@@ -1,0 +1,54 @@
+
+.FilterNavbar_main_div{
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+.Filter_Buttn_div{
+    width: 15%;
+    height: 90px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Sort_Button_div{
+    width: 30%;
+    height: 90px;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Filter_Buttn_div button{
+    font-size: .875rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    text-transform: none;
+    color: #000;
+    margin-bottom: 0;
+    padding: 0.75rem 1.125rem 0.625rem 1.125rem;
+    border: 2px solid #000;
+    border-radius: 10rem;
+    background-color: #fff;
+    cursor: pointer;
+    width: 70%;
+}
+.Sort_Button{
+    font-size: .875rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    text-transform: none;
+    color: #000;
+    margin-bottom: 0;
+    padding: 0.75rem 1.125rem 0.625rem 1.125rem;
+    border: 2px solid #000;
+    border-radius: 10rem;
+    background-color: #fff;
+    cursor: pointer;
+    width: 45%;   
+}
