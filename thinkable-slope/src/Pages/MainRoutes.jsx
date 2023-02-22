@@ -1,3 +1,17 @@
+
+import React from "react";
+import Navbar from "../Components/Navbar/Navbar";
+
+const MainRoutes = () => {
+    return (
+        <div>
+            <Navbar />
+        </div>
+    );
+};
+
+export default MainRoutes;
+
 import React from 'react'
 import {Routes,Route} from "react-router-dom"
 import Clearance from './Clearance/Clearance'
@@ -16,3 +30,4 @@ const MainRoutes = () => {
 }
 
 export default MainRoutes
+
