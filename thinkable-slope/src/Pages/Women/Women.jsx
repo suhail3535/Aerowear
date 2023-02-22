@@ -1,39 +1,34 @@
-
-import FilterNavbar from "../../Components/FilterNavbar/FilterNavbar"
-import Navbar2 from "../../Components/Navbar2/Navbar2"
-import styles from "./Women.module.css"
-import { useEffect, useState } from "react"
-import {  getWomenProducts } from "../../Redux/AppReducer/Action"
+import FilterNavbar from "../../Components/FilterNavbar/FilterNavbar";
+import Navbar2 from "../../Components/Navbar2/Navbar2";
+import styles from "./Women.module.css";
+import { useEffect, useState } from "react";
+import { getWomenProducts } from "../../Redux/AppReducer/Action";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import ProductCard from "../../Components/ProductCard.jsx/ProductCard"
-
+import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
 
 const Women = () => {
-
-    const [sidebar,setSidebar]=useState(false)
+    const [sidebar, setSidebar] = useState(false);
 
     const { products, isLoading, isError } = useSelector((store) => {
-
         return {
             products: store.AppReducer.products,
             isLoading: store.AppReducer.isLoading,
             isError: store.AppReducer.isError,
-        }
-    }, shallowEqual)
+        };
+    }, shallowEqual);
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    console.log(products);
 
     useEffect(() => {
-        dispatch(getWomenProducts)
-    }, [])
+        dispatch(getWomenProducts());
+    }, []);
 
-
-    function Sidebar(){
-        setSidebar(!sidebar)
+    function Sidebar() {
+        setSidebar(!sidebar);
     }
 
-
-    console.log(products)
+    console.log(products);
     return (
         <>
             <div className={styles.Navbar2_mainalignment_div}>
@@ -47,26 +42,16 @@ const Women = () => {
             {isLoading && <h1>Loading...</h1>}
             {isError && <h1>Error...</h1>}
             <div className={styles.product_sidebar_main_div}>
-               
-                
-                {sidebar?<div className={styles.sidebar_div}></div>:null}
-                
-                
+                {sidebar ? <div className={styles.sidebar_div}></div> : null}
+
                 <div className={styles.product_div}>
-                    {
-                        products.map((el) => (
-                            <ProductCard {...el} />
-                        ))
-                    }
-
+                    {products.map((el) => (
+                        <ProductCard {...el} />
+                    ))}
                 </div>
-
-
             </div>
-
-
         </>
-    )
-}
+    );
+};
 
-export default Women
+export default Women;

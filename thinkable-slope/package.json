@@ -7,8 +7,10 @@
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@fluentui/react-icons": "^2.0.194",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
+    "@mui/styled-engine-sc": "^5.11.9",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,14 +18,17 @@
     "framer-motion": "^9.0.7",
     "json-server": "^0.17.1",
     "react": "^18.2.0",
+    "react-country-region-selector": "^3.6.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-tooltip": "^5.8.1",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
-    "thunk": "^0.0.1",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -50,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-scroll": "^1.8.6"
   }
 }

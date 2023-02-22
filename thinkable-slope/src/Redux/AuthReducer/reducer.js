@@ -1,12 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const initialState={
-  isAuth:false
-}
+export const reducer = () => {
+    return <div>reducer</div>;
+};
 
-export const reducer = (state = initialState, { type, payload }) => {
-  switch (type) {
-    default: return state
-  }
 
-}
