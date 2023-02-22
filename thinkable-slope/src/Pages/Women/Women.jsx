@@ -45,7 +45,7 @@ const Women = () => {
                 {sidebar ? <div className={styles.sidebar_div}></div> : null}
 
                 <div className={styles.product_div}>
-                    {products.map((el) => (
+                    {products.reverse().map((el) => (
                         <ProductCard {...el} />
                     ))}
                 </div>

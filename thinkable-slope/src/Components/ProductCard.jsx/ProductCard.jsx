@@ -6,7 +6,7 @@ const ProductCard = ({ image, name, price, Rating, id }) => {
     return (
         <>
             <div>
-                <p>{id}</p>
+              
                 <img src={image} alt="" />
                 <div className={styles.limited_Edition_div}>
                     <p>Limited Edition</p>
