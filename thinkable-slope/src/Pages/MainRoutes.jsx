@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../Components/Navbar/Navbar";
 
 const MainRoutes = () => {
-  return (
-    <div>MainRoutes</div>
-  )
-}
+    return (
+        <div>
+            <Navbar />
+        </div>
+    );
+};
 
-export default MainRoutes
+export default MainRoutes;
