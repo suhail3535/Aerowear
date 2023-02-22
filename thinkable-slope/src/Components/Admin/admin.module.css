@@ -1,7 +1,43 @@
-#main{
-    border: 1px solid red;
-  
-    margin-top: 50px;
-    width: 50%;
-    margin: auto;
+#second {
+  border: 1px solid red;
+  padding: 20px;
+
+  width: 90%;
+  margin: 50px auto;
+}
+#first {
+  border: 1px solid rgb(0, 47, 255);
+  padding: 20px;
+
+  width: 90%;
+  margin: 50px auto;
+}
+#btn{
+    margin: 20px;
+}
+#container{
+    border: 2px solid green;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    margin: 30px auto;
+}
+@media all and (max-width: 1200px) and (min-width: 800px)  {
+
+#container{
+    flex-direction: column;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+}
+@media all and (max-width: 799px) and (min-width: 300px)  {
+
+#container{
+    flex-direction: column;
+    grid-template-columns: repeat(1,1fr);
+}
+
+
 }

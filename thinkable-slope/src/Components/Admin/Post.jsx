@@ -1,28 +1,27 @@
-import React from 'react'
-import styles from "./admin.module.css"
-import TextField from "@mui/material/TextField";
+import React from "react";
+import styles from "./admin.module.css";
+import { Input, Button, Stack, Box } from "@chakra-ui/react";
+
 const Post = () => {
   return (
-    <div id={styles.main}>
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-      <TextField id="filled-basic" label="Filled" variant="filled" />
-      <TextField id="standard-basic" label="Standard" variant="standard" />
-      <h1>post</h1>
-      <TextField label="Outlined secondary" color="secondary" focused />
-      <TextField
-        label="Filled success"
-        variant="filled"
-        color="success"
-        focused
-      />
-      <TextField
-        label="Standard warning"
-        variant="standard"
-        color="warning"
-        focused
-      />
+    <div id={styles.container}>
+     
+      <Box id={styles.first}> </Box>
+      <Box id={styles.second}>
+        <form>
+          <Stack spacing={3}>
+            <Input type="url" placeholder="image" size="md" />
+            <Input type="text" placeholder="name" size="md" />
+            <Input type="number" placeholder="price" size="md" />
+            <Input type="text" placeholder="category" size="md" />
+          </Stack>
+          <Button id={styles.btn} colorScheme="blue">
+            Button
+          </Button>
+        </form>
+      </Box>
     </div>
   );
-}
+};
 
-export default Post
+export default Post;
