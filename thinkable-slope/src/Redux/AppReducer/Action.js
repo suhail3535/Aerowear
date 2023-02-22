@@ -1,3 +1,4 @@
+
 import { GET_PRODUCTS_FAILURE, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS } from "./ActionType"
 import axios from "axios"
 
@@ -22,3 +23,4 @@ export const getProducts = (dispatch) => {
       dispatch(getProductsFailureAction())
   })
 }
+

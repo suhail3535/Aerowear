@@ -23,6 +23,61 @@
     width: 90%;
     margin: 30px auto;
 }
+
+
+
+    #welcome {
+      width: 100%;
+      background-color: rgb(19, 174, 236);
+      height: 100px;
+      display: flex;
+      align-items: center;
+      color: white;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    #sections {
+      margin: auto;
+      margin-top: 50px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+    #sections > div {
+      border-radius: 50px;
+      height: 120px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 15px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #sections > div:nth-child(1) {
+      background-color: yellowgreen;
+    }
+    #sections > div:nth-child(2) {
+      background-color: orange;
+    }
+    #sections > div:nth-child(3) {
+      background-color: pink;
+    }
+    #sections > div:nth-child(4) {
+      background-color: rgb(181, 63, 245);
+    }
+    #sections > div > div > img {
+      width: 80px;
+      height: 70px;
+    }
+    #sections > div > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+    }
+    #sections > div > div spam {
+      font-size: 20px;
+      font-weight: 700;
+    }
 @media all and (max-width: 1200px) and (min-width: 800px)  {
 
 #container{
