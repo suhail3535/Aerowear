@@ -1,29 +1,26 @@
-// import React from "react";
-// import axios from "axios";
-// import { POST_FAILURE, POST_REQUEST, POST_SUCCESS } from "./ActionType";
 
-// export const postRequest = () => {
-//   return { type: POST_REQUEST };
-// };
+import { GET_PRODUCTS_FAILURE, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS } from "./ActionType"
+import axios from "axios"
 
-// export const postSuccess = (payload) => {
-//   return { type: POST_SUCCESS };
-// };
-// export const postFailure = () => {
-//   return { type: POST_FAILURE };
-// };
+export const getProductsRequestAction=()=>{
+  return {type:GET_PRODUCTS_REQUEST }
+}
 
+export const getProductsSuccessAction=(payload)=>{
+  return {type:GET_PRODUCTS_SUCCESS,payload}
+}
 
-// export const postDataRequest = (payload)=>(dispatch) => {
-//   dispatch(postRequest());
-//   axios
-//     .post("http://localhost:8080/women", payload)
-//     .then((res) => {
-//       console.log(res.data);
-//       dispatch(postSuccess());
-//     })
-//     .then((err) => {
-//       console.log(err);
-//       dispatch(postFailure());
-//     });
-// }
+export const getProductsFailureAction=()=>{
+  return {type:GET_PRODUCTS_FAILURE}
+}
+
+export const getProducts = (dispatch) => {
+  dispatch(getProductsRequestAction())
+  axios.get("http://localhost:8080/women").then((res) => {
+  
+      dispatch(getProductsSuccessAction(res.data))
+  }).catch((err) => {
+      dispatch(getProductsFailureAction())
+  })
+}
+
