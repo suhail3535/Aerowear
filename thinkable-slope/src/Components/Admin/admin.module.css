@@ -1,28 +1,47 @@
 #second {
-  border: 1px solid red;
+  border: 0px solid red;
   padding: 20px;
 
   width: 90%;
   margin: 50px auto;
 }
 #first {
-  border: 1px solid rgb(0, 47, 255);
-  padding: 20px;
-
+  border: 0px solid rgb(0, 47, 255);
+  padding: 2px;
+display: grid;
+grid-template-columns: repeat(2,1fr);
   width: 90%;
   margin: 50px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #btn{
-    margin: 20px;
+
+    width: 200px;
+    margin: 20px auto;
 }
 #container{
-    border: 2px solid green;
+    border: 0px solid green;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2,1fr);
     width: 90%;
-    margin: 30px auto;
+    margin: 5px auto;
 }
+#navadmin{
+  border: 0px solid green;
+  width: 90%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+
+    
 @media all and (max-width: 1200px) and (min-width: 800px)  {
 
 #container{

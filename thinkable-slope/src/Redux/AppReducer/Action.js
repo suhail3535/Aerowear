@@ -1,3 +1,4 @@
+
 import { GET_PRODUCTS_FAILURE, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS } from "./ActionType"
 import axios from "axios"
 
@@ -23,6 +24,7 @@ export const getWomenProducts = (dispatch) => {
   })
 }
 
+
 export const getMenProducts = (dispatch) => {
   dispatch(getProductsRequestAction())
   axios.get("http://localhost:8080/men").then((res) => {
@@ -33,6 +35,8 @@ export const getMenProducts = (dispatch) => {
   })
 }
 
+
+
 export const getClearanceProducts = (dispatch) => {
   dispatch(getProductsRequestAction())
   axios.get("http://localhost:8080/clearence").then((res) => {
@@ -42,3 +46,5 @@ export const getClearanceProducts = (dispatch) => {
       dispatch(getProductsFailureAction())
   })
 }
+
+
