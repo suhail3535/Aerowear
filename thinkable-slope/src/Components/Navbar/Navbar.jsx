@@ -9,7 +9,7 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import {
     Drawer,
     DrawerBody,
@@ -76,7 +76,7 @@ const Navbar = () => {
                         </div>
                         <div>
                             <Link
-                                to="about"
+                                to="/men"
                                 smooth={true}
                                 offset={-79}
                                 duration={500}
@@ -86,7 +86,7 @@ const Navbar = () => {
                         </div>
                         <div>
                             <Link
-                                to="skills"
+                                to="/jeans"
                                 smooth={true}
                                 offset={-79}
                                 duration={500}
@@ -96,7 +96,7 @@ const Navbar = () => {
                         </div>
                         <div>
                             <Link
-                                to="projects"
+                                to="/clearance"
                                 smooth={true}
                                 offset={-79}
                                 duration={500}
@@ -106,11 +106,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="wrapperRight">
-                        <Link
-                            to="home"
-                            smooth={true}
-                            offset={-100}
-                            duration={500}>
+                        <Link to="/" smooth={true} offset={-100} duration={500}>
                             <img
                                 src={
                                     process.env.PUBLIC_URL +
@@ -176,7 +172,7 @@ const Navbar = () => {
                         <div className="navAdmin">
                             <Link
                                 title="Admin"
-                                to="/adminLogin"
+                                to="/post"
                                 smooth={true}
                                 offset={-100}
                                 duration={500}
