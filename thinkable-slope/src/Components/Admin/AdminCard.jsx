@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { deletedata, getRequest } from '../../Redux/AdminReducer/action';
 import { Link } from 'react-router-dom';
+import Swal from "sweetalert2";
 const AdminCard = ({ id, image, name, price, Rating }) => {
     const dispatch = useDispatch()
     
@@ -13,7 +14,7 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
         dispatch(deletedata(id)).then(() =>
             dispatch(getRequest()));
         window.location.reload(true);
-
+  Swal.fire("", "Product deleted !", "success");
 
 }
 
@@ -38,7 +39,7 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
       <div style={{ textAlign: "center" }}>
         <h1>Title:{name} </h1>
         <p>Price:{price}</p>
-        <p>Rating{Rating}</p>
+        <p>Rating:{Rating}</p>
         <div id={styles.button}>
           <Link to={`/edit/${id}`}>
             <Button style={{ width: "60px" }} colorScheme="green">

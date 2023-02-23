@@ -4,14 +4,14 @@
       "id": 10,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw070e46b8/80119447_448_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Seriously Soft Seamless Cutout Cropped Baby Tee",
-      "price": "1200",
-      "Rating": "8"
+      "price": 1200,
+      "Rating": "6"
     },
     {
       "id": 11,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw04b13605/80644077_007_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Cutout Convertible Crop Top",
-      "price": 79.11,
+      "price": "1500",
       "Rating": 5
     },
     {
@@ -132,6 +132,34 @@
       "price": 17.8,
       "Rating": 4,
       "id": 28
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw1eeb8be8/80119543_007_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Dump Him Cropped High-Neck Tank",
+      "price": 18.9,
+      "Rating": "5",
+      "id": 29
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwe7fb51ad/80119492_047_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Sports Car Retro Graphic Tank",
+      "price": 25.9,
+      "Rating": "5",
+      "id": 30
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6b23093d/83939186_688_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Long Sleeve Thin Stripe Oversized Button-Down Shirt",
+      "price": 36.8,
+      "Rating": "7",
+      "id": 31
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw246519aa/83939186_688_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Long Sleeve Thin Stripe Oversized Button-Down Shirt",
+      "price": 40,
+      "Rating": "6",
+      "id": 32
     }
   ],
   "clearence": [

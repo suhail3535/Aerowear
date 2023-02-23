@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { editProduct } from '../../Redux/AdminReducer/action';
+import Swal from "sweetalert2";
 import styles from "./admin.module.css"
 const Edit = () => {
   const { id } = useParams();
@@ -24,6 +25,7 @@ const Edit = () => {
     setTitle("")
     setImage("")
     setRating("")
+     Swal.fire("", "updated", "success");
   }
 
   useEffect(() => {

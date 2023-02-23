@@ -6,6 +6,7 @@ import React from "react";
 import HomePage from "../Pages/HomePage/HomePage.jsx"
 import { Admin } from "../Components/Admin/Admin";
 import Edit from "../Components/Admin/Edit";
+import SingleProduct from "./SingleProductPage/SingleProduct.jsx";
 
 const MainRoutes = () => {
     return (
@@ -18,6 +19,7 @@ const MainRoutes = () => {
           <Route path="/clearance" element={<Clearance />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/women/:id" element={<SingleProduct />} />
         </Routes>
       </div>
     );
