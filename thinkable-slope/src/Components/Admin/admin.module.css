@@ -60,11 +60,19 @@ gap: 5px;
     #input{
 
       border: 0px solid red;
-      width: 50%;
+      width: 40%;
       margin: 30px auto;
       padding: 20px;
        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
+    #editbtn{
+      width: 40%;
+      background-color: aquamarine;
+      margin-left: 160px;
+
+    }
+
+    
 @media all and (max-width: 1200px) and (min-width: 800px)  {
 
 #container{

@@ -1,11 +1,12 @@
 import { Box, Button, Input, Stack } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { editProduct } from '../../Redux/AdminReducer/action';
 import Swal from "sweetalert2";
 import styles from "./admin.module.css"
 const Edit = () => {
+   const navigate = useNavigate();
   const { id } = useParams();
   const product = useSelector((store) => store.AdminReducer.women);
   const [data, setData] = useState("")
@@ -14,6 +15,7 @@ const Edit = () => {
   const[rating,setRating] = useState([])
   const dispatch = useDispatch();
   const handleSubmit = () => {
+   
     const newData = {
       price: data,
       name: title,
@@ -25,7 +27,11 @@ const Edit = () => {
     setTitle("")
     setImage("")
     setRating("")
-     Swal.fire("", "updated", "success");
+    Swal.fire("", "updated", "success");
+   
+   
+   
+     navigate("/admin");
   }
 
   useEffect(() => {
@@ -75,7 +81,7 @@ const Edit = () => {
               size="md"
             />
 
-            <Button onClick={handleSubmit} colorScheme="blue">
+            <Button onClick={handleSubmit} id={styles.editbtn}>
               Add-Product
             </Button>
           </Stack>

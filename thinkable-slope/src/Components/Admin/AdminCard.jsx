@@ -13,7 +13,7 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
         // console.log(id)
         dispatch(deletedata(id)).then(() =>
             dispatch(getRequest()));
-        window.location.reload(true);
+        // window.location.reload(true);
   Swal.fire("", "Product deleted !", "success");
 
 }

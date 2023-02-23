@@ -18,9 +18,10 @@
   justify-content: space-evenly;
 }
 .product-detail {
-  padding: 40px;
-  width: 100%;
-  border: 1px solid green;
+  padding: 10px;
+  width: 80%;
+  height: auto;
+  border: 2px solid green;
 }
 .product-card {
   border: 0px solid yellow;
@@ -29,14 +30,15 @@
 }
 .product-card img {
   border: 0px solid pink;
-  height: 99%;
+  height: 80%;
   padding: 0px;
 }
 .btn {
   border: 0px solid red;
   width: 90%;
-  margin:  20px auto;
-  height: 100px;
+  margin:  1px auto;
+  padding: 20px;
+  
  
   align-items: center;
   display: flex;
@@ -56,5 +58,6 @@
   height: 50px;
   margin-top: 20px;
   display: flex;
+    border-radius: 10px 10px;
   justify-content: space-between;
 }
