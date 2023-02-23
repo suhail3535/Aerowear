@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./admin.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Input, Button, Stack, Box } from "@chakra-ui/react";
+import Swal from "sweetalert2";
 
 import { getRequest, postRequest } from "../../Redux/AdminReducer/action";
 import { store } from "../../Redux/store";
@@ -10,7 +11,7 @@ import AdminCard from "./AdminCard";
 const initialState = {
   image: "",
   name: "",
-  Price: "",
+  price: "",
   Rating: "",
 };
 export const  Admin= () => {
@@ -30,7 +31,7 @@ export const  Admin= () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setdata((prev) => {
-      return { ...prev, [name]: name === "Price" ? +value : value };
+      return { ...prev, [name]: name === "price" ? +value : value };
     });
     // console.log(data)
   };
@@ -39,6 +40,8 @@ export const  Admin= () => {
     e.preventDefault();
     dispatch(postRequest(data));
     setdata(initialState);
+     Swal.fire("", "Product added!", "success");
+
   };
   // console.log(data)
 
@@ -48,7 +51,7 @@ export const  Admin= () => {
   // console.log(women);
   return (
     <div>
-      <NavAdmin />
+      {/* <NavAdmin /> */}
       <h1 style={{textAlign:"center"}}>Wecome Admin😎</h1>
       <div id={styles.container}>
         <Box id={styles.first}>
@@ -82,8 +85,8 @@ export const  Admin= () => {
               />
               <Input
                 type="number"
-                name="Price"
-                value={data.Price}
+                name="price"
+                value={data.price}
                 onChange={handleChange}
                 placeholder="price"
                 size="md"

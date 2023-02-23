@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { getWomenProducts } from "../../Redux/AppReducer/Action";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
+import { Link } from "react-router-dom";
 
 const Women = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -30,27 +31,29 @@ const Women = () => {
 
     // console.log(products);
     return (
-        <>
-            <div className={styles.Navbar2_mainalignment_div}>
-                <div className={styles.Women_Title_div}>
-                    <p>Women</p>
-                </div>
-                <Navbar2 />
-            </div>
-            <FilterNavbar Sidebar={Sidebar} />
+      <>
+        <div className={styles.Navbar2_mainalignment_div}>
+          <div className={styles.Women_Title_div}>
+            <p>Women</p>
+          </div>
+          <Navbar2 />
+        </div>
+        <FilterNavbar Sidebar={Sidebar} />
 
-            {isLoading && <h1>Loading...</h1>}
-            {isError && <h1>Error...</h1>}
-            <div className={styles.product_sidebar_main_div}>
-                {sidebar ? <div className={styles.sidebar_div}></div> : null}
+        {isLoading && <h1>Loading...</h1>}
+        {isError && <h1>Error...</h1>}
+        <div className={styles.product_sidebar_main_div}>
+          {sidebar ? <div className={styles.sidebar_div}></div> : null}
 
-                <div className={styles.product_div}>
-                    {products.reverse().map((el) => (
-                        <ProductCard {...el} />
-                    ))}
-                </div>
-            </div>
-        </>
+          <div className={styles.product_div}>
+            {products.reverse().map((el) => (
+              <Link to={`/women/${el.id}`}>
+                    <ProductCard key={el.id }{...el} />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </>
     );
 };
 
