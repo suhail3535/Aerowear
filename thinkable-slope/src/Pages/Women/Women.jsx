@@ -18,7 +18,7 @@ const Women = () => {
     }, shallowEqual);
 
     const dispatch = useDispatch();
-    console.log(products);
+    // console.log(products);
 
     useEffect(() => {
         dispatch(getWomenProducts());
@@ -28,7 +28,7 @@ const Women = () => {
         setSidebar(!sidebar);
     }
 
-    console.log(products);
+    // console.log(products);
     return (
         <>
             <div className={styles.Navbar2_mainalignment_div}>
