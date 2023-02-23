@@ -88,20 +88,20 @@ const Women = () => {
 
                     <div className={styles.sidebar_subdiv1_div}>
                         <p>Filter By Rating</p>
-                        <div style={{ width: "50%", margin: "auto", border: "1px solid red" }}>
-                            <input data-testid="movie-filter-1" type="checkbox" value={1} onChange={handleChange} checked={rating.includes("1")} />
+                        <div style={{ width: "50%", margin: "auto", border: "1px solid gray",}}>
+                            <input  type="checkbox" value={1} onChange={handleChange} checked={rating.includes("1")} />
                             <label>{"\u2605 \u2606 \u2606 \u2606 \u2606"}</label>
                             <br />
-                            <input data-testid="movie-filter-2" type="checkbox" value={2} onChange={handleChange} checked={rating.includes("2")} />
+                            <input  type="checkbox" value={2} onChange={handleChange} checked={rating.includes("2")} />
                             <label>{"\u2605 \u2605 \u2606 \u2606 \u2606"}</label>
                             <br />
-                            <input data-testid="movie-filter-3" type="checkbox" value={3} onChange={handleChange} checked={rating.includes("3")} />
+                            <input  type="checkbox" value={3} onChange={handleChange} checked={rating.includes("3")} />
                             <label>{"\u2605 \u2605 \u2605 \u2606 \u2606"}</label>
                             <br />
-                            <input data-testid="movie-filter-4" type="checkbox" value={4} onChange={handleChange} checked={rating.includes("4")} />
+                            <input  type="checkbox" value={4} onChange={handleChange} checked={rating.includes("4")} />
                             <label>{"\u2605 \u2605 \u2605 \u2605 \u2606"}</label>
                             <br />
-                            <input data-testid="movie-filter-5" type="checkbox" value={5} onChange={handleChange} checked={rating.includes("5")} />
+                            <input type="checkbox" value={5} onChange={handleChange} checked={rating.includes("5")} />
                             <label>{"\u2605 \u2605 \u2605 \u2605 \u2605"}</label>
                             <br />
 
