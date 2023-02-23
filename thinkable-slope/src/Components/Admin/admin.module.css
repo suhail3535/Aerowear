@@ -1,8 +1,8 @@
 #second {
-  border: 0px solid red;
-  padding: 20px;
-
-  width: 90%;
+  border: 0px solid gray;
+  padding: 50px;
+ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 60%;
   margin: 50px auto;
 }
 #first {
@@ -10,7 +10,7 @@
   padding: 2px;
 display: grid;
 grid-template-columns: repeat(2,1fr);
-  width: 90%;
+  width: 100%;
   margin: 50px auto;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -39,7 +39,38 @@ grid-template-columns: repeat(2,1fr);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+#card{
+  border: 0px solid green;
 
+  
+}
+/* edit&delete button */
+#button{
+  border: 0px solid red;
+  padding: 10px;
+  display: flex;
+  overflow: hidden;
+  width: 200px;
+  margin: auto;
+  padding: 2px;
+justify-content: space-evenly;
+gap: 5px;
+}
+
+    #input{
+
+      border: 0px solid red;
+      width: 40%;
+      margin: 30px auto;
+      padding: 20px;
+       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    #editbtn{
+      width: 40%;
+      background-color: aquamarine;
+      margin-left: 160px;
+
+    }
 
     
 @media all and (max-width: 1200px) and (min-width: 800px)  {

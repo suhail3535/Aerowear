@@ -10,7 +10,7 @@ const BasicFn = ({Rating}) => {
   return (
     <Box>
       {[...new Array(totalStars)].map((arr, index) => {
-        return index < activeStars ? <StarIcon /> : <StarBorderIcon />;
+        return index < activeStars ? <StarIcon  /> : <StarBorderIcon />;
       })}
     </Box>
   );

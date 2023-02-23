@@ -189,7 +189,7 @@ const Navbar = () => {
                         <div className="navAdmin">
                             <Link
                                 title="Admin"
-                                to="/post"
+                                to="/admin"
                                 smooth={true}
                                 offset={-100}
                                 duration={500}

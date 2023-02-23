@@ -17,10 +17,10 @@ export const getProductsFailureAction = () => {
     return { type: GET_PRODUCTS_FAILURE };
 };
 
-export const getWomenProducts = () => (dispatch) => {
+export const getWomenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("http://localhost:8080/women")
+        .get("http://localhost:8080/women",obj)
         .then((res) => {
             dispatch(getProductsSuccessAction(res.data));
         })
@@ -29,10 +29,10 @@ export const getWomenProducts = () => (dispatch) => {
         });
 };
 
-export const getMenProducts = () => (dispatch) => {
+export const getMenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("http://localhost:8080/men")
+        .get("http://localhost:8080/men",obj)
         .then((res) => {
             console.log(res);
 
@@ -43,10 +43,10 @@ export const getMenProducts = () => (dispatch) => {
         });
 };
 
-export const getClearanceProducts = () => (dispatch) => {
+export const getClearanceProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("http://localhost:8080/clearence")
+        .get("http://localhost:8080/clearence",obj)
         .then((res) => {
             dispatch(getProductsSuccessAction(res.data));
         })

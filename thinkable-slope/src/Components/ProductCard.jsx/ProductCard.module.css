@@ -4,11 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
-.limited_Edition_div img{
-    width: 30px;
-    cursor: pointer;
-}
+
 .limited_Edition_div p{
     margin-right: 0.625rem;
     font-family: "Visuelt Pro", sans-serif;
@@ -41,4 +39,22 @@
     color: #828282;
     padding-left: 10px;
     font-weight: 400;
+}
+.product_image{
+    width: 100%;
+}
+
+
+
+@media all and (max-width: 1100px) and (min-width:601px){
+    .limited_Edition_div{
+        width: 100%;
+    }
+}
+
+
+@media all and (max-width: 601px) and (min-width:100px){
+    .limited_Edition_div{
+        width: 100%;
+    }
 }

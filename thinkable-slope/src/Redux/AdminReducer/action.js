@@ -1,5 +1,5 @@
 import axios from "axios";
-import {  GET_FAILURE, GET_REQUEST, GET_SUCCESS, POST_FAILURE, POST_REQUEST, POST_SUCCESS } from "./actiontype"
+import {  DELETE_SUCCESS,  GET_SUCCESS, PATCH_SUCCESS, POST_FAILURE, POST_REQUEST, POST_SUCCESS } from "./actiontype"
 
 
 
@@ -15,10 +15,16 @@ export const getpostFailure = () => {
 };
 
 
-// getreques
+// getrequest
 export const getdataSuccess = (payload) => {
   return { type: GET_SUCCESS,payload };
 };
+
+// deleterequest
+export const deldatasuccess = () => {
+  return { type: DELETE_SUCCESS };
+}
+
 
 
 
@@ -39,12 +45,46 @@ export const postRequest = (payload) => (dispatch) => {
 export const getRequest = () => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .get("http://localhost:8080/women?_limit=2")
+    .get("http://localhost:8080/women")
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       dispatch(getdataSuccess(res.data));
     })
     .then((error) => {
       dispatch(getpostFailure());
     });
+};
+
+export const deletedata = (id) => (dispatch) => {
+  dispatch(getpostRequest());
+  return axios.delete(`http://localhost:8080/women/${id}`).then((res) => {
+    // console.log(res.data);
+    dispatch(deldatasuccess());
+  })
+  .catch ((err) => {
+  dispatch(getpostFailure());
+})
+
+}
+
+
+export const editProduct = (id, newData) => (dispatch) => {
+  dispatch(getpostRequest());
+  axios.patch(`http://localhost:8080/women/${id}`, newData).then((res) => {
+    
+    dispatch({type:PATCH_SUCCESS})
+    
+    
+  }).catch((err) => {
+    
+    dispatch(getpostFailure());
+  })
+
+     
+ 
+
+
+
+
+
 };
