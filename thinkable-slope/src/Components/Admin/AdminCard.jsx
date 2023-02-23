@@ -51,6 +51,7 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
             style={{ width: "60px" }}
             colorScheme="red"
           >
+            
             Delete
           </Button>
         </div>
