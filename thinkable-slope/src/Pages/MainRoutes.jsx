@@ -4,10 +4,14 @@ import Men from "./Men/Men";
 import Women from "./Women/Women";
 import React from "react";
 import HomePage from "../Pages/HomePage/HomePage.jsx"
+import Cart from "./Cartpage/Cart";
+
 import { Admin } from "../Components/Admin/Admin";
 import Edit from "../Components/Admin/Edit";
 import SingleProduct from "./SingleProductPage/SingleProduct.jsx";
-import Cart from "./Cartpage/Cart";
+
+import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
 
 const MainRoutes = () => {
     return (
@@ -22,6 +26,9 @@ const MainRoutes = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/women/:id" element={<SingleProduct />} />
+          
+           <Route path="/login" element={<Login/>} />
+           <Route path="/signup" element={<Signup/>} />
         </Routes>
       </div>
     );

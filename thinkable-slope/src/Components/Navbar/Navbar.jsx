@@ -18,6 +18,7 @@ import {
     DrawerCloseButton,
     useDisclosure,
     Input,
+    Tooltip,
 } from "@chakra-ui/react";
 import {} from "@mui/material";
 
@@ -124,35 +125,51 @@ const Navbar = () => {
                             id="inputSearch"
                         />
                         <div className="dropdown-menu">
-                            <button title="User" onClick={handleMenuClick}>
+                            <button onClick={handleMenuClick}>
+                                <Tooltip hasArrow label='Account' bg='gray.300' color='black'>
                                 <PersonOutlineOutlinedIcon />
+                                </Tooltip>
                             </button>
                             {iSOpen && (
                                 <ul>
                                     <li>
                                         <Link
-                                            title="Login"
                                             to="/login"
                                             smooth={true}
                                             offset={-100}
                                             duration={500}>
-                                            Log in{" "}
-                                            <LoginOutlinedIcon
-                                                style={{ paddingTop: "10px" }}
-                                            />
+                                            <Tooltip
+                                                hasArrow
+                                                label="Log in"
+                                                bg="gray.300"
+                                                color="black">
+                                                Log in
+                                                <LoginOutlinedIcon
+                                                    style={{
+                                                        paddingTop: "10px",
+                                                    }}
+                                                />
+                                            </Tooltip>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            title="Register here"
                                             to="/signup"
                                             smooth={true}
                                             offset={-100}
                                             duration={500}>
-                                            Register Here
-                                            <CreateOutlinedIcon
-                                                style={{ paddingTop: "10px" }}
-                                            />
+                                            <Tooltip
+                                                hasArrow
+                                                label="Register"
+                                                bg="gray.300"
+                                                color="black">
+                                                Register Here
+                                                <CreateOutlinedIcon
+                                                    style={{
+                                                        paddingTop: "10px",
+                                                    }}
+                                                />
+                                            </Tooltip>
                                         </Link>
                                     </li>
                                 </ul>
