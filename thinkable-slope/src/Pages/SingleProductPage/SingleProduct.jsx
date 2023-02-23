@@ -32,6 +32,7 @@ const SingleProduct = () => {
           <div style={{ marginBottom: "5px" }}>
             <img src={data.image} alt="" />
           </div>
+         
         </div>
         <div className="product-two">
           <div className="product-card">
@@ -39,7 +40,7 @@ const SingleProduct = () => {
           </div>
           <div className="product-detail">
             <Heading as="h3" size="sm">
-              {data.name}
+            Title:  {data.name}
             </Heading>
             <br />
             <Heading as="h4" size="md">
@@ -61,6 +62,7 @@ const SingleProduct = () => {
                   Select Size
                 </Heading>
               </div>
+
               <div>
                 <Button
                   style={{ marginRight: "30px", marginTop: "5px" }}
@@ -88,6 +90,28 @@ const SingleProduct = () => {
                 </Button>
               </div>
             </div>
+            <br />
+            <Heading as="h1" size="sm">
+              Details
+            </Heading>
+            <li>Part of our Tiny Top collection</li>
+            <li>Stretch rib knit</li>
+            <li>Rhinestone heart with flames detail</li>
+            <li>Style: 9543</li>
+            <li>Imported</li>
+            <Heading as="h1" size="sm">
+              Fit
+            </Heading>
+            <li>Slim fit</li>
+            <li>High neck</li>
+            <li>Cropped cut</li>
+            <li>Approx. length (M): 16.25"</li>
+            <li>Model height: 5'10" | Wear size: Small</li>
+            <Heading as="h1" size="sm">
+              Care & Materials
+            </Heading>
+            <li>94% cotton, 6% spandex</li>
+            <li>Machine wash/dry</li>
             <div className="btn">
               <Button
                 style={{

@@ -2,17 +2,17 @@
   "women": [
     {
       "id": 10,
-      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw070e46b8/80119447_448_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "name": "Seriously Soft Seamless Cutout Cropped Baby Tee",
-      "price": 1200,
-      "Rating": "6"
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw7207c4b4/80643975_047_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Dallas Texas Cropped Baby Tee",
+      "price": "50",
+      "Rating": "3.9"
     },
     {
       "id": 11,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw04b13605/80644077_007_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Cutout Convertible Crop Top",
       "price": "1500",
-      "Rating": 5
+      "Rating": "4.9"
     },
     {
       "id": 12,
@@ -26,7 +26,7 @@
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw90e35608/82739726_541_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Checkered Cropped Sweater Cami",
       "price": 79.11,
-      "Rating": 5
+      "Rating": "4.5"
     },
     {
       "id": 14,
