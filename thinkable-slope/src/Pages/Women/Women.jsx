@@ -6,6 +6,7 @@ import { getWomenProducts } from "../../Redux/AppReducer/Action";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
 import { useLocation, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Women = () => {
@@ -70,7 +71,7 @@ const Women = () => {
 
 
     return (
-        <>
+     <>
             <div className={styles.Navbar2_mainalignment_div}>
                 <div className={styles.Women_Title_div}>
                     <p>Women</p>
