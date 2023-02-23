@@ -42,7 +42,7 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
         <p>Rating:{Rating}</p>
         <div id={styles.button}>
           <Link to={`/edit/${id}`}>
-            <Button style={{ width: "60px" }} colorScheme="green">
+            <Button style={{ width: "60px" }} colorScheme="cyan">
               Edit
             </Button>
           </Link>
@@ -51,6 +51,7 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
             style={{ width: "60px" }}
             colorScheme="red"
           >
+            
             Delete
           </Button>
         </div>
