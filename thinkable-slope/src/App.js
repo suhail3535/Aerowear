@@ -11,7 +11,7 @@ function App() {
       {/* <Post /> */}
       <Navbar/>
       <MainRoutes />
-      <Footer/>
+      {/*<Footer/>*/}
     </div>
   );
 }
