@@ -1,16 +1,27 @@
 
 import styles from "./FilterNavbar.module.css"
 import { ChevronDownIcon } from "@chakra-ui/icons"
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    Button,
-    Image
-  } from '@chakra-ui/react'
+import { useSearchParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
-const FilterNavbar = ({Sidebar}) => {
+
+
+const FilterNavbar = ({ Sidebar,handleSort }) => {
+    {/*const [searchParams, setSearchParama] = useSearchParams()
+    
+
+    useEffect(() => {
+
+        if( order){
+          let param = {}
+          order && (param.order=order)         
+    
+          setSearchParama(param)
+        }
+      }, [order, setSearchParama])*/}
+
+  
+
     return (
         <>
             <div className={styles.FilterNavbar_main_div}>
@@ -20,32 +31,12 @@ const FilterNavbar = ({Sidebar}) => {
                 <div className={styles.Sort_Button_div}>
                     <p>(144 items)</p>
 
-                    <Menu className={styles.menu}>
-                        <MenuButton borderRadius='50px' className={styles.Sort_Button} as={Button} rightIcon={<ChevronDownIcon />}>
-                            Sort By
-                        </MenuButton>
-                        <MenuList style={{width:"20px"}}>
-                            <MenuItem minH='48px'>                                
-                                <span>Featured</span>
-                            </MenuItem>
-                            <MenuItem minH='40px'>                                
-                                <span>Best Sellers</span>
-                            </MenuItem>
-                            <MenuItem minH='40px'>                                
-                                <span>New Arrivals</span>
-                            </MenuItem>
-                            <MenuItem minH='40px'>                                
-                                <span>Price High to Low</span>
-                            </MenuItem>
-                            <MenuItem minH='40px'>                                
-                                <span>Price High to Low</span>
-                            </MenuItem>
-                        </MenuList>
-                    </Menu>
-
-
-
-                    
+                    <select className={styles.Sort_Button} onChange={handleSort}  name="Choose" id="">
+                       <option value="">Sort By Price</option>
+                        <option value={"asc"} >Low to High</option>
+                        <option value={"desc"}  >High to Low</option>                      
+                       
+                    </select>
                 </div>
             </div>
         </>
