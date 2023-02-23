@@ -10,7 +10,7 @@
 
 .foot-one {
     border: 1px solid red;
-    width: 90%;
+    width: 85%;
     margin: auto;
     display: flex;
 }
@@ -18,22 +18,43 @@
     border: 1px solid green;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 10px;
+    height: 11rem;
     font-size: 18px;
 }
 .foot-one-left > div {
-    border: 1px solid purple;
+    border: 0px solid purple;
+    display: flex;
 }
-.foot-one-left > div > a {
-    border: 1px solid palevioletred;
+.foot-one-left > div > p {
+    border: 0px solid palevioletred;
+    padding: 0px 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: all 0.5s ease-in-out;
+}
+.foot-one-left > div > p:hover {
     text-decoration: underline;
 }
 
+.foot-one-mid {
+
+}
+
 .foot-two {
-    border-top: 1px solid black;
+    border-top: 0px solid black;
     display: flex;
     justify-content: space-around;
     padding: 15px;
     font-size: 14px;
     background-color: #f2f2f2;
+    transition: all 0.5s ease-in-out;
+
+}
+.foot-two > a:hover {
+    text-decoration: underline;
 }

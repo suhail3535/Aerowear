@@ -1,0 +1,98 @@
+.sign-main {
+    border: 0px solid red;
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Visuelt Pro";
+}
+.sign-left {
+    border: 0px solid green;
+    width: 26%;
+}
+.sign-strong {
+    font-size: 14px;
+}
+.sign-p > p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.service-chart {
+    margin: 20px auto;
+    background-color: #fbfbfd;
+    padding: 20px;
+}
+.service-chart > h3 {
+    font-size: 12px;
+    font-weight: 700;
+}
+.chart-one,
+.chart-two {
+    margin: 20px auto;
+}
+.chart-one > h3 {
+    margin: 20px auto 0px auto;
+    font-size: 12px;
+    font-weight: 700;
+}
+.chart-two > h3 {
+    font-size: 12px;
+    font-weight: 700;
+}
+.chart-one,
+.chart-two > p {
+    margin: 0px auto;
+    font-size: 12px;
+    font-weight: 400;
+}
+.chart-one > h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.chart-two > p ~ p {
+    margin-top: 5px;
+}
+
+.sign-right {
+    border: 0px solid green;
+    display: flex;
+    justify-content: space-between;
+    width: 67%;
+}
+.sign-form {
+    width: 60%;
+    /* padding: 20px; */
+    /* height: 110vh; */
+    border: 0px solid purple;
+}
+.sign-form>h1{
+    font-size: 28px;
+    font-weight: 500;
+}
+.connect-account {
+    padding: 20px;
+    margin-top: 23px;
+    width: 40%;
+}
+.connect-account>h2{
+        font-size: 18px;
+    margin: 20px auto;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.connect-account>p{
+    font-size: 16px;
+    font-weight: 100;
+}
+.req-check {
+    font-size: 12px;
+    font-weight: 400;
+}
+.name-tag{
+    font-size: 18px;
+    margin: 20px auto;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/* style={{fontSize:"18px",fontWeight:"700"}} */

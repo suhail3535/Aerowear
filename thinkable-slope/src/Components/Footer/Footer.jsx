@@ -14,23 +14,40 @@ const Footer = () => {
                     <div className="foot-one">
                         <div className="foot-one-left">
                             <div>
-                                <FmdGoodOutlinedIcon />
-                                <a href="">Store Locator</a>
+                                <FmdGoodOutlinedIcon style={{border:"0px solid green"}} />
+                                <p>Store Locator</p>
                             </div>
                             <div>
-                                <ContentPasteSearchOutlinedIcon />
-                                <a href="">Order Status</a>
+                                <ContentPasteSearchOutlinedIcon style={{border:"0px solid green"}} />
+                                <p>Order Status</p>
                             </div>
                             <div>
-                                <CardGiftcardOutlinedIcon />
-                                <a href="">Gift Card/Balance</a>
+                                <CardGiftcardOutlinedIcon style={{border:"0px solid green"}} />
+                                <p>Gift Card/Balance</p>
                             </div>
                             <div>
-                                <ErrorOutlineOutlinedIcon />
-                                <a href="">Feedback</a>
+                                <ErrorOutlineOutlinedIcon style={{border:"0px solid green"}} />
+                                <p>Feedback</p>
                             </div>
                         </div>
-                        <div className="foot-one-right"></div>
+                        <div className="foot-one-mid">
+                            <div>
+                                <h3>Shopping Help</h3>
+                                <p>Help Desk</p>
+                                <p>Returns & Exchanges</p>
+                                <p>Prices & Price Match Policy</p>
+                                <p>Shipping and Handling</p>
+                                <p>Size Charts</p>
+                                <p>Buy Online, Pick Up in Store</p>
+                                <p>Student Discount</p>
+                            </div>
+                            <div>
+
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
                     </div>
                     <div className="foot-two">
                         <a href="">Don't Sell My Information</a>
