@@ -13,7 +13,7 @@
     justify-content: center;
 }
 .Sort_Button_div{
-    width: 30%;
+    width: 25%;
     height: 90px;
     margin-right: 40px;
     display: flex;
@@ -52,3 +52,54 @@
     cursor: pointer;
     width: 45%;   
 }
+.Sort_Button option{
+    font-weight: 700;    
+}
+
+
+@media all and (max-width: 1100px) and (min-width:601px){
+    .Filter_Buttn_div{
+        width: 30%
+    }
+    .Sort_Button_div{
+        width: 40%;
+        margin-right: 0px;
+        flex-direction: column;
+    }
+    .Sort_Button{
+        width: 50%;
+    }
+    .FilterNavbar_main_div{
+        justify-content: space-between;
+    }
+    
+   
+
+
+}
+
+@media all and (max-width: 601px) and (min-width:100px){
+    .Filter_Buttn_div{
+        width: 40%;
+        margin-left: 0px;
+    }
+    .Filter_Buttn_div button{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .Sort_Button_div{
+        width: 40%;      
+        flex-direction: column;
+    }
+    .Sort_Button{
+        width: 100%;
+    }
+    .FilterNavbar_main_div{
+        justify-content: space-between;
+    }
+    .Filter_Buttn_div button{
+        border-radius: 10px;
+    }
+
+}
+
