@@ -31,7 +31,7 @@ export const  Admin= () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setdata((prev) => {
-      return { ...prev, [name]: name === "price" ? +value : value };
+      return { ...prev, [name]: name === "price"? +value : value};
     });
     // console.log(data)
   };
@@ -92,7 +92,7 @@ export const  Admin= () => {
                 size="md"
               />
               <Input
-                type="text"
+                type="number"
                 name="Rating"
                 value={data.Rating}
                 onChange={handleChange}
