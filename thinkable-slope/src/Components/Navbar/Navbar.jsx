@@ -87,7 +87,7 @@ const Navbar = () => {
                         </div>
                         <div>
                             <Link
-                                to="/jeans"
+                                to="/payment"
                                 smooth={true}
                                 offset={-79}
                                 duration={500}
