@@ -152,10 +152,12 @@ const Women = () => {
                 ) : null}
 
                 <div className={styles.product_div}>
-                    {products.map((el) => (
+                    {products.map((el) => (                      
+
                         <Link to={`/women/${el.id}`}>
                             <ProductCard {...el} />
                         </Link>
+
                     ))}
                 </div>
             </div>
