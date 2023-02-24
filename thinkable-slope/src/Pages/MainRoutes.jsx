@@ -13,6 +13,7 @@ import SingleProduct from "./SingleProductPage/SingleProduct.jsx";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
 import Payment from "./Payment/Payment";
+import PaymentMethod from "./Payment/PaymentMethod";
 
 const MainRoutes = () => {
     return (
@@ -31,6 +32,7 @@ const MainRoutes = () => {
            <Route path="/payment" element={<Payment/>} />
            <Route path="/login" element={<Login/>} />
            <Route path="/signup" element={<Signup/>} />
+           <Route path="/paymentmethod" element={<PaymentMethod/>} />
         </Routes>
       </div>
     );
