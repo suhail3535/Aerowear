@@ -1,7 +1,16 @@
 import { Box, Button, Center, Divider, FormControl, FormLabel, Heading, HStack, Input, PinInput, PinInputField, Radio, RadioGroup, Select, Stack, VStack } from '@chakra-ui/react';
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import styles from "./Payment.module.css"
 const Payment = () => {
+  const navigate = useNavigate()
+  
+  const handleClick = () => {
+navigate("/paymentmethod");
+
+}
+
+
   return (
     <div>
       <Heading as="h2" size="lg">
@@ -221,7 +230,10 @@ const Payment = () => {
             </RadioGroup>
           </div>
 
-          <button className={styles.bookbtn}> CONTINUE BILLING</button>
+          <button onClick={handleClick} className={styles.bookbtn}>
+            {" "}
+            CONTINUE BILLING
+          </button>
         </div>
         <div id={styles.two}>
           <div id={styles.third}></div>
@@ -245,7 +257,7 @@ const Payment = () => {
               textAlign={"Center"}
               as={"h6"}
               size={"sm"}
-            paddiing={"20px"}
+              paddiing={"20px"}
             >
               <Heading textAlign={"Center"} as={"h6"} size={"xs"}>
                 Paying with PayPal? In-Store Returns will be refunded as

@@ -45,3 +45,27 @@
     padding: 20px;
 
 }
+#method{
+    border: 1px solid gray;
+    width: 70%;
+    height: 800px;
+    margin: 10px auto;
+}
+#otp{
+    border: 0px solid green;
+    margin-right: 285px;
+    margin-top: 20px;
+}
+#date{
+    border: 0px solid green;
+    margin-right: 480px;
+    margin-top: 40px;
+  
+}
+#check{
+    border: 0px solid black;
+     align-items: left;
+       width: 85%;
+       margin: auto;
+
+}
