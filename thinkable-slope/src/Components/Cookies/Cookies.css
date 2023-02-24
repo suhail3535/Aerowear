@@ -1,0 +1,24 @@
+.pref-cookies {
+    background-color: white;
+    color: #17274a;
+    border: 1px solid #17274a;
+    padding: 7px 18px;
+    transition: all 0.5s ease-in-out;
+}
+.pref-cookies:hover{
+    border-radius: 15px;
+}
+
+.ok-cookies {
+    background-color: #17274a;
+    color: white;
+    font-size: revert;
+    border: 1px solid white;
+    padding: 7px 18px;
+    transition: all 0.5s ease-in-out;
+}
+.ok-cookies:hover {
+    background-color: white;
+    color: #17274a;
+    border: 1px solid #17274a;
+}

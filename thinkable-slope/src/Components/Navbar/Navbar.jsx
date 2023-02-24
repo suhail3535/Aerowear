@@ -19,8 +19,15 @@ import {
     useDisclosure,
     Input,
     Tooltip,
+    VStack,
+    InputGroup,
+    InputRightElement,
+    Button,
 } from "@chakra-ui/react";
 import {} from "@mui/material";
+import { SearchIcon } from "@chakra-ui/icons";
+
+let data = JSON.parse(localStorage.getItem("adminData")) || [];
 
 const Navbar = () => {
     const openLink = (url) => {
@@ -33,6 +40,7 @@ const Navbar = () => {
     const handleMenuClick = () => {
         setIsOpen(!iSOpen);
     };
+    // console.log(data);
 
     return (
         <div>
@@ -66,68 +74,138 @@ const Navbar = () => {
                 <div className="wrapper">
                     <div className="wrapperLeft">
                         <div>
-                            <Link
-                                to="/women"
-                                smooth={true}
-                                offset={-100}
-                                duration={500}
-                                className="nav-link Women">
-                                Women
-                            </Link>
+                            <Tooltip
+                                hasArrow
+                                label="Women"
+                                bg="gray.300"
+                                color="black">
+                                <Link
+                                    to="/women"
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                    className="nav-link Women">
+                                    Women
+                                </Link>
+                            </Tooltip>
                         </div>
                         <div>
-                            <Link
-                                to="/men"
-                                smooth={true}
-                                offset={-79}
-                                duration={500}
-                                className="nav-link Men">
-                                Men
-                            </Link>
+                            <Tooltip
+                                hasArrow
+                                label="Men"
+                                bg="gray.300"
+                                color="black">
+                                <Link
+                                    to="/men"
+                                    smooth={true}
+                                    offset={-79}
+                                    duration={500}
+                                    className="nav-link Men">
+                                    Men
+                                </Link>
+                            </Tooltip>
                         </div>
                         <div>
-                            <Link
-                                to="/payment"
-                                smooth={true}
-                                offset={-79}
-                                duration={500}
-                                className="nav-link Jeans">
-                                Jeans
-                            </Link>
+
+                            <Tooltip
+                                hasArrow
+                                label="Jeans"
+                                bg="gray.300"
+                                color="black">
+                                <Link
+                                    to="/payment"
+                                    smooth={true}
+                                    offset={-79}
+                                    duration={500}
+                                    className="nav-link Jeans">
+                                    Jeans
+                                </Link>
+                            </Tooltip>
+
                         </div>
                         <div>
-                            <Link
-                                to="/clearance"
-                                smooth={true}
-                                offset={-79}
-                                duration={500}
-                                className="nav-link Clearance">
-                                Clearance
-                            </Link>
+                            <Tooltip
+                                hasArrow
+                                label="Clearance"
+                                bg="gray.300"
+                                color="black">
+                                <Link
+                                    to="/clearance"
+                                    smooth={true}
+                                    offset={-79}
+                                    duration={500}
+                                    className="nav-link Clearance">
+                                    Clearance
+                                </Link>
+                            </Tooltip>
                         </div>
                     </div>
                     <div className="wrapperRight">
-                        <Link to="/" smooth={true} offset={-100} duration={500}>
-                            <img
-                                src={
-                                    process.env.PUBLIC_URL +
-                                    "./Images/Nav_logo.png"
-                                }
-                                alt="icon"
-                            />
-                        </Link>
+                        <Tooltip
+                            hasArrow
+                            label="Home"
+                            bg="gray.300"
+                            color="black">
+                            <Link
+                                to="/"
+                                smooth={true}
+                                offset={-100}
+                                duration={500}>
+                                <img
+                                    src={
+                                        process.env.PUBLIC_URL +
+                                        "./Images/Nav_logo.png"
+                                    }
+                                    alt="icon"
+                                />
+                            </Link>
+                        </Tooltip>
                     </div>
                     <div className="wrapperProfile">
-                        <Input
-                            title="Search 🔍"
-                            variant="outline"
-                            placeholder="Search"
-                            id="inputSearch"
-                        />
+                        <Tooltip
+                            hasArrow
+                            label="Search"
+                            bg="gray.300"
+                            color="black">
+                            {/* <Input
+                                variant="outline"
+                                placeholder="Search"
+                                id="inputSearch"
+                            /> */}
+                            <VStack>
+                                <InputGroup>
+                                    <Input
+                                        pr="1rem"
+                                        variant="outline"
+                                        focusBorderColor="gray"
+                                        placeholder="Search"
+                                        borderRadius="25px"
+                                        _focusVisible={{
+                                            BorderColor: "gray",
+                                        }}
+                                    />
+                                    <InputRightElement width="4rem">
+                                        <Button
+                                            h={{ base: "1rem", lg: "1.7rem" }}
+                                            color="#17274a"
+                                            bg={"white"}
+                                            _hover={{
+                                                bg: "#ffffff",
+                                            }}>
+                                            <SearchIcon />
+                                        </Button>
+                                    </InputRightElement>
+                                </InputGroup>
+                            </VStack>
+                        </Tooltip>
                         <div className="dropdown-menu">
                             <button onClick={handleMenuClick}>
-                                <Tooltip hasArrow label='Account' bg='gray.300' color='black'>
-                                <PersonOutlineOutlinedIcon />
+                                <Tooltip
+                                    hasArrow
+                                    label="Account"
+                                    bg="gray.300"
+                                    color="black">
+                                    <PersonOutlineOutlinedIcon />
                                 </Tooltip>
                             </button>
                             {iSOpen && (
@@ -138,18 +216,18 @@ const Navbar = () => {
                                             smooth={true}
                                             offset={-100}
                                             duration={500}>
-                                            <Tooltip
+                                            {/* <Tooltip
                                                 hasArrow
                                                 label="Log in"
                                                 bg="gray.300"
-                                                color="black">
-                                                Log in
-                                                <LoginOutlinedIcon
-                                                    style={{
-                                                        paddingTop: "10px",
-                                                    }}
-                                                />
-                                            </Tooltip>
+                                                color="black"> */}
+                                            Log in
+                                            <LoginOutlinedIcon
+                                                style={{
+                                                    paddingTop: "10px",
+                                                }}
+                                            />
+                                            {/* </Tooltip> */}
                                         </Link>
                                     </li>
                                     <li>
@@ -158,44 +236,67 @@ const Navbar = () => {
                                             smooth={true}
                                             offset={-100}
                                             duration={500}>
-                                            <Tooltip
-                                                hasArrow
-                                                label="Register"
-                                                bg="gray.300"
-                                                color="black">
-                                                Register Here
-                                                <CreateOutlinedIcon
-                                                    style={{
-                                                        paddingTop: "10px",
-                                                    }}
-                                                />
-                                            </Tooltip>
+                                            Register Here
+                                            <CreateOutlinedIcon
+                                                style={{
+                                                    paddingTop: "10px",
+                                                }}
+                                            />
                                         </Link>
                                     </li>
                                 </ul>
                             )}
                         </div>
                         <div className="navCart">
-                            <Link
-                                title="Cart"
-                                to="/cart"
-                                smooth={true}
-                                offset={-100}
-                                duration={500}
-                                className="nav-link Women">
-                                <LocalMallOutlinedIcon />
-                            </Link>
+                            <Tooltip
+                                hasArrow
+                                label="Cart"
+                                bg="gray.300"
+                                color="black">
+                                <Link
+                                    to="/cart"
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                    className="nav-link Women">
+                                    <LocalMallOutlinedIcon />
+                                </Link>
+                            </Tooltip>
                         </div>
                         <div className="navAdmin">
-                            <Link
-                                title="Admin"
-                                to="/admin"
-                                smooth={true}
-                                offset={-100}
-                                duration={500}
-                                className="nav-link Women">
-                                <AdminPanelSettingsOutlinedIcon />
-                            </Link>
+                            <Tooltip
+                                hasArrow
+                                label="Admin"
+                                bg="gray.300"
+                                color="black">
+                                {data===0 ? (
+                                    <Link
+                                        to="/admin"
+                                        smooth={true}
+                                        offset={-100}
+                                        duration={500}
+                                        className="nav-link">
+                                        <AdminPanelSettingsOutlinedIcon />
+                                    </Link>
+                                ) : (
+                                    <Link
+                                        to="/adminlogin"
+                                        smooth={true}
+                                        offset={-100}
+                                        duration={500}
+                                        className="nav-link ">
+                                        <AdminPanelSettingsOutlinedIcon />
+                                    </Link>
+                                )}
+                                {/* <Link
+                                    to="/adminlogin"
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                    className="nav-link adminlogin">
+                                    <AdminPanelSettingsOutlinedIcon />
+                                </Link> */}
+                            </Tooltip>
                         </div>
                     </div>
 

@@ -1,0 +1,60 @@
+.main-page {
+    border: 1px solid red;
+    padding: 20px;
+}
+.main-add {
+    background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwce79bcc9/images/homepage/2020/060420/060420%20DESKTOP%20PRIDE%20BANNER@2x.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 11vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.left-add {
+    position: relative;
+    width: 40%;
+}
+
+.bgc-top {
+    color: black;
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+.right-add {
+    position: relative;
+    width: 60%;
+}
+.text-1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+.text-2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 1.1px;
+}
+.banner {
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-add {
+    border: 1px solid purple;
+}
+.add-text-2 {
+    color: #ee5e68;
+    font-size:77px;
+    font-weight: 700;
+}
+.add-text-3{
+        color: #ee5e68;
+    font-size:46px;
+    font-weight: 400;
+    /* te */
+}

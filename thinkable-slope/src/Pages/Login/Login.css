@@ -1,34 +1,87 @@
 .login-main {
-    border: 1px solid red;
-    width: 70%;
-    margin: 20px auto;
+    border: 0px solid red;
+    width: 63%;
+    margin: 40px auto;
     display: flex;
     justify-content: space-between;
     font-family: "Visuelt Pro" sans-serif;
 }
 .log-form {
-    border: 1px solid green;
+    border: 0px solid green;
     width: 42%;
+    margin: revert;
 }
-.hr{
-    border-right: .1px solid gray;
+.log-form > h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: revert;
+}
+.log-form > h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+}
+.log-btn {
+    border: 1.5px solid #17274a;
+    padding: 10px 20px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    background-color: #17274a;
+    color: white;
+    width: 60%;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+.log-btn:hover {
+    background-color: white;
+    color: #17274a;
+}
+.log-btn ~ h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    margin: 20px auto;
+}
+.policy-line {
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+    margin-top: 35px;
+}
+.policy-line > a {
+    text-decoration: underline;
+}
+.hr {
+    border-right: 0.1px solid gray;
 }
 
 .order-account {
-    border: 1px solid purple;
-    width:42%;
+    border: 0px solid purple;
+    width: 42%;
 }
-.order-btn{
+.order-account>h1{
+    font-size: 28px;
+    font-weight: 700;
+    margin: revert;
+}
+.order-account>h4{
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+}
+.order-btn {
     padding: 10px 20px;
     border: 1.5px solid #17274a;
     border-radius: 0px;
     text-transform: uppercase;
     color: #17274a;
     font-size: 14px;
+    margin-top: 20px;
     font-weight: 700;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
-.order-btn:hover{
+.order-btn:hover {
     color: white;
     background-color: #17274a;
 }
