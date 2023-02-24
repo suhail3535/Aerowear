@@ -7,9 +7,11 @@ import {
     Input,
     InputGroup,
     InputRightElement,
+    useToast,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { FaFacebook } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./Login.css";
 
 let userReg = JSON.parse(localStorage.getItem("userData"));
@@ -20,17 +22,40 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const toast = useToast();
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         if (email !== "" && password !== "") {
-            if (userReg.email == email && userReg.password == password) {
-              alert("successfull");
-              navigate ("/");
+            if (userReg.email === email && userReg.password === password) {
+                toast({
+                    title: "Login Successful",
+                    description: "",
+                    status: "success",
+                    duration: 2500,
+                    isClosable: true,
+                    position: "top",
+                });
+                navigate("/");
             } else {
-                alert("Wrong Credentials");
+                toast({
+                    title: "Wrong Credentials",
+                    description: "Please check your details",
+                    status: "error",
+                    duration: 2500,
+                    isClosable: true,
+                    position: "bottom-right",
+                });
             }
         } else {
-            alert("Please fill details");
+            toast({
+                title: "Details Missing",
+                description: "Please fill all details",
+                status: "warning",
+                duration: 2500,
+                isClosable: true,
+                position: "bottom-right",
+            });
         }
     };
 
@@ -78,8 +103,6 @@ const Login = () => {
                                 placeholder="Enter password"
                                 style={{
                                     outlineWidth: "1px",
-                                    borderRadius: "0px",
-                                    border: "1px solid gray",
                                 }}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
@@ -96,28 +119,41 @@ const Login = () => {
                         <Checkbox
                             style={{
                                 margin: "15px auto",
-                            }}
-                            >
-                            <span className="req-check">Forgot Password</span>
-                        </Checkbox>
-                        <button
-                            rightIcon={<ArrowForwardIcon />}
-                            style={{
-                                background:
-                                    "linear-gradient(45deg, rgba(146,175,238,1) 0%, rgba(23,39,74,1) 100%)",
-                                color: "white",
-                                transition: "all .5s ease-in-out",
-                                margin: "auto",
-                            }}
-                            onClick={handleSubmit}
-                            _hover={{
-                                background:
-                                    "linear-gradient(45deg, rgba(23,39,74,1) 0%, rgba(146,175,238,1) 100%)",
-                                paddingLeft: "40px",
-                                paddingRight: "40px",
                             }}>
-                            Log in
+                            Remember me
+                        </Checkbox>
+                        <br />
+                        <button onClick={handleSubmit} className="log-btn">
+                            Log in <ArrowForwardIcon />
                         </button>
+
+                        <h4>Or log in using your account from</h4>
+                        <Link to={"/signup"}>
+                            <Button
+                                style={{
+                                    border: "1.5px solid #385898",
+                                    // margin: "20px auto",
+                                    width: "60%",
+                                    borderRadius: "0px",
+                                    transition: "all .5s ease-in-out",
+                                }}
+                                _hover={{
+                                    backgroundColor: "white",
+                                    color: "#17274a",
+                                    border: "1.5px solid #17274a",
+                                }}
+                                colorScheme="facebook"
+                                leftIcon={<FaFacebook />}>
+                                Facebook
+                            </Button>
+                        </Link>
+                        <p className="policy-line">
+                            Please see our <a href=""> Privacy Policy </a> .
+                            California residents, see our
+                            <a href=""> California Privacy Notice</a> and
+                            <a href=""> Do Not Sell My Personal Information </a>
+                            page.
+                        </p>
                     </FormControl>
                 </form>
             </div>
@@ -128,9 +164,11 @@ const Login = () => {
                     Creating an account is easy. Just fill out the form below
                     and enjoy the benefits of being a registered customer.
                 </h4>
-                <button onClick={handleCreate} className="order-btn">
-                    Create Account Now
-                </button>
+                <Link to={"/signup"}>
+                    <button onClick={handleCreate} className="order-btn">
+                        Create Account Now
+                    </button>
+                </Link>
 
                 <h1>Track Your Order</h1>
                 <h4>See your order even if you are not a registered user.</h4>
@@ -145,7 +183,7 @@ const Login = () => {
                         </FormLabel>
                         <Input
                             type="text"
-                            placeholder="ORDER NUMBER"
+                            placeholder="ORDER NUMBER*"
                             value={""}
                             onChange={""}
                             style={{
@@ -163,7 +201,7 @@ const Login = () => {
                         </FormLabel>
                         <Input
                             type="text"
-                            placeholder="ORDER EMAIL"
+                            placeholder="ORDER EMAIL*"
                             value={""}
                             onChange={""}
                             style={{
@@ -181,7 +219,7 @@ const Login = () => {
                         </FormLabel>
                         <Input
                             type="text"
-                            placeholder="BILLING ZIP CODE"
+                            placeholder="BILLING ZIP CODE*"
                             value={""}
                             onChange={""}
                             style={{

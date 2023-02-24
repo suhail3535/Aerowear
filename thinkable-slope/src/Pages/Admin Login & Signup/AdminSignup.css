@@ -1,0 +1,15 @@
+.adminLogin {
+    border: 1px solid #17274a;
+    background-color: #17274a;
+    color: white;
+    border-radius: 8px;
+    padding: 13px;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+}
+.adminLogin:hover {
+    background-color: white;
+    color: #17274a;
+    border-radius: 25px;
+    border: 1px solid #17274a;
+}
