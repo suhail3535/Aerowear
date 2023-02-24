@@ -12,6 +12,7 @@ import SingleProduct from "./SingleProductPage/SingleProduct.jsx";
 
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
+import Payment from "./Payment/Payment";
 
 const MainRoutes = () => {
     return (
@@ -27,6 +28,7 @@ const MainRoutes = () => {
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/women/:id" element={<SingleProduct />} />
           
+           <Route path="/payment" element={<Payment/>} />
            <Route path="/login" element={<Login/>} />
            <Route path="/signup" element={<Signup/>} />
         </Routes>

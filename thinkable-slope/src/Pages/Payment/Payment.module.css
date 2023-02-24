@@ -1,0 +1,47 @@
+#main{
+    border: 1px solid red;
+    height: 1200px;
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-around;
+}
+#one{
+    border: 0px solid green;
+    width: 70%;
+ margin: 30px;
+ padding: 10px;
+
+}
+#two{
+    border: 1px solid blue;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+}
+          
+.bookbtn{
+    background-color: green;
+    height: 60px;
+    width: 320px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.bookbtn:hover{
+    background-color: black;
+}
+.fourth{
+    border: 1px solid black;
+    height: auto;
+    padding: 20px;
+
+}
+
+#third{
+    border: 1px solid yellow;
+    height: 400px;
+    padding: 20px;
+
+}
