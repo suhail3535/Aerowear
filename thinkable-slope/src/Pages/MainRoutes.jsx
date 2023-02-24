@@ -12,6 +12,7 @@ import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
 import AdminLogin from "./Admin Login & Signup/AdminLogin";
 import AdminSignup from "./Admin Login & Signup/AdminSignup";
+import Payment from "./Payment/Payment";
 
 const MainRoutes = () => {
     return (
@@ -26,13 +27,14 @@ const MainRoutes = () => {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/edit/:id" element={<Edit />} />
                 <Route path="/women/:id" element={<SingleProduct />} />
+                  <Route path="/payment" element={<Payment/>} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/adminlogin" element={<AdminLogin />} />
                 <Route path="/adminsignup" element={<AdminSignup />} />
             </Routes>
         </div>
-    );
-};
+
+
 
 export default MainRoutes;

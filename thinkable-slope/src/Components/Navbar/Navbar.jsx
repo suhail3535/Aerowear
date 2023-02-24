@@ -106,13 +106,14 @@ const Navbar = () => {
                             </Tooltip>
                         </div>
                         <div>
+
                             <Tooltip
                                 hasArrow
                                 label="Jeans"
                                 bg="gray.300"
                                 color="black">
                                 <Link
-                                    to="/jeans"
+                                    to="/payment"
                                     smooth={true}
                                     offset={-79}
                                     duration={500}
@@ -120,6 +121,7 @@ const Navbar = () => {
                                     Jeans
                                 </Link>
                             </Tooltip>
+
                         </div>
                         <div>
                             <Tooltip
