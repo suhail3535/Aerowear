@@ -23,11 +23,13 @@ import {
     InputGroup,
     InputRightElement,
     Button,
+    Badge,
 } from "@chakra-ui/react";
 import {} from "@mui/material";
 import { SearchIcon } from "@chakra-ui/icons";
 
-let data = JSON.parse(localStorage.getItem("adminData")) || [];
+let dataAdmin = JSON.parse(localStorage.getItem("adminData")) || [];
+let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
 const Navbar = () => {
     const openLink = (url) => {
@@ -37,10 +39,9 @@ const Navbar = () => {
 
     const [iSOpen, setIsOpen] = useState(false);
 
-    const handleMenuClick = () => {
-        setIsOpen(!iSOpen);
-    };
-    // console.log(data);
+    // const handleMenuClick = () => {
+    //     setIsOpen(!iSOpen);
+    // };
 
     return (
         <div>
@@ -106,7 +107,6 @@ const Navbar = () => {
                             </Tooltip>
                         </div>
                         <div>
-
                             <Tooltip
                                 hasArrow
                                 label="Jeans"
@@ -121,7 +121,6 @@ const Navbar = () => {
                                     Jeans
                                 </Link>
                             </Tooltip>
-
                         </div>
                         <div>
                             <Tooltip
@@ -199,7 +198,7 @@ const Navbar = () => {
                             </VStack>
                         </Tooltip>
                         <div className="dropdown-menu">
-                            <button onClick={handleMenuClick}>
+                            <button className="hover-account">
                                 <Tooltip
                                     hasArrow
                                     label="Account"
@@ -208,44 +207,37 @@ const Navbar = () => {
                                     <PersonOutlineOutlinedIcon />
                                 </Tooltip>
                             </button>
-                            {iSOpen && (
-                                <ul>
-                                    <li>
-                                        <Link
-                                            to="/login"
-                                            smooth={true}
-                                            offset={-100}
-                                            duration={500}>
-                                            {/* <Tooltip
-                                                hasArrow
-                                                label="Log in"
-                                                bg="gray.300"
-                                                color="black"> */}
-                                            Log in
-                                            <LoginOutlinedIcon
-                                                style={{
-                                                    paddingTop: "10px",
-                                                }}
-                                            />
-                                            {/* </Tooltip> */}
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to="/signup"
-                                            smooth={true}
-                                            offset={-100}
-                                            duration={500}>
-                                            Register Here
-                                            <CreateOutlinedIcon
-                                                style={{
-                                                    paddingTop: "10px",
-                                                }}
-                                            />
-                                        </Link>
-                                    </li>
-                                </ul>
-                            )}
+                            <ul className="all-log">
+                                <li className="log">
+                                    <Link
+                                        to="/login"
+                                        smooth={true}
+                                        offset={-100}
+                                        duration={500}>
+                                        Log in
+                                        <LoginOutlinedIcon
+                                            style={{
+                                                paddingTop: "10px",
+                                            }}
+                                        />
+                                        {/* </Tooltip> */}
+                                    </Link>
+                                </li>
+                                <li className="reg">
+                                    <Link
+                                        to="/signup"
+                                        smooth={true}
+                                        offset={-100}
+                                        duration={500}>
+                                        Register Here
+                                        <CreateOutlinedIcon
+                                            style={{
+                                                paddingTop: "10px",
+                                            }}
+                                        />
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
                         <div className="navCart">
                             <Tooltip
@@ -260,6 +252,14 @@ const Navbar = () => {
                                     duration={500}
                                     className="nav-link Women">
                                     <LocalMallOutlinedIcon />
+                                    <Badge
+                                        borderRadius={"8px"}
+                                        variant="subtle"
+                                        colorScheme="green">
+                                        {cartData.length !== 0
+                                            ? cartData.length
+                                            : ""}
+                                    </Badge>
                                 </Link>
                             </Tooltip>
                         </div>
@@ -269,7 +269,7 @@ const Navbar = () => {
                                 label="Admin"
                                 bg="gray.300"
                                 color="black">
-                                {data===0 ? (
+                                {dataAdmin === 0 ? (
                                     <Link
                                         to="/admin"
                                         smooth={true}
