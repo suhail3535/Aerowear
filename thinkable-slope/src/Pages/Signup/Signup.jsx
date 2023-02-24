@@ -47,10 +47,9 @@ const reducer = (state, action) => {
     }
 };
 
-
 const Signup = () => {
     const toast = useToast();
-    const [show, setShow] = React.useState(false);
+    const [show, setShow] = useState(false);
     const handleClick = () => setShow(!show);
     const navigate = useNavigate();
 
