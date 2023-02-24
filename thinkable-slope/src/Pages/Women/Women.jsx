@@ -113,7 +113,7 @@ const Women = () => {
 
                 <div className={styles.product_div}>
                     {products.map((el) => (
-                        <ProductCard {...el} />
+                        <ProductCard {...el} key={el.key} />
                     ))}
                 </div>
             </div>

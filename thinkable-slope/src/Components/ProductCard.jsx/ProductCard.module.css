@@ -43,6 +43,9 @@
 .product_image{
     width: 100%;
 }
+.cart_image{
+    cursor: pointer;
+}
 
 
 
