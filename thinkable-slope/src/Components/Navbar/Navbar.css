@@ -25,7 +25,7 @@
 .navbar {
     width: 100%;
     position: fixed;
-    top:41px;
+    top: 41px;
     background-color: #fff;
     z-index: 100;
     /* font-size: 18px; */
@@ -65,16 +65,10 @@
 }
 .wrapperProfile {
     /* border: 1px solid red; */
-    padding: 0px 20px;
+    padding: 0px 0px 0px 20px;
     display: flex;
 }
-#inputSearch {
-    border-radius: 25px;
-    border: 1px solid grey;
-}
-#inputSearch:focus {
-    border: none;
-}
+
 .wrapperLeft a:hover {
     transition: all 0.3s ease-in-out;
     cursor: pointer;
