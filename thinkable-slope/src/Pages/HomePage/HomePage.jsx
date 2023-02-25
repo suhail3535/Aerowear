@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Cookies from "../../Components/Cookies/Cookies";
+// import Cookies from "../..Components/Cookies/Cookies.jsx"
 import style from "./HomePage.css";
 
 const HomePage = () => {
@@ -56,7 +57,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <Cookies />
+<Cookies />
         </div>
     );
 };

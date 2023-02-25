@@ -1,5 +1,5 @@
 #main{
-    border: 1px solid red;
+    border: 1px solid rgb(243, 237, 237);
     height: 1200px;
     display: flex;
     width: 90%;
@@ -14,10 +14,11 @@
 
 }
 #two{
-    border: 1px solid blue;
+  border: 1px solid rgb(243, 237, 237);
     width: 30%;
     margin: 20px;
     padding: 20px;
+    margin-top: 40px;
 }
           
 .bookbtn{
@@ -28,37 +29,52 @@
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 20px;
+    margin-left: 20%;
 }
 .bookbtn:hover{
     background-color: black;
+
+    border-radius: 5px;
+}
+
+.bookbtn2{
+    background-color: green;
+    height: 60px;
+    width: 250px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 45%;
+  
+}
+.bookbtn2:hover{
+    background-color: black;
+      border-radius: 5px;
 }
 .fourth{
-    border: 1px solid black;
+   border: 1px solid rgb(243, 237, 237);
     height: auto;
     padding: 20px;
 
 }
 
 #third{
-    border: 1px solid yellow;
-    height: 400px;
+    border: 0px solid yellow;
+    height: auto;
     padding: 20px;
+  
 
 }
-#method{
-    border: 1px solid gray;
-    width: 70%;
-    height: 800px;
-    margin: 10px auto;
-}
+
 #otp{
-    border: 0px solid green;
-    margin-right: 285px;
+    border: 0px solid rgb(207, 30, 210);
+    margin-right: 1px;
     margin-top: 20px;
 }
 #date{
     border: 0px solid green;
-    margin-right: 480px;
+    margin-right: 0px;
     margin-top: 40px;
   
 }
@@ -66,6 +82,75 @@
     border: 0px solid black;
      align-items: left;
        width: 85%;
-       margin: auto;
+       margin: 20px auto;
 
+}
+
+.Order_summmary_div p:nth-child(1){
+    margin: 5px 0 15px 0;
+    padding: 0;
+    font: normal normal bold 24px/28px "Visuelt Pro", sans-serif;
+    letter-spacing: 1.2px;
+    color: #1e3352;
+    text-transform: uppercase;
+   
+}
+.Order_summmary_div p:nth-child(2),.Order_summmary_div p:nth-child(3),.Order_summmary_div p:nth-child(4){
+    text-align: left;
+    padding: 10px 0;
+    font: normal normal normal 14px/14px "Visuelt Pro", sans-serif;
+    color: #348011bd;
+}
+.Order_summmary_div p:nth-child(5){
+    font: normal normal normal 14px/14px "Visuelt Pro", sans-serif;
+    color: #08045d;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.Order_summmary_div button{
+    text-align: center;
+    letter-spacing: 0.8px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px;
+    background: #1e3352;
+    transition: .2s ease-in-out all;
+    margin: 0 0 30px 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-family: "Visuelt Pro";
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: visible;
+    margin-top: 20px;
+}
+.Order_summmary_div{
+ border: 0px solid green;
+}
+#address{
+    border: 2px solid green;
+   border: 1px solid gray;
+    width: 30%;
+    margin: 20px auto;
+    padding: 20px;
+}
+#method{
+    border: 1px solid rgb(147, 150, 145);
+    width: 60%;
+    height: auto;
+    margin-left: 50px;
+    margin:  20px auto;
+ ;
+}
+#container{
+    border: 2px solid rgb(106, 105, 105);
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
 }
