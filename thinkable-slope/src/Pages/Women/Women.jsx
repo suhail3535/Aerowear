@@ -94,7 +94,7 @@ const Women = () => {
                                 style={{
                                     width: "50%",
                                     margin: "auto",
-                                    border: "1px solid gray",
+                                    border: "0px solid gray",
                                 }}>
                                 <input
                                     type="checkbox"
@@ -152,7 +152,7 @@ const Women = () => {
                 ) : null}
 
                 <div className={styles.product_div}>
-                    {products.map((el) => (                      
+                    {products.map((el) => (
 
                         <Link to={`/women/${el.id}`}>
                             <ProductCard {...el} />

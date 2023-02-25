@@ -1,10 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import CartMap from "../../Components/CartMap/Cartmap";
 import EmptyCart from "../../Components/EmptyCart/EmptyCart";
 import styles from "./Cart.module.css";
 const Cart = () => {
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
-
+    const navigate = useNavigate();
     let totalprice;
     if (cartData == null) {
         totalprice = 0;
@@ -15,6 +16,9 @@ const Cart = () => {
     }
     function HandleRemove(i) {
         console.log(i);
+    }
+    const handleCheckout = () => {
+        navigate("/payment")
     }
 
     return (
@@ -47,7 +51,7 @@ const Cart = () => {
                                 Estimated Total:${" "}
                                 {(totalprice + 5.0 + 0.65).toFixed(2)}
                             </p>
-                            <button>Checkout</button>
+                            <button onClick={handleCheckout} >Checkout</button>
                         </div>
                     </div>
                 </div>

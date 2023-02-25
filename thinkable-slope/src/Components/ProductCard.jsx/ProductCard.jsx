@@ -2,6 +2,7 @@ import BasicFn from "../Stars";
 import styles from "./ProductCard.module.css";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+import { style } from "@mui/system";
 
 const ProductCard = ({ image, name, price, Rating, id }) => {
     function AddToCart(e) {
@@ -18,7 +19,8 @@ const ProductCard = ({ image, name, price, Rating, id }) => {
 
     return (
         <>
-            <div>
+            <div className={styles.parent_card}
+                >
                 <img className={styles.product_image} src={image} alt="" />
                 <div className={styles.limited_Edition_div}>
                     <p>Limited Edition</p>
