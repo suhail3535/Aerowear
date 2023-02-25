@@ -22,7 +22,6 @@
 }
 .product_sidebar_main_div{
     
-    height: 800px;
     display: flex;
 }
 .sidebar_div{
@@ -44,7 +43,6 @@
 .sidebar_subdiv1_div{
     width: 100%;    
     height: 200px;
-    border: 1px solid red;
     align-items: center;
    
 }

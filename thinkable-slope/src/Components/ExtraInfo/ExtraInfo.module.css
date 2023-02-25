@@ -1,0 +1,29 @@
+
+.extrainfodiv{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.extrainfosubdiv{
+    width: 48%;
+}
+.extrainfoheading{
+    font-weight: 700;
+    font-family: "Visuelt Pro", sans-serif;
+    text-transform: capitalize;
+    line-height: 1.4;
+    margin-bottom: 0;
+    color: #000;
+    box-sizing: border-box;
+    font-size: small;
+}
+.extrainformation{
+    font-family: 'Visuelt Pro', sans-serif;
+    color: #000;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+}

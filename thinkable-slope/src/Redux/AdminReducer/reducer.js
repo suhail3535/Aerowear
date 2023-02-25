@@ -13,7 +13,6 @@ import {
 const initialState = {
   isLoading: false,
   women: [],
-
   isError: false,
 };
 
