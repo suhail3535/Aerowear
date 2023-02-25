@@ -30,27 +30,25 @@ import { width } from "@mui/system";
 
 const PaymentMethod = () => {
   const [isButLoading, setIsButLoading] = useState(false);
-  let cartData = JSON.parse(localStorage.getItem("cart"));
+
   const navigate = useNavigate();
 
-  let totalprice;
-  if (cartData == null) {
-    totalprice = 0;
-  } else {
-    totalprice = cartData.reduce((acc, el) => {
-      return acc + Number(el.price);
-    }, 0);
-  }
+
+
 
   const handlePay = () => {
     setIsButLoading(true);
     setTimeout(() => {
       // alert("Added To Favourite Page");
 
+
+
       setIsButLoading(false);
       navigate("/");
     }, 3000);
-  };
+
+  }
+      
 
   const dispatch = useDispatch();
   const newData = useSelector((store) => {
@@ -59,8 +57,26 @@ const PaymentMethod = () => {
       address: store.UserReducer.address,
       isLoading: store.isLoading,
       isError: store.isError,
+
+      products: store.CartReducer.products,
     };
   });
+
+  let totalprice;
+  if (newData.products.length == 0) {
+    totalprice = 0
+  } else {
+    totalprice = newData.products.reduce((acc, el) => {
+
+      return acc + Number(el.price)
+    }, 0)
+  }
+
+
+
+
+
+
   const { address } = newData;
 
   useEffect(() => {
@@ -312,7 +328,7 @@ const PaymentMethod = () => {
         </div>
       </div>
       <button onClick={handlePay} className={styles.bookbtn2}>
-        {!isButLoading && ` Pay Now ${(totalprice + 5.0 + 0.65).toFixed(2)}`}
+        {!isButLoading && ` Pay Now ${( totalprice+5.0 + 0.65).toFixed(2)}`}
 
         {isButLoading && (
           <Spinner

@@ -24,17 +24,35 @@ const Cart = () => {
     }, shallowEqual);
     let dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getCartProducts());
-    }, []);
+
+        dispatch(getCartProducts())
+    }, [])   
+
+    
+  let totalprice;
+  if (products.length == 0) {
+    totalprice = 0
+  } else {
+    totalprice = products.reduce((acc, el) => {
+
+      return acc + Number(el.price)
+    }, 0)
+  }
+
+
 
     function HandleCartDelete(id) {
         dispatch(deleteCartdata(id)).then(() => {
             dispatch(getCartProducts());
         });
     }
+
+
+
     const handleCheckout = () => {
         navigate("/payment");
     };
+
 
     return (
         <div>
@@ -58,12 +76,18 @@ const Cart = () => {
                         </div>
                         <div className={styles.Order_summmary_div}>
                             <p>ORDER SUMMARY</p>
-                            <p>Subtotal : </p>
+
+                            <p>Subtotal :{totalprice.toFixed(2)}  </p>
                             <p>Shipping Economy Ground : $ 5.00</p>
                             <p>Sales Tax : $ 0.65</p>
-                            <p>Estimated Total:$ {(5 + 0.65).toFixed(2)}</p>
+                            <p>
+                                Estimated Total:${" "}
+                                {( totalprice+5 + 0.65).toFixed(2)}
+                            </p>
+                            <Link to="/payment">
+                                <button className={styles.checkout_button}>Checkout</button>
+                            </Link>
 
-                            <button onClick={handleCheckout}>Checkout</button>
 
                             <div className={styles.deliveryinfo_div}>
                                 <button className={styles.Paypal_checkout}>

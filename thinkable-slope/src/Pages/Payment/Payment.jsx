@@ -4,8 +4,10 @@ import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import CartMap from '../../Components/CartMap/Cartmap';
 import styles from "./Payment.module.css"
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { postRequestAddress } from '../../Redux/UserReducer/action';
+import { useEffect } from 'react';
+import { getCartProducts } from '../../Redux/CartReducer/Action';
 
 const initialState = {
 
@@ -18,50 +20,62 @@ const initialState = {
 };
 
 const Payment = () => {
- const [data, setdata] = useState(initialState);
- // console.log(store);
+  const [data, setdata] = useState(initialState);
+  let dispatch = useDispatch()
+
+  const { products, isLoading, isError } = useSelector((store) => {
+    return {
+      products: store.CartReducer.products,
+      isLoading: store.CartReducer.isLoading,
+      isError: store.CartReducer.isError,
+    };
+  }, shallowEqual);
+  useEffect(() => {
+    dispatch(getCartProducts())
+  }, [])
+
+  let totalprice;
+  if (products.length == 0) {
+    totalprice = 0
+  } else {
+    totalprice = products.reduce((acc, el) => {
+
+      return acc + Number(el.price)
+    }, 0)
+  }
 
 
- const dispatch = useDispatch();
 
- const handleChange = (e) => {
-   const { name, value } = e.target;
-   setdata((prev) => {
-     return { ...prev, [name]: name === "phone" ? +value : value };
-   });
-   // console.log(data)
- };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setdata((prev) => {
+      return { ...prev, [name]: name === "phone" ? +value : value };
+    });
+  };
 
- const handleSubmit = (e) => {
-   e.preventDefault();
-   dispatch(postRequestAddress(data));
-   setdata(initialState);
-     navigate("/paymentmethod");
-  //  Swal.fire("", "Product added!", "success");
- };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(postRequestAddress(data));
+    setdata(initialState);
+    navigate("/paymentmethod");
+    //  Swal.fire("", "Product added!", "success");
+  };
 
-let cartData = JSON.parse(localStorage.getItem("cart"));
 
-let totalprice;
-if (cartData == null) {
-  totalprice = 0;
-} else {
-  totalprice = cartData.reduce((acc, el) => {
-    return acc + Number(el.price);
-  }, 0);
-}
 
-function HandleRemove(i) {
-  console.log(i);
-}
+
+
+
+
+
 
   const navigate = useNavigate()
-  
-//   const handleClick = () => {
-//     navigate("/paymentmethod");
-//      Swal.fire("", "Redirect to payment method!", "success");
 
-// }
+  //   const handleClick = () => {
+  //     navigate("/paymentmethod");
+  //      Swal.fire("", "Redirect to payment method!", "success");
+
+  // }
 
 
   return (
@@ -310,10 +324,10 @@ function HandleRemove(i) {
            
             <div className={styles.Order_summmary_div}>
               <p>ORDER SUMMARY</p>
-              <p>Subtotal : {totalprice}</p>
+              <p>Subtotal : {totalprice.toFixed(2)}</p>
               <p>Shipping Economy Ground : $ 5.00</p>
               <p>Sales Tax : $ 0.65</p>
-              <p>Estimated Total:$ {(totalprice + 5.0 + 0.65).toFixed(2)}</p>
+              <p>Estimated Total:$ {(totalprice+5+0.65).toFixed(2)}</p>
             </div>
           </div>
           <div className={styles.fourth}>
