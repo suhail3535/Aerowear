@@ -6,6 +6,8 @@ import { getMenProducts } from "../../Redux/AppReducer/Action";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
 import { useLocation, useSearchParams } from "react-router-dom";
+import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
+
 
 const Men = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -38,8 +40,11 @@ const Men = () => {
 
     useEffect(() => {
         if (rating || order) {
+
             let param = {};
             order && (param.order = order);
+
+
             rating && (param.rating = rating);
             setSearchParama(param);
         }
@@ -60,8 +65,10 @@ const Men = () => {
     }, [location.search]);
 
     function handleSort(e) {
+
         setOrder(e.target.value);
     }
+
 
     function Sidebar() {
         setSidebar(!sidebar);
@@ -77,6 +84,7 @@ const Men = () => {
                 <Navbar2 />
             </div>
             <FilterNavbar handleSort={handleSort} Sidebar={Sidebar} />
+
 
             {isLoading && (
                 <img
@@ -153,6 +161,21 @@ const Men = () => {
                                 </label>
                                 <br />
                             </div>
+                            <p>Sort By Size</p>
+                        <div style={{ width: "50%", margin: "auto" }}>
+                            <input name="size" type="radio" defaultChecked={true}/>
+                            <label >XS</label><br />
+                            <input name="size" type="radio" />
+                            <label >Small</label><br />
+                            <input name="size" type="radio" />
+                            <label >Large</label><br />
+                            <input name="size" type="radio" />
+                            <label >Medium</label><br />
+                            <input name="size" type="radio" />
+                            <label >XL</label><br />
+
+            
+
                         </div>
                     </div>
                 ) : null}
@@ -163,6 +186,7 @@ const Men = () => {
                     ))}
                 </div>
             </div>
+            <ExtraInfo />
         </>
     );
 };

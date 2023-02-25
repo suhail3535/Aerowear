@@ -37,9 +37,9 @@
     color: #1d3451
 
 }
-.product_sidebar_main_div{
 
-    /* height: 800px; */
+.product_sidebar_main_div{    
+
     display: flex;
 }
 .sidebar_div{
@@ -65,11 +65,13 @@
     margin-right: auto;
 }
 .sidebar_subdiv1_div{
+
     border-radius: 15px;
     padding: 20px;
     width: 100%;
     /* height: 200px; */
     border: 0px solid red;
+
     align-items: center;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

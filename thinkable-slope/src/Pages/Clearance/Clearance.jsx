@@ -5,6 +5,8 @@ import { getClearanceProducts } from "../../Redux/AppReducer/Action";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
 import { useLocation, useSearchParams } from "react-router-dom";
+import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
+
 
 const Clearance = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -78,6 +80,7 @@ const Clearance = () => {
                 </div>
             </div>
             <FilterNavbar handleSort={handleSort} Sidebar={Sidebar} />
+
 
             {isLoading && (
                 <img
@@ -154,16 +157,42 @@ const Clearance = () => {
                                 </label>
                                 <br />
                             </div>
+                             <p>Sort By Size</p>
+                        <div style={{ width: "50%", margin: "auto" }}>
+                            <input name="size" type="radio" defaultChecked={true} />
+                            <label >XS</label><br />
+                            <input name="size" type="radio" />
+                            <label >Small</label><br />
+                            <input name="size" type="radio" />
+                            <label >Large</label><br />
+                            <input name="size" type="radio" />
+                            <label >Medium</label><br />
+                            <input name="size" type="radio" />
+                            <label >XL</label><br />
+                        </div>
                         </div>
                     </div>
                 ) : null}
 
                 <div className={styles.product_div}>
+
                     {products.map((el) => (
                         <ProductCard {...el} key={el.key} />
                     ))}
-                </div>
+            
             </div>
+
+                 
+
+                </div>
+
+
+
+            </div>
+            <ExtraInfo />
+
+
+
         </>
     );
 };

@@ -19,8 +19,10 @@
     line-height: 2.25rem;
     color: #1d3451;
 }
-.product_sidebar_main_div {
-    /* height: 800px; */
+
+.product_sidebar_main_div{
+    
+
     display: flex;
 }
 .sidebar_div {
@@ -46,12 +48,14 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .sidebar_subdiv1_div {
     width: 100%;
     border-radius: 15px;
     padding: 20px;
     /* height: 200px; */
     border: 0px solid red;
+
     align-items: center;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

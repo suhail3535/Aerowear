@@ -9,9 +9,23 @@ Installation needed:-
 6 Redux Thunk,
 7 Axios,
 8 React,
+9 Swal alert
+
+
+# we are using React Component Libraries
+
+React-Bootstrap,
+React Router,
+chakra-UI,
+material-icon,
+material-UI,
+materail colours,
+flat icon,
+React Motion
+
 
 # For Backend 
-We use json server (db.json)
+We use json server (db.json) for backends
 
 
 
@@ -28,10 +42,13 @@ We use json server (db.json)
 
 Compleate Admin side 
 Single Product page
+payment page
+payment Method page
 # Nisha Sharma working on
 women page
 men page 
 clearence page
+cart page
 sorting and fitering 
 
 # Shantanu working on
@@ -39,5 +56,6 @@ Navbar section
 Fotter Section
 Login & Register for user 
 login & Register for Admin
+home page
 
 

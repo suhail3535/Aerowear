@@ -7,6 +7,7 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
 
 const Women = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -94,7 +95,11 @@ const Women = () => {
                                 style={{
                                     width: "50%",
                                     margin: "auto",
+
                                     border: "0px solid gray",
+
+
+
                                 }}>
                                 <input
                                     type="checkbox"
@@ -147,6 +152,20 @@ const Women = () => {
                                 </label>
                                 <br />
                             </div>
+
+                            <p>Sort By Size</p>
+                            <div style={{ width: "50%", margin: "auto" }}>
+                                <input name="size" type="radio" defaultChecked={true} />
+                                <label >XS</label><br />
+                                <input name="size" type="radio" />
+                                <label >Small</label><br />
+                                <input name="size" type="radio" />
+                                <label >Large</label><br />
+                                <input name="size" type="radio" />
+                                <label >Medium</label><br />
+                                <input name="size" type="radio" />
+                                <label >XL</label><br />
+                            </div>
                         </div>
                     </div>
                 ) : null}
@@ -154,13 +173,16 @@ const Women = () => {
                 <div className={styles.product_div}>
                     {products.map((el) => (
 
+
                         <Link to={`/women/${el.id}`}>
                             <ProductCard {...el} />
                         </Link>
 
+
                     ))}
                 </div>
             </div>
+            <ExtraInfo />
         </>
     );
 };

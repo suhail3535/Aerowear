@@ -19,6 +19,13 @@ grid-template-columns: repeat(2,1fr);
     width: 200px;
     margin: 20px auto;
 }
+#edit{
+  background-color: #83e0e0;
+}
+#delete{
+  background-color:
+#f3c2d4 ;
+}
 #container{
     border: 0px solid green;
     display: grid;
@@ -67,7 +74,7 @@ gap: 5px;
     }
     #editbtn{
       width: 40%;
-      background-color: aquamarine;
+      background-color: rgb(126, 162, 219);
       margin-left: 160px;
 
     }
