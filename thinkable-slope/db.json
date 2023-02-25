@@ -33,7 +33,7 @@
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw36365377/82739719_255_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "'90s Super High-Rise Baggy Premium Air Jean",
       "price": 79.12,
-      "Rating": 2
+      "Rating": "3"
     },
     {
       "id": 6,
@@ -708,26 +708,20 @@
       "id": 3
     },
     {
-      "firstname": "",
-      "lastname": "",
-      "address1": "",
-      "zipcode": "",
-      "city": "",
-      "phone": "",
+
+      "firstname": "Suhail",
+      "lastname": "khan",
+      "address1": "Moh Khera Balaykot post Shahabad Distt hardoi up India 241124",
+      "zipcode": "241124",
+      "city": "Hardoi",
+      "phone": 8630245788,
       "id": 4
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "address1": "",
-      "zipcode": "",
-      "city": "",
-      "phone": "",
-      "id": 5
+
     }
   ],
   "cart": [
     {
+
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwe7fb51ad/80119492_047_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Sports Car Retro Graphic Tank",
       "price": 25.9,
@@ -740,6 +734,8 @@
       "price": 79.11,
       "Rating": 5,
       "id": 4
+
+    
     }
   ]
 }

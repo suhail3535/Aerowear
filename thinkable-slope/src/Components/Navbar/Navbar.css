@@ -67,6 +67,8 @@
     /* border: 1px solid red; */
     padding: 0px 0px 0px 20px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .wrapperLeft a:hover {
@@ -117,6 +119,45 @@
     padding: 8px 16px;
     cursor: pointer;
 }
+
+.navAdmin {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-account {
+    background-color: #fff;
+    /* border: 1px solid #ccc; */
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.navAdmin > ul {
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    transition: all 0.2s ease-in-out;
+    text-align: left;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.navAdmin:hover .all-log {
+    display: block;
+}
+.navAdmin:not(:hover) .all-log {
+    display: none;
+}
+.navAdmin li {
+    padding: 8px 16px;
+    cursor: pointer;
+}
 .log {
     padding: 8px 16px;
     cursor: pointer;
@@ -151,7 +192,7 @@
     cursor: pointer;
 }
 .navAdmin {
-    padding: 8px 16px;
+    /* padding: 8px 16px; */
     cursor: pointer;
 }
 

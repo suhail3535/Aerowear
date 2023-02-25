@@ -321,14 +321,7 @@ const Payment = () => {
         </div>
         <div id={styles.two}>
           <div id={styles.third}>
-            {/* {cartData.map((ele) => {
-              return (
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)" }}>
-                  <img width={100} src={ele.image} alt="" />
-                  <p>{ele.name}</p>
-                </div>
-              );
-            })} */}
+           
             <div className={styles.Order_summmary_div}>
               <p>ORDER SUMMARY</p>
               <p>Subtotal : {totalprice.toFixed(2)}</p>

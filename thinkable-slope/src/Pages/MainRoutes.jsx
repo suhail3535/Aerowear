@@ -17,26 +17,25 @@ import PaymentMethod from "./Payment/PaymentMethod";
 
 const MainRoutes = () => {
     return (
-
-      <div>
-        {/* <Navbar /> */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/women" element={<Women />} />
-          <Route path="/men" element={<Men />} />
-          <Route path="/clearance" element={<Clearance />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/edit/:id" element={<Edit />} />
-          <Route path="/women/:id" element={<SingleProduct />} />
-            <Route path="/adminlogin" element={<AdminLogin />} />
-              <Route path="/adminsignup" element={<AdminSignup />} />
-           <Route path="/payment" element={<Payment/>} />
-           <Route path="/login" element={<Login/>} />
-           <Route path="/signup" element={<Signup/>} />
-           <Route path="/paymentmethod" element={<PaymentMethod/>} />
-        </Routes>
-      </div>
+        <div>
+            {/* <Navbar /> */}
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/women" element={<Women />} />
+                <Route path="/men" element={<Men />} />
+                <Route path="/clearance" element={<Clearance />} />
+                <Route path="/admin" element={<Admin />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/edit/:id" element={<Edit />} />
+                <Route path="/women/:id" element={<SingleProduct />} />
+                <Route path="/adminlogin" element={<AdminLogin />} />
+                <Route path="/adminsignup" element={<AdminSignup />} />
+                <Route path="/payment" element={<Payment />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/paymentmethod" element={<PaymentMethod />} />
+            </Routes>
+        </div>
     );
 };
 

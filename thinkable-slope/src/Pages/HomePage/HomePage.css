@@ -1,6 +1,6 @@
 .main-page {
-    border: 1px solid red;
-    padding: 20px;
+    border: 0px solid red;
+    padding: 20px 20px 0px 20px;
 }
 .main-add {
     background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwce79bcc9/images/homepage/2020/060420/060420%20DESKTOP%20PRIDE%20BANNER@2x.jpg);
@@ -18,7 +18,7 @@
 }
 
 .bgc-top {
-    color: black;
+    color: #17244a;
     width: 30%;
     display: block;
     margin: auto;
@@ -128,8 +128,8 @@
 }
 .lit-right:hover {
     background-color: white;
-    border: 2px solid black;
-    color: black;
+    border: 2px solid #17244a;
+    color: #17244a;
 }
 .hlf-slide {
     display: flex;
@@ -191,7 +191,7 @@
     width: 50%;
 }
 .ads-all {
-    border: 1px solid green;
+    border: 0px solid green;
     text-align: center;
     background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwc9e72c6c/images/homepage/2020/060420/060420%20DESKTOP%20STORE%20ASSET@2x.jpg);
     background-size: cover;
@@ -199,9 +199,143 @@
     background-repeat: no-repeat;
     padding: 20px;
     height: 100%;
+    border-radius: 25px;
     display: block;
     position: relative;
 }
-.ads-all-img-wrapper{
+.ads-all-img-wrapper {
+    border: 0px solid purple;
     text-align: center;
+    position: relative;
+    width: 5%;
+    margin: auto;
+}
+.ads-all-text-2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 60px;
+    color: white;
+}
+.ads-all-text-3 {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 26px;
+    color: white;
+}
+.ads-all-cta-wrap {
+    margin: 40px auto;
+    display: flex;
+    width: 65%;
+    justify-content: space-around;
+}
+
+.ads-all-cta-wrap > a {
+    border: 2px solid white;
+    padding: 10px 15px;
+    margin: 0px 40px;
+    color: white;
+    display: block;
+    width: 25%;
+    border-radius: 4.5px;
+    font-size: 18px;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+}
+.ads-all-cta-wrap > a:hover {
+    color: #17244a;
+    background-color: #fff;
+}
+.snd-hlf-slide {
+    display: flex;
+    margin: 30px auto;
+    /* grid-template-columns: 1fr 1fr 2fr; */
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+}
+.start-crs {
+    width: 50%;
+}
+
+.snd-text-wrap {
+    background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwf7488dfd/images/homepage/2020/060420/060420%20DESKTOP%20GUYS%20SHORTS@2x.jpg);
+    border-radius: 21px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 25%;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.right-boy-card {
+    width: 25%;
+}
+.end-jean {
+    position: relative;
+    font-family: "Visuelt Bold Pro", sans-serif;
+}
+.end-jean > img {
+    max-width: 100%;
+}
+.end-jean-content {
+    /* position: relative; */
+    width: 100%;
+    position: absolute;
+    top: 21%;
+}
+.text-wrap {
+    padding: 30px;
+    width: 97%;
+}
+.end-jean-text {
+    width: 40%;
+    /* margin-left: 8vw; */
+    text-align: center;
+    left: 768px;
+    position: relative;
+}
+.end-jean-text > img {
+    width: 7vw;
+    margin: 0 auto;
+    margin-bottom: 1.5vw;
+}
+.end-jean-text > p {
+    text-size-adjust: 100%;
+    text-align: center;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    font-size: 1.5vw;
+    margin: 0;
+    color: #fff;
+    line-height: normal;
+}
+.end-jean-cta-wrap {
+    width: 23%;
+    margin: 0 auto;
+    position: relative;
+    left: 24vw;
+}
+.end-jean-cta-wrap > a {
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    align-items: center;
+    border: 4px solid #17244a;
+    line-height: 3;
+    width: 19.8vw;
+    background-color: white;
+    margin: auto;
+    color: #1e3352;
+    padding-top: 0.7%;
+    font-size: 1.4vw;
+    border-width: 4px;
+    margin-top: 1vw;
+    display: inline-block;
+}
+.end-jean-cta-wrap > a:hover {
+    border: solid white 4px;
+    background-color: #1e3352;
+    color: white;
 }
