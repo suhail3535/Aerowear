@@ -43,7 +43,7 @@
     padding: 10px 0;
     font-weight: bold;
 }
-.Order_summmary_div button{
+.checkout_button{
     text-align: center;
     letter-spacing: 0.8px;
     color: #fff;
@@ -64,4 +64,47 @@
     cursor: pointer;
     overflow: visible;
     margin-top: 20px;
+}
+.checkout_button:hover{
+    background-color: black;
+}
+.Paypal_checkout{
+    
+    position: relative;
+    top: 50%;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    background: #ffc439;
+    color: #111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-weight: 500;
+    padding:10px 20px;
+    border-radius: 50px;
+
+}
+
+.deliveryinfo_div label{
+    padding-left: 30px;
+    width: auto;
+    font: normal normal normal 14px/21px "Visuelt Pro", sans-serif;
+    letter-spacing: 0.7px;
+    color: #232629;
+    text-transform: capitalize;
+}
+
+.deliveryinfo_div p{
+    font-family: Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: #17120f;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 14px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }

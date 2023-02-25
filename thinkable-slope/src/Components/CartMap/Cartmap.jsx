@@ -1,8 +1,6 @@
 import styles from "./Cartmap.module.css"
 
-function CartMap({ image, price, name,id,HandleRemove }) {
-
-    
+function CartMap({ image, price, name,id,HandleCartDelete }) {    
 
 
     return (
@@ -33,7 +31,7 @@ function CartMap({ image, price, name,id,HandleRemove }) {
                         <option value="">5</option>
                         <option value="">6</option>
                     </select>
-                    <p onClick={()=>{HandleRemove(id)}}>Remove</p>
+                    <p onClick={() => HandleCartDelete(id)}>Remove</p>
                     <p>In Stock</p>
                 </div>
                 <div className={styles.Price_div}>

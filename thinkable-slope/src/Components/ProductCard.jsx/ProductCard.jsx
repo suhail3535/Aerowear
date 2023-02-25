@@ -2,8 +2,13 @@ import BasicFn from "../Stars";
 import styles from "./ProductCard.module.css";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { postCartRequest } from "../../Redux/CartReducer/Action";
+
 
 const ProductCard = ({ image, name, price, Rating, id }) => {
+
+    const dispatch = useDispatch()
     function AddToCart(e) {
         let data = {
             image,
@@ -11,15 +16,16 @@ const ProductCard = ({ image, name, price, Rating, id }) => {
             price,
             Rating,
         };
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push(data);
-        localStorage.setItem("cart", JSON.stringify(cart));
+
+        dispatch(postCartRequest(data))
     }
 
     return (
         <>
             <div>
-                <img className={styles.product_image} src={image} alt="" />
+                <Link to={`/women/${id}`}>
+                    <img className={styles.product_image} src={image} alt="" />
+                </Link>
                 <div className={styles.limited_Edition_div}>
                     <p>Limited Edition</p>
                     <div className={styles.cart_image}>

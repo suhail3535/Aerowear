@@ -4,9 +4,20 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Single.modules.css";
 import StarPurple500Icon from "@mui/icons-material/StarPurple500";
+import { postCartRequest } from "../../Redux/CartReducer/Action";
+import { useDispatch } from 'react-redux';
+
+
 const SingleProduct = () => {
     const [data, setData] = useState({});
     const param = useParams();
+
+    const dispatch = useDispatch()
+    function AddToCart() { 
+
+        dispatch(postCartRequest(data))
+    }
+
 
     const getSingleProduct = (id) => {
         axios
@@ -127,8 +138,11 @@ const SingleProduct = () => {
                                 style={{
                                     backgroundColor: "#E1F5FE",
                                     width: "30%",
-                                    border: "1px solid black",
-                                }}>
+                                    border: "1px solid black",                                  
+                                    
+                                }}
+                                onClick={AddToCart}
+                                >
                                 Add to Cart
                             </Button>
 
