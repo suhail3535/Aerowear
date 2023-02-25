@@ -56,7 +56,6 @@ const Cart = () => {
                                 />
                             ))}
                         </div>
-
                         <div className={styles.Order_summmary_div}>
                             <p>ORDER SUMMARY</p>
                             <p>Subtotal : </p>
