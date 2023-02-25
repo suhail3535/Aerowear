@@ -715,25 +715,16 @@
       "city": "Hardoi",
       "phone": 8630245788,
       "id": 4
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "address1": "",
-      "zipcode": "",
-      "city": "",
-      "phone": "",
-      "id": 5
-    }
+   }
+   
   ],
   "cart": [
     {
-      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwe7fb51ad/80119492_047_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "name": "Sports Car Retro Graphic Tank",
-      "price": 25.9,
-      "Rating": 5,
-      "id": 3
-    },
+      "id": 1,
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw04b13605/80644077_007_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Cutout Convertible Crop Top",
+      "price": 1500,
+      "Rating": 3
     {
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw0b38791c/80649436_680_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Checkered Cropped Cardigan",
@@ -747,6 +738,7 @@
       "price": 79.11,
       "Rating": 5,
       "id": 5
+
     }
   ]
 }
