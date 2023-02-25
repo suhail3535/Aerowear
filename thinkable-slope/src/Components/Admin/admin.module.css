@@ -2,15 +2,16 @@
   border: 0px solid gray;
   padding: 50px;
  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 60%;
+  width: 30%;
   margin: 50px auto;
 }
 #first {
   border: 0px solid rgb(0, 47, 255);
   padding: 2px;
+  gap:10px;
 display: grid;
-grid-template-columns: repeat(2,1fr);
-  width: 100%;
+grid-template-columns: repeat(3,1fr);
+  width: 60%;
   margin: 50px auto;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -28,11 +29,19 @@ grid-template-columns: repeat(2,1fr);
 }
 #container{
     border: 0px solid green;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    justify-content: space-between;
+   
     width: 90%;
     margin: 5px auto;
+}
+#heading{
+  border: 0px solid red;
+  padding: 5px;
+  margin-bottom:20px ;
+  text-align: center;
+  color:#17274a;
+  font-family:fantasy;
 }
 #navadmin{
   border: 0px solid green;
@@ -48,6 +57,8 @@ grid-template-columns: repeat(2,1fr);
 
 #card{
   border: 0px solid green;
+  padding: 10px;
+ 
 
   
 }

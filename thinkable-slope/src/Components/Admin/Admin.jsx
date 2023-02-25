@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./admin.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Input, Button, Stack, Box } from "@chakra-ui/react";
+import { Input, Button, Stack, Box, Heading } from "@chakra-ui/react";
 import Swal from "sweetalert2";
 
 import { getRequest, postRequest } from "../../Redux/AdminReducer/action";
@@ -51,8 +51,8 @@ export const  Admin= () => {
   // console.log(women);
   return (
     <div>
-      {/* <NavAdmin /> */}
-      <h1 style={{textAlign:"center"}}>Wecome Admin😎</h1>
+    
+      <Heading size="md" style={{textAlign:"center",color:"blue",padding:"10px"}}>Wecome Admin😎</Heading>
       <div id={styles.container}>
         <Box id={styles.first}>
           {women.map((ele) => {
@@ -65,6 +65,7 @@ export const  Admin= () => {
           })}
         </Box>
         <Box id={styles.second}>
+          <Heading id ={styles.heading} as={"h4"} size="md">Add Product</Heading>
           <form>
             <Stack spacing={4}>
               <Input
