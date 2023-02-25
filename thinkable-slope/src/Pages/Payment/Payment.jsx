@@ -1,4 +1,4 @@
-import { Box, Button, Center, Divider, FormControl, FormLabel, Heading, HStack, Input, PinInput, PinInputField, Radio, RadioGroup, Select, Stack, VStack } from '@chakra-ui/react';
+import { Box, Button, Center, Divider, FormControl, FormLabel, Heading, HStack, Input, PinInput, PinInputField, Radio, RadioGroup, Select, Spinner, Stack, VStack } from '@chakra-ui/react';
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
@@ -20,6 +20,8 @@ const initialState = {
 };
 
 const Payment = () => {
+    
+     const [isButLoading, setIsButLoading] = useState(false);
   const [data, setdata] = useState(initialState);
   let dispatch = useDispatch()
 
@@ -56,8 +58,15 @@ const Payment = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(postRequestAddress(data));
+
     setdata(initialState);
-    navigate("/paymentmethod");
+    setIsButLoading(true);
+    setTimeout(() => {
+      
+      setIsButLoading(false);
+      navigate("/paymentmethod");
+    }, 2000);
+  
     //  Swal.fire("", "Product added!", "success");
   };
 
@@ -316,18 +325,26 @@ const Payment = () => {
           </div>
 
           <button onClick={handleSubmit} className={styles.bookbtn}>
-            Review Order
+            {!isButLoading && `  Review Order `}
+            {isButLoading && (
+              <Spinner
+                thickness="4px"
+                speed="0.55s"
+                emptyColor="gray.200"
+                color="#17274a"
+                size="lg"
+              />
+            )}
           </button>
         </div>
         <div id={styles.two}>
           <div id={styles.third}>
-           
             <div className={styles.Order_summmary_div}>
               <p>ORDER SUMMARY</p>
               <p>Subtotal : {totalprice.toFixed(2)}</p>
               <p>Shipping Economy Ground : $ 5.00</p>
               <p>Sales Tax : $ 0.65</p>
-              <p>Estimated Total:$ {(totalprice+5+0.65).toFixed(2)}</p>
+              <p>Estimated Total:$ {(totalprice + 5 + 0.65).toFixed(2)}</p>
             </div>
           </div>
           <div className={styles.fourth}>

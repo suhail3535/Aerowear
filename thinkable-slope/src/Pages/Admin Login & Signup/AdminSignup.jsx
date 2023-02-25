@@ -71,7 +71,9 @@ const AdminSignup = () => {
                 position: "bottom-right",
             });
             dispatch({ type: "reset" });
-            navigate("/adminlogin");
+             navigate("/adminlogin");
+             window.location.reload();
+           
         } else {
             toast({
                 title: "Details Missing",
