@@ -8,7 +8,6 @@ import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
 import { useLocation, useSearchParams } from "react-router-dom";
 import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
 
-
 const Men = () => {
     const [sidebar, setSidebar] = useState(false);
     const { products, isLoading, isError } = useSelector((store) => {
@@ -40,10 +39,8 @@ const Men = () => {
 
     useEffect(() => {
         if (rating || order) {
-
             let param = {};
             order && (param.order = order);
-
 
             rating && (param.rating = rating);
             setSearchParama(param);
@@ -65,10 +62,8 @@ const Men = () => {
     }, [location.search]);
 
     function handleSort(e) {
-
         setOrder(e.target.value);
     }
-
 
     function Sidebar() {
         setSidebar(!sidebar);
@@ -84,7 +79,6 @@ const Men = () => {
                 <Navbar2 />
             </div>
             <FilterNavbar handleSort={handleSort} Sidebar={Sidebar} />
-
 
             {isLoading && (
                 <img
@@ -106,7 +100,6 @@ const Men = () => {
                                     border: "0px solid red",
                                 }}>
                                 <input
-
                                     type="checkbox"
                                     value={1}
                                     onChange={handleChange}
@@ -117,7 +110,6 @@ const Men = () => {
                                 </label>
                                 <br />
                                 <input
-
                                     type="checkbox"
                                     value={2}
                                     onChange={handleChange}
@@ -128,7 +120,6 @@ const Men = () => {
                                 </label>
                                 <br />
                                 <input
-
                                     type="checkbox"
                                     value={3}
                                     onChange={handleChange}
@@ -139,7 +130,6 @@ const Men = () => {
                                 </label>
                                 <br />
                                 <input
-
                                     type="checkbox"
                                     value={4}
                                     onChange={handleChange}
@@ -150,7 +140,6 @@ const Men = () => {
                                 </label>
                                 <br />
                                 <input
-                                    
                                     type="checkbox"
                                     value={5}
                                     onChange={handleChange}
@@ -162,30 +151,37 @@ const Men = () => {
                                 <br />
                             </div>
                             <p>Sort By Size</p>
-                        <div style={{ width: "50%", margin: "auto" }}>
-                            <input name="size" type="radio" defaultChecked={true}/>
-                            <label >XS</label><br />
-                            <input name="size" type="radio" />
-                            <label >Small</label><br />
-                            <input name="size" type="radio" />
-                            <label >Large</label><br />
-                            <input name="size" type="radio" />
-                            <label >Medium</label><br />
-                            <input name="size" type="radio" />
-                            <label >XL</label><br />
-
-            
-
+                            <div style={{ width: "50%", margin: "auto" }}>
+                                <input
+                                    name="size"
+                                    type="radio"
+                                    defaultChecked={true}
+                                />
+                                <label>XS</label>
+                                <br />
+                                <input name="size" type="radio" />
+                                <label>Small</label>
+                                <br />
+                                <input name="size" type="radio" />
+                                <label>Large</label>
+                                <br />
+                                <input name="size" type="radio" />
+                                <label>Medium</label>
+                                <br />
+                                <input name="size" type="radio" />
+                                <label>XL</label>
+                                <br />
+                            </div>
                         </div>
                     </div>
                 ) : null}
-
                 <div className={styles.product_div}>
                     {products.map((el) => (
                         <ProductCard {...el} key={el.key} />
                     ))}
                 </div>
             </div>
+
             <ExtraInfo />
         </>
     );
