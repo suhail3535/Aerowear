@@ -1,5 +1,5 @@
 import axios from "axios";
-import {  DELETE_SUCCESS,  GET_SUCCESS, PATCH_SUCCESS, POST_FAILURE, POST_REQUEST, POST_SUCCESS } from "./actiontype"
+import {  DELETE_SUCCESS,  GET_SUCCESS, PATCH_SUCCESS, POST_ADDRESS_SUCCESS, POST_FAILURE, POST_REQUEST, POST_SUCCESS } from "./actiontype"
 
 
 
@@ -7,18 +7,20 @@ import {  DELETE_SUCCESS,  GET_SUCCESS, PATCH_SUCCESS, POST_FAILURE, POST_REQUES
 export const getpostRequest = () => {
     return{type:POST_REQUEST}
 }
-export const getpostSuccess = (payload) => {
-  return { type: POST_SUCCESS,payload };
-};
+
+
 export const getpostFailure = () => {
   return { type: POST_FAILURE };
 };
-
+export const getpostSuccess = (payload) => {
+  return { type: POST_SUCCESS, payload };
+};
 
 // getrequest
 export const getdataSuccess = (payload) => {
   return { type: GET_SUCCESS,payload };
 };
+
 
 // deleterequest
 export const deldatasuccess = () => {
@@ -41,6 +43,7 @@ export const postRequest = (payload) => (dispatch) => {
       dispatch(getpostFailure());
     });
 };
+
 
 export const getRequest = () => (dispatch) => {
   dispatch(getpostRequest());

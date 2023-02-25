@@ -1,19 +1,72 @@
 import { Box, Button, Center, Divider, FormControl, FormLabel, Heading, HStack, Input, PinInput, PinInputField, Radio, RadioGroup, Select, Stack, VStack } from '@chakra-ui/react';
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
+import CartMap from '../../Components/CartMap/Cartmap';
 import styles from "./Payment.module.css"
+import { useDispatch, useSelector } from "react-redux";
+import { postRequestAddress } from '../../Redux/UserReducer/action';
+
+const initialState = {
+
+  firstname: "",
+  lastname: "",
+  address1: "",
+  zipcode: "",
+  city: "",
+  phone: "",
+};
+
 const Payment = () => {
+ const [data, setdata] = useState(initialState);
+ // console.log(store);
+
+
+ const dispatch = useDispatch();
+
+ const handleChange = (e) => {
+   const { name, value } = e.target;
+   setdata((prev) => {
+     return { ...prev, [name]: name === "phone" ? +value : value };
+   });
+   // console.log(data)
+ };
+
+ const handleSubmit = (e) => {
+   e.preventDefault();
+   dispatch(postRequestAddress(data));
+   setdata(initialState);
+     navigate("/paymentmethod");
+  //  Swal.fire("", "Product added!", "success");
+ };
+
+let cartData = JSON.parse(localStorage.getItem("cart"));
+
+let totalprice;
+if (cartData == null) {
+  totalprice = 0;
+} else {
+  totalprice = cartData.reduce((acc, el) => {
+    return acc + Number(el.price);
+  }, 0);
+}
+
+function HandleRemove(i) {
+  console.log(i);
+}
+
   const navigate = useNavigate()
   
-  const handleClick = () => {
-navigate("/paymentmethod");
+//   const handleClick = () => {
+//     navigate("/paymentmethod");
+//      Swal.fire("", "Redirect to payment method!", "success");
 
-}
+// }
 
 
   return (
     <div>
-      <Heading as="h2" size="lg">
+      <Heading marginLeft={20} as="h2" size="lg">
         1.Shipping
       </Heading>
 
@@ -23,7 +76,7 @@ navigate("/paymentmethod");
         <div id={styles.one}>
           <VStack
             align="flex-start"
-            border={"2px solid green"}
+            border={"1px solid rgb(243, 237, 237)"}
             marginBottom={"40px"}
             spacing={10}
             padding={10}
@@ -33,6 +86,9 @@ navigate("/paymentmethod");
                 <FormControl>
                   <FormLabel>First Name*</FormLabel>
                   <Input
+                    name="firstname"
+                    value={data.firstname}
+                    onChange={handleChange}
                     style={{
                       border: "1px solid black",
                       height: "50px",
@@ -46,6 +102,9 @@ navigate("/paymentmethod");
                     Last Name*
                   </FormLabel>
                   <Input
+                    name="lastname"
+                    value={data.lastname}
+                    onChange={handleChange}
                     style={{
                       border: "1px solid black",
                       height: "50px",
@@ -60,6 +119,9 @@ navigate("/paymentmethod");
               <FormControl>
                 <FormLabel>Address 1*</FormLabel>
                 <Input
+                  name="address1"
+                  value={data.address1}
+                  onChange={handleChange}
                   style={{ border: "1px solid black", height: "50px" }}
                   size="lg"
                   placeholder="Address 1*"
@@ -84,7 +146,7 @@ navigate("/paymentmethod");
                         height: "50px",
                         width: "380px",
                       }}
-                      placeholder="United States"
+                      placeholder="India"
                       size="lg"
                     ></Select>
                   </FormControl>
@@ -93,6 +155,9 @@ navigate("/paymentmethod");
                       Zip Code*
                     </FormLabel>
                     <Input
+                      name="zipcode"
+                      value={data.zipcode}
+                      onChange={handleChange}
                       style={{
                         border: "1px solid black",
                         height: "50px",
@@ -109,6 +174,9 @@ navigate("/paymentmethod");
                   <FormControl>
                     <FormLabel>City*</FormLabel>
                     <Input
+                      name="city"
+                      value={data.city}
+                      onChange={handleChange}
                       style={{
                         border: "1px solid black",
                         height: "50px",
@@ -131,11 +199,11 @@ navigate("/paymentmethod");
                       placeholder="State"
                       size="lg"
                     >
-                      <option value="Select">Alabama</option>
-                      <option value="Select">Florida</option>
-                      <option value="Select">Utah</option>
-                      <option value="Select">Washington</option>
-                      <option value="Select">West Virginia</option>
+                      <option value="Select">Uttar Pradesh</option>
+                      <option value="Select">Delhi</option>
+                      <option value="Select">Mumbai</option>
+                      <option value="Select">Rajesthan</option>
+                      <option value="Select">Jaipur</option>
                     </Select>
                   </FormControl>
                 </HStack>
@@ -147,6 +215,9 @@ navigate("/paymentmethod");
                 <FormControl>
                   <FormLabel>Phone*</FormLabel>
                   <Input
+                    name="phone"
+                    value={data.phone}
+                    onChange={handleChange}
                     style={{
                       border: "1px solid black",
                       height: "50px",
@@ -191,7 +262,7 @@ navigate("/paymentmethod");
           </Heading>
           <div
             style={{
-              border: "1px solid red",
+              border: "0px solid red",
               height: "auto",
               marginTop: "10px",
               padding: "20px",
@@ -230,13 +301,28 @@ navigate("/paymentmethod");
             </RadioGroup>
           </div>
 
-          <button onClick={handleClick} className={styles.bookbtn}>
-            {" "}
-            CONTINUE BILLING
+          <button onClick={handleSubmit} className={styles.bookbtn}>
+            Review Order
           </button>
         </div>
         <div id={styles.two}>
-          <div id={styles.third}></div>
+          <div id={styles.third}>
+            {/* {cartData.map((ele) => {
+              return (
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)" }}>
+                  <img width={100} src={ele.image} alt="" />
+                  <p>{ele.name}</p>
+                </div>
+              );
+            })} */}
+            <div className={styles.Order_summmary_div}>
+              <p>ORDER SUMMARY</p>
+              <p>Subtotal : {totalprice}</p>
+              <p>Shipping Economy Ground : $ 5.00</p>
+              <p>Sales Tax : $ 0.65</p>
+              <p>Estimated Total:$ {(totalprice + 5.0 + 0.65).toFixed(2)}</p>
+            </div>
+          </div>
           <div className={styles.fourth}>
             <Heading textAlign={"Center"} as={"h4"} size={"sm"}>
               Help?

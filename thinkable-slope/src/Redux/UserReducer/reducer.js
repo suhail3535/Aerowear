@@ -1,18 +1,14 @@
 import {
-  DELETE_SUCCESS,
+    DELETE_SUCCESS,
   GET_ADDRESS_SUCCESS,
-
-  GET_SUCCESS,
-  PATCH_SUCCESS,
   POST_ADDRESS_SUCCESS,
   POST_FAILURE,
   POST_REQUEST,
-  POST_SUCCESS,
 } from "./actiontype";
 
 const initialState = {
   isLoading: false,
-  women: [],
+  address: [],
 
   isError: false,
 };
@@ -24,24 +20,13 @@ export const reducer = (state = initialState, { type, payload }) => {
     case POST_FAILURE:
       return { ...state, isError: true, isLoading: false };
 
-    case POST_SUCCESS:
-      return {
-        ...state,
-        isLoading: false,
-        women: [payload, ...state.women],
-      };
-   
-    //  getreqest function
+    case POST_ADDRESS_SUCCESS:
+      return { ...state, isLoading: false };
 
-    case GET_SUCCESS:
-      return { ...state, isLoading: false, women: payload };
-  
-
-    //  deleterequest
+    case GET_ADDRESS_SUCCESS:
+      return { ...state, isLoading: false, address: payload };
     case DELETE_SUCCESS:
-      return { ...state, isLoading: false };
-    case PATCH_SUCCESS:
-      return { ...state, isLoading: false };
+      return { ...state, isLoading: false,isError:true };
     default:
       return state;
   }
