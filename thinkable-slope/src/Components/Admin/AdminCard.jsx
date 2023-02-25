@@ -58,6 +58,7 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
       <div>
         <img
           style={{
+            border:"0px solid green",
             width: "70%",
             textAlign: "center",
             marginLeft: "50PX",
