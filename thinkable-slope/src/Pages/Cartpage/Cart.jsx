@@ -19,7 +19,6 @@ const Cart = () => {
 
     return (
         <div>
-            {" "}
             {cartData.length == 0 ? (
                 <EmptyCart />
             ) : (

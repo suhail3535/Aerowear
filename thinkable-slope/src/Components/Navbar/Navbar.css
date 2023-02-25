@@ -58,7 +58,7 @@
 }
 .wrapperLeft > div {
     border-radius: 5px;
-    transition: all 0.5s;
+    transition: all 0.2s ease-in-out;
 }
 .wrapperLeft > div:hover {
     border-radius: 5px;
@@ -70,7 +70,7 @@
 }
 
 .wrapperLeft a:hover {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
     color: #17274a;
 }
@@ -101,7 +101,7 @@
     width: 240px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     list-style: none;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     text-align: left;
     display: none;
     position: absolute;
@@ -125,7 +125,7 @@
     margin: 20px;
     background-color: #17274a;
     color: white;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .log:hover {
     border: 1px solid #17274a;
@@ -139,7 +139,7 @@
     cursor: pointer;
     border-radius: 25px;
     margin: 20px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .reg:hover {
     color: white;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Navbar.css";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded";
@@ -36,12 +36,10 @@ const Navbar = () => {
         window.open(url);
     };
     const { isOpen, onOpen, onClose } = useDisclosure();
-
-    const [iSOpen, setIsOpen] = useState(false);
-
-    // const handleMenuClick = () => {
-    //     setIsOpen(!iSOpen);
-    // };
+    // const newfile = cartData;
+    // useEffect(() => {
+    //     window.location.reload();
+    // }, [newfile]);
 
     return (
         <div>
