@@ -23,9 +23,10 @@ export const DeleteCartSuccess = () => {
 
 export const getCartProducts = () => (dispatch) => {
     dispatch(getCartProductsRequestAction());
-    axios
+   return axios
         .get("http://localhost:8080/cart")
         .then((res) => {
+           
             dispatch(getCartProductsSuccessAction(res.data));
         })
         .catch((err) => {

@@ -20,7 +20,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Payment.module.css";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import { useDispatch, useSelector } from "react-redux";
-import {getRequestAddress } from "../../Redux/UserReducer/action";
+import { getRequestAddress } from "../../Redux/UserReducer/action";
 
 import PaymentCard from "./PaymentCard";
 import { Button } from "@mui/material";
@@ -28,47 +28,54 @@ import { useNavigate } from "react-router-dom";
 
 
 const PaymentMethod = () => {
-    const [isButLoading, setIsButLoading] = useState(false);
-  let cartData = JSON.parse(localStorage.getItem("cart"));
+  const [isButLoading, setIsButLoading] = useState(false);
   const navigate = useNavigate();
 
-let totalprice;
-if (cartData == null) {
-  totalprice = 0;
-} else {
-  totalprice = cartData.reduce((acc, el) => {
-    return acc + Number(el.price);
-  }, 0);
-}
+
 
   const handlePay = () => {
-      setIsButLoading(true);
- setTimeout(() => {
-   // alert("Added To Favourite Page");
-   
+    setIsButLoading(true);
+    setTimeout(() => {
+      // alert("Added To Favourite Page");
 
-   setIsButLoading(false);
-   navigate("/");
- }, 3000);
-   
-    
+
+      setIsButLoading(false);
+      navigate("/");
+    }, 3000);
+
+
   }
 
   const dispatch = useDispatch();
   const newData = useSelector((store) => {
     //  console.log(store)
-     return {
-       address: store.UserReducer.address,
-       isLoading: store.isLoading,
-       isError: store.isError,
-     };
-   });
+    return {
+      address: store.UserReducer.address,
+      isLoading: store.isLoading,
+      isError: store.isError,
+      products: store.CartReducer.products,
+    };
+  });
+
+  let totalprice;
+  if (newData.products.length == 0) {
+    totalprice = 0
+  } else {
+    totalprice = newData.products.reduce((acc, el) => {
+
+      return acc + Number(el.price)
+    }, 0)
+  }
+
+
+
+
   const { address } = newData;
-  
+
   useEffect(() => {
     dispatch(getRequestAddress());
   }, []);
-// console.log(newData)
+  // console.log(newData)
   return (
     <div>
       <Heading
@@ -268,7 +275,7 @@ if (cartData == null) {
         </div>
       </div>
       <button onClick={handlePay} className={styles.bookbtn2}>
-        {!isButLoading && ` Pay Now ${(totalprice + 5.0 + 0.65).toFixed(2)}`}
+        {!isButLoading && ` Pay Now ${( totalprice+5.0 + 0.65).toFixed(2)}`}
 
         {isButLoading && (
           <Spinner
