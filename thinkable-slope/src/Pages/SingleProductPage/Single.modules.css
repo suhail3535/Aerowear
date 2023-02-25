@@ -1,63 +1,77 @@
 .product-all {
-  border: 1px solid gray;
-  width: 80%;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px auto;
+    border: 0px solid gray;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    border-radius: 15px;
+    justify-content: space-between;
+    margin: 20px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .product-one {
-  border: 0px solid blue;
-  width: 15%;
-  margin-right: 10px;
+    border: 0px solid blue;
+    width: 15%;
+    margin-right: 20px;
+}
+.product-one > div {
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.product-one > div:hover {
+    box-shadow: 10px 10px 0px 0px rgba(23, 39, 74, 1);
 }
 .product-two {
-  border: 0px solid rgb(128, 0, 119);
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+    border: 1px solid rgb(128, 0, 119);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .product-detail {
-  padding: 10px;
-  width: 80%;
-  height: auto;
-  border: 2px solid green;
+    padding: 10px;
+    width: 80%;
+    height: auto;
+    border: 2px solid green;
 }
 .product-card {
-  border: 0px solid yellow;
-  width: 95%;
-  margin-right: 10px;
+    border: 1px solid yellow;
+    width: 95%;
+    /* margin-right: 10px; */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.product-card > img:hover {
+    box-shadow: 10px 10px 0px 0px rgba(23, 39, 74, 1);
 }
 .product-card img {
-  border: 0px solid pink;
-  height: 80%;
-  padding: 0px;
+    border: 0px solid pink;
+    height: 80%;
+    padding: 0px;
 }
 .btn {
-  border: 0px solid red;
-  width: 90%;
-  margin:  1px auto;
-  padding: 20px;
-  
- 
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
+    border: 0px solid red;
+    width: 90%;
+    margin: 1px auto;
+    padding: 20px;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
 }
 .delivery {
-  background-color: none;
-  border: 1px solid black;
-  margin-top: 20px;
-  height: 40px;
-  width: 150px;
-  border-radius: 40px 40px;
+    background-color: none;
+    border: 1px solid black;
+    margin-top: 20px;
+    height: 40px;
+    width: 150px;
+    border-radius: 40px 40px;
 }
 .size {
-  display: flex;
-  border: 1px solid gray;
-  height: 50px;
-  margin-top: 20px;
-  display: flex;
+    display: flex;
+    border: 1px solid gray;
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
     border-radius: 10px 10px;
-  justify-content: space-between;
+    justify-content: space-between;
 }

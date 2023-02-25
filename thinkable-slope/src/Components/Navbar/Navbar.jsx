@@ -111,7 +111,7 @@ const Navbar = () => {
                                 bg="gray.300"
                                 color="black">
                                 <Link
-                                    to="/payment"
+                                    to="/jeans"
                                     smooth={true}
                                     offset={-79}
                                     duration={500}
@@ -262,39 +262,39 @@ const Navbar = () => {
                             </Tooltip>
                         </div>
                         <div className="navAdmin">
-                            <Tooltip
-                                hasArrow
-                                label="Admin"
-                                bg="gray.300"
-                                color="black">
-                                {dataAdmin === 0 ? (
-                                    <Link
-                                        to="/admin"
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={500}
-                                        className="nav-link">
-                                        <AdminPanelSettingsOutlinedIcon />
-                                    </Link>
-                                ) : (
+                            <button className="hover-account">
+                                <Tooltip
+                                    hasArrow
+                                    label="Account"
+                                    bg="gray.300"
+                                    color="black">
+                                    <AdminPanelSettingsOutlinedIcon />
+                                </Tooltip>
+                            </button>
+                            <ul className="all-log">
+                                <li className="log">
                                     <Link
                                         to="/adminlogin"
                                         smooth={true}
                                         offset={-100}
                                         duration={500}
                                         className="nav-link ">
-                                        <AdminPanelSettingsOutlinedIcon />
+                                        Admin Login
+                                        {/* <AdminPanelSettingsOutlinedIcon /> */}
                                     </Link>
-                                )}
-                                {/* <Link
-                                    to="/adminlogin"
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={500}
-                                    className="nav-link adminlogin">
-                                    <AdminPanelSettingsOutlinedIcon />
-                                </Link> */}
-                            </Tooltip>
+                                </li>
+                                <li className="reg">
+                                    <Link
+                                        to="/adminsignup"
+                                        smooth={true}
+                                        offset={-100}
+                                        duration={500}
+                                        className="nav-link">
+                                        Admin Signup
+                                        {/* <AdminPanelSettingsOutlinedIcon /> */}
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 

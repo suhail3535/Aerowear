@@ -1,5 +1,4 @@
-
-.limited_Edition_div{
+.limited_Edition_div {
     height: 40px;
     display: flex;
     align-items: center;
@@ -7,57 +6,62 @@
     width: 100%;
 }
 
-.limited_Edition_div p{
+.limited_Edition_div p {
     margin-right: 0.625rem;
     font-family: "Visuelt Pro", sans-serif;
     font-size: 0.75rem;
     font-weight: 800;
     line-height: 0.9375rem;
-    color: #cc1632
+    color: #cc1632;
 }
-.productCard_name{
+.productCard_name {
     font-size: 14px;
     font-weight: normal;
     line-height: 1.4;
     color: #000;
     font-weight: 700;
 }
-.ProductCard_price_maindiv{
+.ProductCard_price_maindiv {
     height: 25px;
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
-.productCard_price{
+.productCard_price {
     color: #000;
     padding-right: 0.4375rem;
     font-weight: 600;
-    
 }
-.productCard_price span{
-    font-size: .75rem;
+.productCard_price span {
+    font-size: 0.75rem;
     line-height: 0.9375rem;
     color: #828282;
     padding-left: 10px;
     font-weight: 400;
 }
-.product_image{
+.product_image {
     width: 100%;
 }
-.cart_image{
+.cart_image {
     cursor: pointer;
 }
+.parent_card {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.parent_card:hover {
+    box-shadow: 10px 10px 0px 0px rgba(23, 39, 74, 1);
+    left: -5%;
+    top: -5%;
+}
 
-
-
-@media all and (max-width: 1100px) and (min-width:601px){
-    .limited_Edition_div{
+@media all and (max-width: 1100px) and (min-width: 601px) {
+    .limited_Edition_div {
         width: 100%;
     }
 }
 
-
-@media all and (max-width: 601px) and (min-width:100px){
-    .limited_Edition_div{
+@media all and (max-width: 601px) and (min-width: 100px) {
+    .limited_Edition_div {
         width: 100%;
     }
 }

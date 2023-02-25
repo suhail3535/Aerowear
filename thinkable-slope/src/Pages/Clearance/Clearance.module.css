@@ -9,7 +9,7 @@
 .Navbar2_mainalignment_div{
     display: flex;
     align-items: center;
-    
+
 }
 .clearance_Sub_div{
     display: flex;
@@ -37,30 +37,43 @@
     color: #1d3451
 
 }
+
 .product_sidebar_main_div{    
+
     display: flex;
 }
 .sidebar_div{
     width: 20%;
-    height: 800px;
+    /* height: 800px; */
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px;
 }
 .product_div{
     width: 95%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;   
+    gap: 20px;
     margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .Loderimage{
     display: block;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 .sidebar_subdiv1_div{
-    width: 100%;    
-    height: 200px;
+
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    /* height: 200px; */
+    border: 0px solid red;
+
     align-items: center;
-   
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .sidebar_subdiv1_div p{

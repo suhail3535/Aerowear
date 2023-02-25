@@ -2,8 +2,12 @@ import BasicFn from "../Stars";
 import styles from "./ProductCard.module.css";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+
+import { style } from "@mui/system";
+
 import { useDispatch } from 'react-redux';
 import { postCartRequest } from "../../Redux/CartReducer/Action";
+
 
 
 const ProductCard = ({ image, name, price, Rating, id }) => {
@@ -22,10 +26,15 @@ const ProductCard = ({ image, name, price, Rating, id }) => {
 
     return (
         <>
-            <div>
+
+            <div className={styles.parent_card}
+              >
+
+         
                 <Link to={`/women/${id}`}>
                     <img className={styles.product_image} src={image} alt="" />
                 </Link>
+
                 <div className={styles.limited_Edition_div}>
                     <p>Limited Edition</p>
                     <div className={styles.cart_image}>

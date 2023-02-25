@@ -1,10 +1,9 @@
-
-.FilterNavbar_main_div{
+.FilterNavbar_main_div {
     height: 90px;
     display: flex;
     justify-content: space-between;
 }
-.Filter_Buttn_div{
+.Filter_Buttn_div {
     width: 15%;
     height: 90px;
     margin-left: 40px;
@@ -12,7 +11,7 @@
     align-items: center;
     justify-content: center;
 }
-.Sort_Button_div{
+.Sort_Button_div {
     width: 25%;
     height: 90px;
     margin-right: 40px;
@@ -20,8 +19,8 @@
     align-items: center;
     justify-content: space-around;
 }
-.Filter_Buttn_div button{
-    font-size: .875rem;
+.Filter_Buttn_div button {
+    font-size: 0.875rem;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -36,8 +35,8 @@
     cursor: pointer;
     width: 70%;
 }
-.Sort_Button{
-    font-size: .875rem;
+.Sort_Button {
+    font-size: 0.875rem;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -50,56 +49,49 @@
     border-radius: 10rem;
     background-color: #fff;
     cursor: pointer;
-    width: 45%;   
+    width: 45%;
 }
-.Sort_Button option{
-    font-weight: 700;    
+.Sort_Button option {
+    font-weight: 700;
 }
 
-
-@media all and (max-width: 1100px) and (min-width:601px){
-    .Filter_Buttn_div{
-        width: 30%
+@media all and (max-width: 1100px) and (min-width: 601px) {
+    .Filter_Buttn_div {
+        width: 30%;
     }
-    .Sort_Button_div{
+    .Sort_Button_div {
         width: 40%;
         margin-right: 0px;
         flex-direction: column;
     }
-    .Sort_Button{
+    .Sort_Button {
         width: 50%;
     }
-    .FilterNavbar_main_div{
+    .FilterNavbar_main_div {
         justify-content: space-between;
     }
-    
-   
-
-
 }
 
-@media all and (max-width: 601px) and (min-width:100px){
-    .Filter_Buttn_div{
+@media all and (max-width: 601px) and (min-width: 100px) {
+    .Filter_Buttn_div {
         width: 40%;
         margin-left: 0px;
     }
-    .Filter_Buttn_div button{
+    .Filter_Buttn_div button {
         width: 100%;
         margin-left: 0px;
     }
-    .Sort_Button_div{
-        width: 40%;      
+    .Sort_Button_div {
+        width: 40%;
         flex-direction: column;
     }
-    .Sort_Button{
+    .Sort_Button {
         width: 100%;
     }
-    .FilterNavbar_main_div{
+    .FilterNavbar_main_div {
         justify-content: space-between;
     }
-    .Filter_Buttn_div button{
+    .Filter_Buttn_div button {
         border-radius: 10px;
     }
-
 }
-

@@ -1,6 +1,7 @@
 import React from "react";
 
 import CardCarousel from "../../Components/CardCarousel/CardCarousel";
+import CardCarousel2 from "../../Components/CardCarousel/CardCarousel2";
 import Cookies from "../../Components/Cookies/Cookies";
 // import Cookies from "../..Components/Cookies/Cookies.jsx"
 import style from "./HomePage.css";
@@ -145,9 +146,71 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="snd-hlf-slide">
+                    <div className="start-crs">
+                        <CardCarousel2 />
+                    </div>
+                    <div className="snd-text-wrap">
+                        <p className="mid-text-2">
+                            <strong>Guys Shorts</strong>
+                        </p>
+                        <p className="mid-text-3">
+                            $<span style={{ fontSize: "61px" }}>12</span>
+                            &amp; Up
+                        </p>
+                        <p className="mid-text-4">
+                            New Premium fabric elevated
+                            <br />
+                            with extra stretch for comfort
+                            <br />
+                            and 360° of freedom
+                        </p>
+                        <a href="/" className="btn-card">
+                            Guys Shorts
+                        </a>
+                    </div>
+
+                    <div className="right-boy-card">
+                        <img
+                            src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwe3f82a4b/images/homepage/2020/060420/GUYS%20SHORTS%20PHOTO@2x.jpg"
+                            alt="cute-cozy"
+                        />
+                    </div>
+                </div>
+
+                <div className="end-jean">
+                    {/* <div className="end-jean-img"> */}
+                    <img
+                        src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw50dec257/images/homepage/2020/051320/ECO_DESKTOP@2x-min.jpg"
+                        alt="eco"
+                        class="hp-hidden-mobile b-lazy b-loaded"
+                    />
+
+                    <div className="end-jean-content">
+                        <div class="text-wrap">
+                            <div className="end-jean-text">
+                                <img
+                                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw195f8fb0/images/landing-page/032720-sustainability-lp/desktop/SPRING20_SUSTAINABILITY_LP_RECYCLE_ICON.svg"
+                                    alt=""
+                                />
+                                <p>
+                                    At Aero, we're committed to a better,
+                                    brighter future. <br />
+                                    do better, look better, feel better... it's
+                                    in our jeans.
+                                </p>
+                            </div>
+                            <div className="end-jean-cta-wrap">
+                                <a href="/">Aero's Sustainability Efforts</a>
+                            </div>
+                        </div>
+                    </div>
+                    {/* </div> */}
+                </div>
             </div>
 
-<Cookies />
+            <Cookies />
         </div>
     );
 };
