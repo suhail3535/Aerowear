@@ -8,6 +8,7 @@ import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
+import { GrUserAdmin } from "react-icons/gr";
 
 import { Link } from "react-router-dom";
 import {
@@ -27,6 +28,7 @@ import {
 } from "@chakra-ui/react";
 import {} from "@mui/material";
 import { SearchIcon } from "@chakra-ui/icons";
+import { shallowEqual, useSelector } from "react-redux";
 
 let dataAdmin = JSON.parse(localStorage.getItem("adminData")) || [];
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
@@ -40,7 +42,13 @@ const Navbar = () => {
     // useEffect(() => {
     //     window.location.reload();
     // }, [newfile]);
-
+    const { products, isLoading, isError } = useSelector((store) => {
+        return {
+            products: store.CartReducer.products,
+            isLoading: store.CartReducer.isLoading,
+            isError: store.CartReducer.isError,
+        };
+    }, shallowEqual);
     return (
         <div>
             {/* ---PreNavBar--- */}
@@ -107,22 +115,6 @@ const Navbar = () => {
                         <div>
                             <Tooltip
                                 hasArrow
-                                label="Jeans"
-                                bg="gray.300"
-                                color="black">
-                                <Link
-                                    to="/jeans"
-                                    smooth={true}
-                                    offset={-79}
-                                    duration={500}
-                                    className="nav-link Jeans">
-                                    Jeans
-                                </Link>
-                            </Tooltip>
-                        </div>
-                        <div>
-                            <Tooltip
-                                hasArrow
                                 label="Clearance"
                                 bg="gray.300"
                                 color="black">
@@ -133,6 +125,22 @@ const Navbar = () => {
                                     duration={500}
                                     className="nav-link Clearance">
                                     Clearance
+                                </Link>
+                            </Tooltip>
+                        </div>
+                        <div>
+                            <Tooltip
+                                hasArrow
+                                label="Jeans"
+                                bg="gray.300"
+                                color="black">
+                                <Link
+                                    to="/"
+                                    smooth={true}
+                                    offset={-79}
+                                    duration={500}
+                                    className="nav-link Jeans">
+                                    Jeans
                                 </Link>
                             </Tooltip>
                         </div>
@@ -254,8 +262,8 @@ const Navbar = () => {
                                         borderRadius={"8px"}
                                         variant="subtle"
                                         colorScheme="green">
-                                        {cartData.length !== 0
-                                            ? cartData.length
+                                        {products.length !== 0
+                                            ? products.length
                                             : ""}
                                     </Badge>
                                 </Link>
@@ -265,7 +273,7 @@ const Navbar = () => {
                             <button className="hover-account">
                                 <Tooltip
                                     hasArrow
-                                    label="Account"
+                                    label="Admin"
                                     bg="gray.300"
                                     color="black">
                                     <AdminPanelSettingsOutlinedIcon />
@@ -291,7 +299,7 @@ const Navbar = () => {
                                         duration={500}
                                         className="nav-link">
                                         Admin Signup
-                                        {/* <AdminPanelSettingsOutlinedIcon /> */}
+                                        {/* <GrUserAdmin /> */}
                                     </Link>
                                 </li>
                             </ul>
