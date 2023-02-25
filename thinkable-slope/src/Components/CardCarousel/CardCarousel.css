@@ -1,0 +1,21 @@
+.card-carousel {
+    border: 0px solid red;
+    width: 98%;
+}
+.single-card {
+    border: 0px solid green;
+    text-align: center;
+    /* width: 50%; */
+    margin: auto;
+}
+.img-card {
+    border: 0px solid purple;
+    width: 70%;
+    margin: auto;
+    object-fit: cover;
+}
+.text-card {
+    font-size: 15px;
+    font-weight: 700;
+    color: #17274a;
+}
