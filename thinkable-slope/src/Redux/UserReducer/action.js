@@ -1,6 +1,6 @@
 import axios from "axios";
 import { POST_FAILURE } from "../AdminReducer/actiontype";
-import { DELETE_SUCCESS, GET_ADDRESS_SUCCESS, POST_ADDRESS_SUCCESS, POST_REQUEST } from "./actiontype";
+import { DELETE_SUCCESS, GET_ADDRESS_SUCCESS, PATCH_SUCCESS, POST_ADDRESS_SUCCESS, POST_REQUEST } from "./actiontype";
 
 
 
@@ -61,3 +61,4 @@ export const deletedataAdd = (id) => (dispatch) => {
       dispatch(getpostFailure());
     });
 };
+

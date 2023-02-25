@@ -21,13 +21,13 @@ const PaymentCard = ({
   const handleDelete = (id) => {
     // console.log(id)
     dispatch(deletedataAdd(id)).then(() => dispatch(getRequestAddress()));
-    window.location.reload(true);
+  
     Swal.fire("", "removed !", "success");
   };
 
-  //     useEffect(() => {
-  //     dispatch(getRequestAddress());
-  // },[])
+      useEffect(() => {
+      dispatch(getRequestAddress());
+  },[])
 
   return (
     <div id={styles.card}>
@@ -48,7 +48,7 @@ const PaymentCard = ({
           
           >
             Remove
-          </button>{" "}
+          </button>
         </div>
       </div>
     </div>

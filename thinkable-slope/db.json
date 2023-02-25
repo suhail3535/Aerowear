@@ -6,6 +6,7 @@
       "name": "Cutout Convertible Crop Top",
       "price": 1500,
       "Rating": 3
+
     },
     {
       "id": 2,
@@ -13,6 +14,7 @@
       "name": "Checkered Cropped Cardigan",
       "price": 79.11,
       "Rating": 5
+
     },
     {
       "id": 3,
@@ -20,6 +22,8 @@
       "name": "Cropped Full-Zip Hooded Sweater",
       "price": 70,
       "Rating": 2
+
+
     },
     {
       "id": 4,
@@ -33,7 +37,7 @@
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw36365377/82739719_255_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "'90s Super High-Rise Baggy Premium Air Jean",
       "price": 79.12,
-      "Rating": 2
+      "Rating": "3"
     },
     {
       "id": 6,
@@ -706,6 +710,15 @@
       "city": "Hardoi",
       "phone": 8630245788,
       "id": 3
+    },
+    {
+      "firstname": "Suhail",
+      "lastname": "khan",
+      "address1": "Moh Khera Balaykot post Shahabad Distt hardoi up India 241124",
+      "zipcode": "241124",
+      "city": "Hardoi",
+      "phone": 8630245788,
+      "id": 4
     }
   ],
   "cart": [
