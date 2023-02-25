@@ -72,6 +72,7 @@ const Signup = () => {
             });
             dispatch({ type: "reset" });
             navigate("/login");
+              window.location.reload();
         } else {
             toast({
                 title: "Details Missing",

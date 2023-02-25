@@ -37,6 +37,7 @@ const Login = () => {
                     position: "top",
                 });
                 navigate("/");
+               
             } else {
                 toast({
                     title: "Wrong Credentials",

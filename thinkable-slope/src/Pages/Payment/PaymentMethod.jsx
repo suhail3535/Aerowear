@@ -33,22 +33,13 @@ const PaymentMethod = () => {
 
   const navigate = useNavigate();
 
-
-
-
   const handlePay = () => {
     setIsButLoading(true);
     setTimeout(() => {
-      // alert("Added To Favourite Page");
-
-
-
       setIsButLoading(false);
       navigate("/");
-    }, 3000);
-
-  }
-      
+    }, 2000);
+  };
 
   const dispatch = useDispatch();
   const newData = useSelector((store) => {
@@ -63,19 +54,13 @@ const PaymentMethod = () => {
   });
 
   let totalprice;
-  if (newData.products.length == 0) {
-    totalprice = 0
+  if (newData.products.length === 0) {
+    totalprice = 0;
   } else {
     totalprice = newData.products.reduce((acc, el) => {
-
-      return acc + Number(el.price)
-    }, 0)
+      return acc + Number(el.price);
+    }, 0);
   }
-
-
-
-
-
 
   const { address } = newData;
 
@@ -232,14 +217,11 @@ const PaymentMethod = () => {
                       <FormLabel marginLeft={0}>Security Code</FormLabel>
                       <HStack width="full">
                         <PinInput size="lg" type="alphanumeric" mask>
-                          <PinInputField style={{ border: "1px solid gray" }}/>
-                          <PinInputField style={{ border: "1px solid gray" }}/>
-                          <PinInputField style={{ border: "1px solid gray" }}/>
-                        
+                          <PinInputField style={{ border: "1px solid gray" }} />
+                          <PinInputField style={{ border: "1px solid gray" }} />
+                          <PinInputField style={{ border: "1px solid gray" }} />
                         </PinInput>
                       </HStack>
-
-                     
                     </FormControl>
                   </HStack>
                   <HStack id={styles.date}>
@@ -328,7 +310,7 @@ const PaymentMethod = () => {
         </div>
       </div>
       <button onClick={handlePay} className={styles.bookbtn2}>
-        {!isButLoading && ` Pay Now ${( totalprice+5.0 + 0.65).toFixed(2)}`}
+        {!isButLoading && ` Pay Now ${(totalprice + 5.0 + 0.65).toFixed(2)}`}
 
         {isButLoading && (
           <Spinner

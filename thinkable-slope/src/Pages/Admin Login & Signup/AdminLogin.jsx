@@ -23,9 +23,10 @@ const AdminLogin = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const toast = useToast();
-
+   
     const handleRegister = () => {
         navigate("/adminsignup");
+        
     };
 
     const handleSubmit = (e) => {
@@ -43,6 +44,7 @@ const AdminLogin = () => {
                     position: "top",
                 });
                 navigate("/admin");
+                 
             } else {
                 toast({
                     title: "Wrong Credentials",
