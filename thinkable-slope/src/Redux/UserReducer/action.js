@@ -26,9 +26,9 @@ export const deldatasuccess = () => {
 export const postRequestAddress = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("http://localhost:8080/address", payload)
+    .post("https://blush-drill-sari.cyclic.app/address", payload)
     .then((res) => {
-      console.log("post",res.data);
+      console.log("post", res.data);
       dispatch(getpostSuccessAddress(res.data));
     })
     .then((error) => {
@@ -39,9 +39,9 @@ export const postRequestAddress = (payload) => (dispatch) => {
 export const getRequestAddress = () => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .get("http://localhost:8080/address")
+    .get("https://blush-drill-sari.cyclic.app/address")
     .then((res) => {
-    //   console.log("get",res.data);
+      //   console.log("get",res.data);
       dispatch(getdataSuccessAddress(res.data));
     })
     .then((error) => {
@@ -52,7 +52,7 @@ export const getRequestAddress = () => (dispatch) => {
 export const deletedataAdd = (id) => (dispatch) => {
   dispatch(getpostRequest());
   return axios
-    .delete(`http://localhost:8080/address/${id}`)
+    .delete(`https://blush-drill-sari.cyclic.app/address/${id}`)
     .then((res) => {
       console.log(res.data);
       dispatch(deldatasuccess());

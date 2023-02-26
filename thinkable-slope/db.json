@@ -708,22 +708,13 @@
       "id": 3
     },
     {
-      "firstname": "Suhail",
+      "firstname": "uzair",
       "lastname": "khan",
       "address1": "Moh Khera Balaykot post Shahabad Distt hardoi up India 241124",
       "zipcode": "241124",
       "city": "Hardoi",
       "phone": 8630245788,
-      "id": 4
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "address1": "",
-      "zipcode": "",
-      "city": "",
-      "phone": "",
-      "id": 5
+      "id": 6
     }
   ],
   "cart": [

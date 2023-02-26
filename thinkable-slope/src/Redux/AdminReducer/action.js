@@ -34,7 +34,7 @@ export const deldatasuccess = () => {
 export const postRequest = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("http://localhost:8080/women", payload)
+    .post("https://blush-drill-sari.cyclic.app/women", payload)
     .then((res) => {
       console.log(res.data);
       dispatch(getpostSuccess(res.data));
@@ -48,7 +48,7 @@ export const postRequest = (payload) => (dispatch) => {
 export const getRequest = () => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .get("http://localhost:8080/women")
+    .get("https://blush-drill-sari.cyclic.app/women")
     .then((res) => {
       // console.log(res.data);
       dispatch(getdataSuccess(res.data));
@@ -60,28 +60,29 @@ export const getRequest = () => (dispatch) => {
 
 export const deletedata = (id) => (dispatch) => {
   dispatch(getpostRequest());
-  return axios.delete(`http://localhost:8080/women/${id}`).then((res) => {
-    // console.log(res.data);
-    dispatch(deldatasuccess());
-  })
-  .catch ((err) => {
-  dispatch(getpostFailure());
-})
+  return axios
+    .delete(`https://blush-drill-sari.cyclic.app/women/${id}`)
+    .then((res) => {
+      // console.log(res.data);
+      dispatch(deldatasuccess());
+    })
+    .catch((err) => {
+      dispatch(getpostFailure());
+    });
 
 }
 
 
 export const editProduct = (id, newData) => (dispatch) => {
   dispatch(getpostRequest());
-  axios.patch(`http://localhost:8080/women/${id}`, newData).then((res) => {
-    
-    dispatch({type:PATCH_SUCCESS})
-    
-    
-  }).catch((err) => {
-    
-    dispatch(getpostFailure());
-  })
+  axios
+    .patch(`https://blush-drill-sari.cyclic.app/women/${id}`, newData)
+    .then((res) => {
+      dispatch({ type: PATCH_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch(getpostFailure());
+    });
 
      
  
