@@ -30,7 +30,7 @@ const Cart = () => {
   }, []);
 
   let totalprice;
-  if (products.length == 0) {
+  if (products.length === 0) {
     totalprice = 0;
   } else {
     totalprice = products.reduce((acc, el) => {
