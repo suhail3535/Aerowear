@@ -24,7 +24,7 @@ export const DeleteCartSuccess = () => {
 export const getCartProducts = () => (dispatch) => {
     dispatch(getCartProductsRequestAction());
    return axios
-     .get("http://localhost:8080/cart")
+     .get("https://aerowearnew.cyclic.app/cart")
      .then((res) => {
        dispatch(getCartProductsSuccessAction(res.data));
      })
@@ -36,7 +36,7 @@ export const getCartProducts = () => (dispatch) => {
 export const postCartRequest = (payload) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     axios
-      .post("http://localhost:8080/cart", payload)
+      .post("https://aerowearnew.cyclic.app/cart", payload)
       .then((res) => {
         dispatch(PostCartSuccess(res.data));
       })
@@ -49,7 +49,7 @@ export const postCartRequest = (payload) => (dispatch) => {
 export const deleteCartdata = (id) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     return axios
-      .delete(`http://localhost:8080/cart/${id}`)
+      .delete(`https://aerowearnew.cyclic.app/cart/${id}`)
       .then((res) => {
         dispatch(DeleteCartSuccess());
       })
