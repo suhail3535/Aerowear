@@ -72,6 +72,7 @@ const Payment = () => {
     };
 
     const handleSubmit = (e) => {
+        setIsButLoading(true);
         e.preventDefault();
         if (
             data.firstname === "" ||
@@ -82,15 +83,16 @@ const Payment = () => {
             data.city === ""
         ) {
             // setTimeout(() => {
-                setIsButLoading(false);
-                toast({
-                    title: "Shipping Details Missing",
-                    description: "Please fill all the details",
-                    status: "warning",
-                    duration: 2500,
-                    isClosable: true,
-                    position: "bottom-right",
-                });
+            setIsButLoading(false);
+            toast({
+                title: "Shipping Details Missing",
+                description: "Please fill all the details",
+                status: "warning",
+                variant: "left-accent",
+                duration: 2500,
+                isClosable: true,
+                position: "top",
+            });
             // }, 2000);
         } else if (
             data.firstname !== "" &&
@@ -107,9 +109,10 @@ const Payment = () => {
                     title: "Please Choose a Payment Method",
                     description: "",
                     status: "warning",
+                    variant: "left-accent",
                     duration: 2500,
                     isClosable: true,
-                    position: "bottom-right",
+                    position: "top",
                 });
                 setdata(initialState);
                 navigate("/paymentmethod");
@@ -379,19 +382,22 @@ const Payment = () => {
                             <Divider />
                         </RadioGroup>
                     </div>
-
-                    <button onClick={handleSubmit} className={styles.bookbtn}>
-                        {!isButLoading && `  Review Order `}
-                        {isButLoading && (
-                            <Spinner
-                                thickness="4px"
-                                speed="0.55s"
-                                emptyColor="gray.200"
-                                color="#17274a"
-                                size="md"
-                            />
-                        )}
-                    </button>
+                    <div>
+                        <button
+                            onClick={handleSubmit}
+                            className={styles.bookbtn}>
+                            {!isButLoading && `  Review Order `}
+                            {isButLoading && (
+                                <Spinner
+                                    thickness="4px"
+                                    speed="0.55s"
+                                    emptyColor="gray.200"
+                                    color="#17274a"
+                                    size="md"
+                                />
+                            )}
+                        </button>
+                    </div>
                 </div>
                 <div id={styles.two}>
                     <div id={styles.third}>

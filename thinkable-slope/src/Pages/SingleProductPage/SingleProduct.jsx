@@ -35,8 +35,9 @@ const SingleProduct = () => {
                 description: "Product successfully added",
                 status: "success",
                 duration: 2500,
+                variant: "left-accent",
                 isClosable: true,
-                position: "bottom-right",
+                position: "top",
             });
             navigate("/cart");
         }, 2000);
@@ -49,15 +50,15 @@ const SingleProduct = () => {
             status: "success",
             duration: 2500,
             isClosable: true,
-            position: "bottom-right",
+            variant: "left-accent",
+            position: "top",
         });
         navigate("/cart");
-
-
+    }
     const getSingleProduct = (id) => {
         axios
-          .get(`http://localhost:8080/women/${id}`)
-          .then((res) => setData(res.data));
+            .get(`http://localhost:8080/women/${id}`)
+            .then((res) => setData(res.data));
     };
     const handleDelivery = () => {};
 

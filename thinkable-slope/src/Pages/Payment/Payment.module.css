@@ -56,34 +56,49 @@
 }
 
 .bookbtn {
-    background-color: green;
-    height: 60px;
-    width: 320px;
+    background-color: #17274a;
+    border: 2px solid transparent;
+
+    /* height: 60px; */
+    width: 40%;
+    display: block;
+    padding: 20px 25px;
     color: white;
     font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 20%;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .bookbtn:hover {
-    background-color: black;
-
-    border-radius: 5px;
+    background-color: white;
+    color: #17274a;
+    border: 2px solid #17274a;
+    border-radius: 15px;
 }
 
 .bookbtn2 {
-    background-color: green;
-    height: 60px;
-    width: 250px;
+        background-color: #17274a;
+    border: 2px solid transparent;
+
+    /* height: 60px; */
+    width: 20%;
+    display: block;
+    padding: 20px 25px;
     color: white;
     font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 45%;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .bookbtn2:hover {
-    background-color: black;
-    border-radius: 5px;
+    background-color: white;
+    color: #17274a;
+    border: 2px solid #17274a;
+    border-radius: 15px;
 }
 .fourth {
     border: 1px solid rgb(243, 237, 237);
@@ -171,23 +186,60 @@
     border: 0px solid green;
 }
 #address {
-    border: 2px solid green;
-    border: 1px solid gray;
     width: 30%;
     margin: 20px auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 #method {
-    border: 1px solid rgb(147, 150, 145);
+    border: 0px solid rgb(147, 150, 145);
     width: 60%;
     height: auto;
     margin-left: 50px;
     margin: 20px auto;
+    border-radius: 15px;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }
 #container {
-    border: 2px solid rgb(106, 105, 105);
+    border: 0px solid rgb(106, 105, 105);
     display: flex;
     justify-content: space-around;
     width: 90%;
     margin: auto;
+}
+.single_card_address {
+    border: 2px solid transparent;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+}
+.single_card_address:hover {
+    border: 2px solid #17274a;
+    transform: scale(1.01);
+}
+
+.bookbtn3 {
+        background-color: #17274a;
+    border: 2px solid transparent;
+
+    /* height: 60px; */
+    width: 40%;
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-weight: bold;
+    /* margin: 40px auto; */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.bookbtn3:hover {
+    background-color: white;
+    color: #17274a;
+    border: 2px solid #17274a;
+    border-radius: 15px;
 }

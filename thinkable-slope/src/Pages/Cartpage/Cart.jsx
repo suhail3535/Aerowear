@@ -60,14 +60,7 @@ const Cart = () => {
         }, 2000);
     };
 
-
-
-  return (
-    <div>
-      {products.length === 0 ? (
-        <EmptyCart />
-      ) : (
-
+    return (
         <div>
             {products.length === 0 ? (
                 <EmptyCart />
