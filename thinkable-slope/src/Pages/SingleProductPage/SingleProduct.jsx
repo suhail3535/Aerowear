@@ -1,4 +1,11 @@
-import { Box, Button, Heading, WrapItem } from "@chakra-ui/react";
+import {
+    Box,
+    Button,
+    Heading,
+    Spinner,
+    useToast,
+    WrapItem,
+} from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -10,19 +17,42 @@ import Swal from "sweetalert2";
 
 const SingleProduct = () => {
     const [data, setData] = useState({});
+    const navigate = useNavigate();
     const param = useParams();
-const navigate=useNavigate()
+
+    const toast = useToast();
+
+    const [isButLoading, setIsButLoading] = useState(false);
+
     const dispatch = useDispatch();
     function AddToCart() {
         dispatch(postCartRequest(data));
-        //   window.location.reload();
-        Swal.fire("", "Product added in cart!", "success");
-        // navigate("/cart");
+        setIsButLoading(true);
+        setTimeout(() => {
+            setIsButLoading(false);
+            toast({
+                title: "Added to Cart",
+                description: "Product successfully added",
+                status: "success",
+                duration: 2500,
+                isClosable: true,
+                position: "bottom-right",
+            });
+            navigate("/cart");
+        }, 2000);
     }
     function handleBuy() {
         dispatch(postCartRequest(data));
-      
-    }
+        toast({
+            title: "Added to Cart",
+            description: "Product successfully added",
+            status: "success",
+            duration: 2500,
+            isClosable: true,
+            position: "bottom-right",
+        });
+        navigate("/cart");
+
 
     const getSingleProduct = (id) => {
         axios
@@ -144,13 +174,19 @@ const navigate=useNavigate()
                             <button
                                 className="add-cart-btn"
                                 onClick={AddToCart}>
-                                Add to Cart
+                                {!isButLoading && `Add to Cart`}
+                                {isButLoading && (
+                                    <Spinner
+                                        thickness="4px"
+                                        speed="0.55s"
+                                        emptyColor="gray.200"
+                                        color="#17274a"
+                                        size="sm"
+                                    />
+                                )}
                             </button>
 
-                            <button
-                                className="buy-Now"
-                                onClick={handleBuy}
-                                >
+                            <button className="buy-Now" onClick={handleBuy}>
                                 Buy Now
                             </button>
                         </div>
