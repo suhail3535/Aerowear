@@ -57,7 +57,7 @@ const SingleProduct = () => {
     }
     const getSingleProduct = (id) => {
         axios
-          .get(`https://aerowearnew.cyclic.app/women/${id}`)
+          .get(`http://localhost:8080/women/${id}`)
           .then((res) => setData(res.data));
     };
     const handleDelivery = () => {};
