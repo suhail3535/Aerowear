@@ -20,37 +20,37 @@ export const getProductsFailureAction = () => {
 export const getWomenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("http://localhost:8080/women",obj)
-        .then((res) => {
-            dispatch(getProductsSuccessAction(res.data));
-        })
-        .catch((err) => {
-            dispatch(getProductsFailureAction());
-        });
+      .get("http://localhost:8080/women", obj)
+      .then((res) => {
+        dispatch(getProductsSuccessAction(res.data));
+      })
+      .catch((err) => {
+        dispatch(getProductsFailureAction());
+      });
 };
 
 export const getMenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("http://localhost:8080/men",obj)
-        .then((res) => {
-            console.log(res);
+      .get("http://localhost:8080/men", obj)
+      .then((res) => {
+        console.log(res);
 
-            dispatch(getProductsSuccessAction(res.data));
-        })
-        .catch((err) => {
-            dispatch(getProductsFailureAction());
-        });
+        dispatch(getProductsSuccessAction(res.data));
+      })
+      .catch((err) => {
+        dispatch(getProductsFailureAction());
+      });
 };
 
 export const getClearanceProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("http://localhost:8080/clearence",obj)
-        .then((res) => {
-            dispatch(getProductsSuccessAction(res.data));
-        })
-        .catch((err) => {
-            dispatch(getProductsFailureAction());
-        });
+      .get("http://localhost:8080/clearence", obj)
+      .then((res) => {
+        dispatch(getProductsSuccessAction(res.data));
+      })
+      .catch((err) => {
+        dispatch(getProductsFailureAction());
+      });
 };

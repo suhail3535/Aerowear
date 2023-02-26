@@ -59,7 +59,7 @@ export const  Admin= () => {
             return (
               <div>
         
-                <AdminCard key={ele.id} {...ele} />{" "}
+                <AdminCard key={ele.id} {...ele} />
               </div>
             );
           })}

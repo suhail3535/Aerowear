@@ -14,6 +14,7 @@ import AdminLogin from "./Admin Login & Signup/AdminLogin";
 import AdminSignup from "./Admin Login & Signup/AdminSignup";
 import Payment from "./Payment/Payment";
 import PaymentMethod from "./Payment/PaymentMethod";
+import OrderSuccessfull from "./Payment/OderSuccessfull";
 
 const MainRoutes = () => {
     return (
@@ -34,6 +35,7 @@ const MainRoutes = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/paymentmethod" element={<PaymentMethod />} />
+                <Route path="/ordersuccessfull" element={<OrderSuccessfull />} />
             </Routes>
         </div>
     );

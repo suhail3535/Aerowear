@@ -13,11 +13,13 @@ import styles from "./Single.modules.css";
 import StarPurple500Icon from "@mui/icons-material/StarPurple500";
 import { postCartRequest } from "../../Redux/CartReducer/Action";
 import { useDispatch } from "react-redux";
+import Swal from "sweetalert2";
 
 const SingleProduct = () => {
     const [data, setData] = useState({});
     const navigate = useNavigate();
     const param = useParams();
+
     const toast = useToast();
 
     const [isButLoading, setIsButLoading] = useState(false);
@@ -50,12 +52,12 @@ const SingleProduct = () => {
             position: "bottom-right",
         });
         navigate("/cart");
-    }
+
 
     const getSingleProduct = (id) => {
         axios
-            .get(`http://localhost:8080/women/${id}`)
-            .then((res) => setData(res.data));
+          .get(`http://localhost:8080/women/${id}`)
+          .then((res) => setData(res.data));
     };
     const handleDelivery = () => {};
 

@@ -60,28 +60,29 @@ export const getRequest = () => (dispatch) => {
 
 export const deletedata = (id) => (dispatch) => {
   dispatch(getpostRequest());
-  return axios.delete(`http://localhost:8080/women/${id}`).then((res) => {
-    // console.log(res.data);
-    dispatch(deldatasuccess());
-  })
-  .catch ((err) => {
-  dispatch(getpostFailure());
-})
+  return axios
+    .delete(`http://localhost:8080/women/${id}`)
+    .then((res) => {
+      // console.log(res.data);
+      dispatch(deldatasuccess());
+    })
+    .catch((err) => {
+      dispatch(getpostFailure());
+    });
 
 }
 
 
 export const editProduct = (id, newData) => (dispatch) => {
   dispatch(getpostRequest());
-  axios.patch(`http://localhost:8080/women/${id}`, newData).then((res) => {
-    
-    dispatch({type:PATCH_SUCCESS})
-    
-    
-  }).catch((err) => {
-    
-    dispatch(getpostFailure());
-  })
+  axios
+    .patch(`http://localhost:8080/women/${id}`, newData)
+    .then((res) => {
+      dispatch({ type: PATCH_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch(getpostFailure());
+    });
 
      
  

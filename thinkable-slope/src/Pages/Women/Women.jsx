@@ -171,7 +171,7 @@ const Women = () => {
                 ) : null}
 
                 <div className={styles.product_div}>
-                    {products.map((el) => (
+                    {products.reverse().map((el) => (
 
 
                         <Link to={`/women/${el.id}`}>

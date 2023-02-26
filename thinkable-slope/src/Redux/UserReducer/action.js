@@ -28,7 +28,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
   axios
     .post("http://localhost:8080/address", payload)
     .then((res) => {
-      console.log("post",res.data);
+      console.log("post", res.data);
       dispatch(getpostSuccessAddress(res.data));
     })
     .then((error) => {
@@ -41,7 +41,7 @@ export const getRequestAddress = () => (dispatch) => {
   axios
     .get("http://localhost:8080/address")
     .then((res) => {
-    //   console.log("get",res.data);
+      //   console.log("get",res.data);
       dispatch(getdataSuccessAddress(res.data));
     })
     .then((error) => {

@@ -27,6 +27,7 @@ import PaymentCard from "./PaymentCard";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { width } from "@mui/system";
+import Swal from "sweetalert2";
 
 const PaymentMethod = () => {
   const [isButLoading, setIsButLoading] = useState(false);
@@ -37,7 +38,8 @@ const PaymentMethod = () => {
     setIsButLoading(true);
     setTimeout(() => {
       setIsButLoading(false);
-      navigate("/");
+       Swal.fire("Congratulations!", "Payment successfull!", "success");
+      navigate("/ordersuccessfull");
     }, 2000);
   };
 

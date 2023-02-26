@@ -24,37 +24,38 @@ export const DeleteCartSuccess = () => {
 export const getCartProducts = () => (dispatch) => {
     dispatch(getCartProductsRequestAction());
    return axios
-        .get("http://localhost:8080/cart")
-        .then((res) => {
-           
-            dispatch(getCartProductsSuccessAction(res.data));
-        })
-        .catch((err) => {
-            dispatch(getCartProductsFailureAction());
-        });
+     .get("http://localhost:8080/cart")
+     .then((res) => {
+       dispatch(getCartProductsSuccessAction(res.data));
+     })
+     .catch((err) => {
+       dispatch(getCartProductsFailureAction());
+     });
 };
 
 export const postCartRequest = (payload) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     axios
-        .post("http://localhost:8080/cart", payload)
-        .then((res) => {
-            dispatch(PostCartSuccess(res.data));
-        })
-        .then((err) => {
-            dispatch(getCartProductsFailureAction());
-        });
+      .post("http://localhost:8080/cart", payload)
+      .then((res) => {
+        dispatch(PostCartSuccess(res.data));
+      })
+      .then((err) => {
+        dispatch(getCartProductsFailureAction());
+      });
 };
 
 
 export const deleteCartdata = (id) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
-    return axios.delete(`http://localhost:8080/cart/${id}`).then((res) => {
-      dispatch(DeleteCartSuccess());
-    })
-    .catch ((err) => {
-    dispatch(getCartProductsFailureAction());
-  })
+    return axios
+      .delete(`http://localhost:8080/cart/${id}`)
+      .then((res) => {
+        dispatch(DeleteCartSuccess());
+      })
+      .catch((err) => {
+        dispatch(getCartProductsFailureAction());
+      });
   
   }
 
