@@ -703,25 +703,11 @@
   ],
   "cart": [
     {
-      "id": 1,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw04b13605/80644077_007_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Cutout Convertible Crop Top",
       "price": 1500,
-      "Rating": 3
-    },
-    {
-      "id": 2,
-      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw0b38791c/80649436_680_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "name": "Checkered Cropped Cardigan",
-      "price": 79.11,
-      "Rating": 5
-    },
-    {
-      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw0b38791c/80649436_680_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "name": "Checkered Cropped Cardigan",
-      "price": 79.11,
-      "Rating": 5,
-      "id": 3
+      "Rating": 3,
+      "id": 4
     }
   ]
 }

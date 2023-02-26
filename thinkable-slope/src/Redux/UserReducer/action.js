@@ -39,7 +39,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 export const getRequestAddress = () => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .get("http://localhost:8080/women/address")
+    .get("http://localhost:8080/address")
     .then((res) => {
       //   console.log("get",res.data);
       dispatch(getdataSuccessAddress(res.data));
