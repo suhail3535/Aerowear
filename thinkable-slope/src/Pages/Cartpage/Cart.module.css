@@ -1,6 +1,6 @@
 .Shopping_cart_heading p:nth-child(1) {
     letter-spacing: 1.2px;
-    color: #1e3352;
+    color: #17274a;
     font: normal normal bold 24px/24px "Visuelt Pro", sans-serif;
     margin: 0;
 }
@@ -20,10 +20,9 @@
     display: flex;
     align-items: center;
     padding: 20px;
-
 }
 
-.Order_summmary_div p:nth-child(1){
+.Order_summmary_div p:nth-child(1) {
     margin: 5px 0 15px 0;
     padding: 0;
     font: normal normal bold 24px/28px "Visuelt Pro", sans-serif;
@@ -31,61 +30,65 @@
     color: #1e3352;
     text-transform: uppercase;
 }
-.Order_summmary_div p:nth-child(2),.Order_summmary_div p:nth-child(3),.Order_summmary_div p:nth-child(4){
+.Order_summmary_div p:nth-child(2),
+.Order_summmary_div p:nth-child(3),
+.Order_summmary_div p:nth-child(4) {
     text-align: left;
     padding: 10px 0;
     font: normal normal normal 14px/14px "Visuelt Pro", sans-serif;
     color: #6d7278;
 }
-.Order_summmary_div p:nth-child(5){
+.Order_summmary_div p:nth-child(5) {
     font: normal normal normal 14px/14px "Visuelt Pro", sans-serif;
     color: #6d7278;
     padding: 10px 0;
     font-weight: bold;
 }
-.checkout_button{
+.checkout_button {
+    border: 2px solid transparent;
     text-align: center;
-    letter-spacing: 0.8px;
     color: #fff;
     text-transform: uppercase;
     width: 100%;
-    height: 60px;
-    background: #1e3352;
-    transition: .2s ease-in-out all;
+    /* height: 60px; */
+    padding: 15px 20px;
+    background: #17274a;
     margin: 0 0 30px 0;
-    padding: 0;
-    outline: none;
-    border: none;
     font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    font-family: "Visuelt Pro";
+    font-size: 1rem;
+    /* font-family: "Visuelt Pro"; */
     box-sizing: border-box;
     cursor: pointer;
     overflow: visible;
     margin-top: 20px;
+    transition: 0.2s ease-in-out all;
 }
-.checkout_button:hover{
-    background-color: black;
+.checkout_button:hover {
+    color: #17274a;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #17274a;
 }
-.Paypal_checkout{
-    
+.Paypal_checkout {
     position: relative;
     top: 50%;
     width: 100%;
     cursor: pointer;
     display: block;
     background: #ffc439;
-    color: #111;
+    color: #17274a;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: none;
     font-weight: 500;
-    padding:10px 20px;
-    border-radius: 50px;
-
+    padding: 15px 20px;
+    transition: 0.2s ease-in-out all;
+    border-radius: 25px;
+}
+.Paypal_checkout:hover{
+background-color: #ffc439cc;
 }
 
-.deliveryinfo_div label{
+.deliveryinfo_div label {
     padding-left: 30px;
     width: auto;
     font: normal normal normal 14px/21px "Visuelt Pro", sans-serif;
@@ -94,8 +97,9 @@
     text-transform: capitalize;
 }
 
-.deliveryinfo_div p{
-    font-family: Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+.deliveryinfo_div p {
+    font-family: Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica,
+        sans-serif;
     text-align: left;
     color: #17120f;
     font-size: 12px;

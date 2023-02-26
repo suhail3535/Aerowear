@@ -55,6 +55,7 @@
     border: 0px solid pink;
     height: 80%;
     padding: 0px;
+    object-fit: cover;
 }
 .btn {
     border: 0px solid red;

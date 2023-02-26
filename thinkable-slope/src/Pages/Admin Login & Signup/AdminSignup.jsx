@@ -61,7 +61,7 @@ const AdminSignup = () => {
         if (userData.email !== "" && userData.password !== "") {
             localStorage.setItem("adminData", JSON.stringify(userData));
             setFormData(userData);
-            console.log("64",userData);
+            console.log("64", userData);
             toast({
                 title: "Registration Successful",
                 description: "You are redirected to login page.",
@@ -71,9 +71,8 @@ const AdminSignup = () => {
                 position: "bottom-right",
             });
             dispatch({ type: "reset" });
-             navigate("/adminlogin");
-             window.location.reload();
-           
+            navigate("/adminlogin");
+            window.location.reload();
         } else {
             toast({
                 title: "Details Missing",
