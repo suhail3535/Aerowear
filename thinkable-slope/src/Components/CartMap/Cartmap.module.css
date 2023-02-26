@@ -4,7 +4,8 @@
     height: 300px;
     width: 90%;
     display: flex;
-    margin: auto;
+    margin: 20px auto;
+
     padding: 20px;
     cursor: pointer;
     justify-content: space-between;

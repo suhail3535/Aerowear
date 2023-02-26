@@ -169,7 +169,7 @@ const PaymentMethod = () => {
                                     boxShadow:
                                         "inset 10px 10px 13px 0px rgba(0,0,0,0.1)",
                                     borderRadius: "15px",
-                                    margin: "auto 20px",
+                                    margin: "20px",
                                 }}>
                                 <VStack>
                                     <HStack id={styles.name}>
@@ -374,7 +374,7 @@ const PaymentMethod = () => {
                                     boxShadow:
                                         "inset 10px 10px 13px 0px rgba(0,0,0,0.1)",
                                     borderRadius: "15px",
-                                    margin: "auto 20px",
+                                    margin: "20px",
                                 }}>
                                 <div className={styles.buttonpay}>
                                     <div>
@@ -399,7 +399,7 @@ const PaymentMethod = () => {
                                     boxShadow:
                                         "inset 10px 10px 13px 0px rgba(0,0,0,0.1)",
                                     borderRadius: "15px",
-                                    margin: "auto 20px",
+                                    margin: " 20px",
                                 }}>
                                 <div id={styles.phone}>
                                     <img src="./payment.png" alt="" />
