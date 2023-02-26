@@ -1,58 +1,77 @@
-import { Button } from "@chakra-ui/react";
+import { Button, useToast } from "@chakra-ui/react";
 import styles from "./Payment.module.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { deletedataAdd, getRequestAddress } from "../../Redux/UserReducer/action";
-
+import {
+    deletedataAdd,
+    getRequestAddress,
+} from "../../Redux/UserReducer/action";
 
 const PaymentCard = ({
-  id,
-  address1,
-  firstname,
-  lastname,
-  city,
-  phone,
-  zipcode,
+    id,
+    address1,
+    firstname,
+    lastname,
+    city,
+    phone,
+    zipcode,
 }) => {
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const [isButLoading, setIsButLoading] = useState(false);
+    const toast = useToast();
+    const handleDelete = (id) => {
+        // console.log(id)
+        setIsButLoading(true);
+        setTimeout(() => {
+            setIsButLoading(false);
+            dispatch(deletedataAdd(id)).then(() =>
+                dispatch(getRequestAddress())
+            );
+            toast({
+                title: "Address deleted",
+                description: "",
+                status: "info",
+                variant: "left-accent",
+                duration: 2500,
+                isClosable: true,
+                position: "top",
+            });
+        }, 2000);
+    };
 
-  const handleDelete = (id) => {
-    // console.log(id)
-    dispatch(deletedataAdd(id)).then(() => dispatch(getRequestAddress()));
-  
-    Swal.fire("", "removed !", "success");
-  };
+    useEffect(() => {
+        dispatch(getRequestAddress());
+    }, []);
 
-      useEffect(() => {
-      dispatch(getRequestAddress());
-  },[])
-
-  return (
-    <div id={styles.card}>
-      <div>
-        <h1>
-          {firstname} {lastname}
-        </h1>
-        <p>{address1}</p>
-        <p>{city}</p>
-        <p>{phone}</p>
-        <p>{zipcode}</p>
-        <input type="checkbox" />
-        <div>
-   
-          <button
-            onClick={() => handleDelete(id)}
-            style={{ width: "100px",backgroundColor: "yellow",borderRadius:"10px" }}
-          
-          >
-            Remove
-          </button>
+    return (
+        <div id={styles.card}>
+            <div>
+                <h1>
+                    {firstname} {lastname}
+                </h1>
+                <p>{address1}</p>
+                <p>{city}</p>
+                <p>{phone}</p>
+                <p>{zipcode}</p>
+                <input type="checkbox" />
+                <div>
+                    <button
+                        onClick={() => handleDelete(id)}
+                        style={{
+                          width: "100px",
+                          padding:"5px 8px",
+                            backgroundColor: "orange",
+                            borderRadius: "8px",
+                        }}>
+                        Remove
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default PaymentCard;

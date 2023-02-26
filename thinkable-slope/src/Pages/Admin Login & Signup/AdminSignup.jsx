@@ -97,7 +97,7 @@ const AdminSignup = () => {
                             Sign up
                         </Heading>
                         <Text fontSize={"lg"} color={"gray.600"}>
-                            to enjoy all of our cool features ✌️
+                            Be a admin just by creating a new account
                         </Text>
                     </Stack>
                     <Box
