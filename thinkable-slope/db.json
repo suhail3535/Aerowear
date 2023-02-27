@@ -15,13 +15,6 @@
       "Rating": 5
     },
     {
-      "id": 3,
-      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw815b8428/82739728_541_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "name": "Cropped Full-Zip Hooded Sweater",
-      "price": 70,
-      "Rating": 2
-    },
-    {
       "id": 4,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6ba328a2/82739761_366_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Long Sleeve Keyhole Pointelle Crop Top",
@@ -48,13 +41,6 @@
       "name": "High-Rise Mom Jean",
       "price": 65,
       "Rating": 5
-    },
-    {
-      "id": 9,
-      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw0b38791c/80649436_680_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "name": "Checkered Cropped Cardigan",
-      "price": 79.11,
-      "Rating": 4
     },
     {
       "id": 10,
@@ -181,6 +167,34 @@
       "price": 40,
       "Rating": 1,
       "id": 27
+    },
+    {
+      "image": "https://via.placeholder.com/300",
+      "name": "shirt",
+      "price": 12000,
+      "Rating": "2",
+      "id": 28
+    },
+    {
+      "image": "https://via.placeholder.com/300",
+      "name": "shirt",
+      "price": 45,
+      "Rating": "3",
+      "id": 29
+    },
+    {
+      "image": "https://via.placeholder.com/300",
+      "name": "shirt",
+      "price": 123,
+      "Rating": "5",
+      "id": 30
+    },
+    {
+      "image": "https://via.placeholder.com/300",
+      "name": "shirt",
+      "price": 45,
+      "Rating": "1",
+      "id": 31
     }
   ],
   "clearence": [
@@ -692,22 +706,22 @@
   ],
   "address": [
     {
-      "firstname": "Shantanu",
-      "lastname": "Suthar",
-      "address1": "House No: 93, Ward No: 12,",
-      "zipcode": "335512",
-      "city": "Hanumangarh",
-      "phone": 7732962110,
-      "id": 1
+      "firstname": "Suhail",
+      "lastname": "khan",
+      "address1": "Moh Khera Balaykot post Shahabad Distt hardoi up India 241124",
+      "zipcode": "241124",
+      "city": "Hardoi",
+      "phone": 8630245788,
+      "id": 3
     }
   ],
   "cart": [
     {
-      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw04b13605/80644077_007_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "name": "Cutout Convertible Crop Top",
-      "price": 1500,
-      "Rating": 3,
-      "id": 4
+      "id": 3,
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw815b8428/82739728_541_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Cropped Full-Zip Hooded Sweater",
+      "price": 70,
+      "Rating": 2
     }
   ]
 }
