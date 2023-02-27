@@ -114,6 +114,7 @@ Install dependencies
   npm i axios 
   npm i react-redux 
   npm i redux 
+  npm i thunk
   npm i json-server 
   npm i chakra-ui 
   npm i material-UI 
