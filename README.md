@@ -99,7 +99,7 @@ npm run deploy
 
 ![paymentpage](https://user-images.githubusercontent.com/112754439/222429318-1ee19784-269a-4cfe-8bfe-0730368f88f4.png)
 ![adminpannel](https://user-images.githubusercontent.com/112754439/222429357-ecd1712c-8796-4ded-83db-f9a572816f9d.png)
-
+![tabveiw](https://user-images.githubusercontent.com/112754439/222456763-37cab0e9-4230-4558-87ba-921ffc450dd2.png)
 ![mobileview](https://user-images.githubusercontent.com/112754439/222429257-01fcb2f7-d0a9-4d48-bcd7-c3633f0d6c81.png)
 
 ## Run Locally
