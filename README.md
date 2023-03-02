@@ -23,14 +23,23 @@ Aerowear is known for its trendy and affordable clothing, with a focus on casual
 
 
 
+## Tech Stack
 
+**Front-end :** React, Redux, Chakra UI, Material UI
 
+**Back-end :** JSON-Server
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Primary | ![#17274a](https://via.placeholder.com/10/17274a?text=+) #17274a |
+| Secondary | ![#ee5e68](https://via.placeholder.com/10/ee5e68?text=+) #ee5e68 |
 
 
 
 ## Badges
 
-Add badges from somewhere like: [shields.io](https://shields.io/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b05289d0-09c8-4f2a-833c-a58d8cd7a1fd/deploy-status)](https://app.netlify.com/sites/aerowear/deploys)
 
@@ -38,18 +47,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 [![](https://img.shields.io/github/contributors-anon/suhail3535/thinkable-slope-4107?style=for-the-badge)]()
 
-
-
 [![](https://img.shields.io/github/languages/count/suhail3535/thinkable-slope-4107?style=for-the-badge)]()
-
-
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
 
 
 ## Deployment
@@ -66,16 +64,16 @@ npm run deploy
 
 - Navbar
 - Landing page
-- women page
-- men page
-- clearence page
+- Women page
+- Men page
+- Clearence page
 - Admin page
 - Landing page
-- single product page
-- cart section
-- payment page
-- payment method
-- payment succesfull page
+- Single product page
+- Cart section
+- Payment page
+- Payment method
+- Payment succesfull page
 
 ## Features
 - Get Request Api call
@@ -127,9 +125,7 @@ Install dependencies
   npm i json-server 
   npm i chakra-ui 
   npm i material-UI 
-  npm i material-icon
-   
-
+  npm i material-icon  
 ```
 
 Start the server
@@ -143,4 +139,19 @@ Start the server
 ## Demo
 
 https://aerowear.netlify.app/
+
+
+## FAQ
+
+#### What is a clone of Aeropostale?
+
+A clone of Aeropostale is a replica or imitation of the popular clothing brand Aeropostale. It may sell similar styles of clothing or try to emulate the overall aesthetic of the brand.
+
+#### Is a clone of Aeropostale the same as an official Aeropostale store?
+
+No, a clone of Aeropostale is not an official Aeropostale store. It is a separate business that is not affiliated with the original brand.
+
+#### Is this website fully Responsive?
+
+No, As of Now this website isn't fully Responsive. Some of our the part of this website is broken for small screen devices. Our team is working on this soon we will fix this.
 
