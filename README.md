@@ -90,14 +90,24 @@ npm run deploy
 - Sorting & filter
 
 ## ScreenShots
-![Screenshot (137)](https://user-images.githubusercontent.com/112754439/222426239-dee8cd63-3b68-4754-98c1-f4fe8a89e300.png)
+### 1. Homepage
+![home](https://user-images.githubusercontent.com/110021464/222483483-7eb2c6ac-b8d7-447d-89e6-19ed1845c597.png)
+### 2. Women Page
+![women](https://user-images.githubusercontent.com/110021464/222483629-c972b512-cdd2-4e13-a10a-d604232c5f44.png)
+### 3. Men Page
+![men](https://user-images.githubusercontent.com/110021464/222483650-88bb0989-9215-4e23-ab68-1476636d09cd.png)
+### 4. Cart Page
+![cart](https://user-images.githubusercontent.com/110021464/222483675-eea1d198-a787-423f-92e3-b18c142ae5a6.png)
+<!--![Screenshot (137)](https://user-images.githubusercontent.com/112754439/222426239-dee8cd63-3b68-4754-98c1-f4fe8a89e300.png)
 ![Screenshot (138)](https://user-images.githubusercontent.com/112754439/222426322-e903ae80-1511-4bf4-bc69-ec2e602cb8ec.png)
 ![Screenshot (139)](https://user-images.githubusercontent.com/112754439/222426349-a1b407d5-9ac4-423e-b235-9503142f7dc9.png)
 ![Screenshot (150)](https://user-images.githubusercontent.com/112754439/222426434-00b4850e-d647-4a01-9d36-40e7baa1e15d.png)
-
-![paymentpage](https://user-images.githubusercontent.com/112754439/222429318-1ee19784-269a-4cfe-8bfe-0730368f88f4.png)
+![paymentpage](https://user-images.githubusercontent.com/112754439/222429318-1ee19784-269a-4cfe-8bfe-0730368f88f4.png)-->
+### 5. Admin Page
 ![adminpannel](https://user-images.githubusercontent.com/112754439/222429357-ecd1712c-8796-4ded-83db-f9a572816f9d.png)
+### 6. Responsive (Tab View)
 ![tabveiw](https://user-images.githubusercontent.com/112754439/222456763-37cab0e9-4230-4558-87ba-921ffc450dd2.png)
+### 7. Responsive (Phone View)
 ![mobileview](https://user-images.githubusercontent.com/112754439/222429257-01fcb2f7-d0a9-4d48-bcd7-c3633f0d6c81.png)
 
 ## Run Locally
