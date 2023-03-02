@@ -100,9 +100,7 @@ npm run deploy
 ![paymentpage](https://user-images.githubusercontent.com/112754439/222429318-1ee19784-269a-4cfe-8bfe-0730368f88f4.png)
 ![adminpannel](https://user-images.githubusercontent.com/112754439/222429357-ecd1712c-8796-4ded-83db-f9a572816f9d.png)
 
-![cart](https://user-images.githubusercontent.com/112754439/222429242-486525c9-f671-4055-b1fb-e65e967e40e4.png)
 ![mobileview](https://user-images.githubusercontent.com/112754439/222429257-01fcb2f7-d0a9-4d48-bcd7-c3633f0d6c81.png)
-![mycropimg](https://user-images.githubusercontent.com/112754439/222429258-9749929e-05df-4e65-9c25-f1b2a614d154.png)
 
 ## Run Locally
 
