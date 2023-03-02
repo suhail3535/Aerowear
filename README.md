@@ -91,11 +91,18 @@ npm run deploy
 - Edit product
 - Sorting & filter
 
-
+## ScreenShots
 ![Screenshot (137)](https://user-images.githubusercontent.com/112754439/222426239-dee8cd63-3b68-4754-98c1-f4fe8a89e300.png)
 ![Screenshot (138)](https://user-images.githubusercontent.com/112754439/222426322-e903ae80-1511-4bf4-bc69-ec2e602cb8ec.png)
 ![Screenshot (139)](https://user-images.githubusercontent.com/112754439/222426349-a1b407d5-9ac4-423e-b235-9503142f7dc9.png)
 ![Screenshot (150)](https://user-images.githubusercontent.com/112754439/222426434-00b4850e-d647-4a01-9d36-40e7baa1e15d.png)
+
+![paymentpage](https://user-images.githubusercontent.com/112754439/222429318-1ee19784-269a-4cfe-8bfe-0730368f88f4.png)
+![adminpannel](https://user-images.githubusercontent.com/112754439/222429357-ecd1712c-8796-4ded-83db-f9a572816f9d.png)
+
+![cart](https://user-images.githubusercontent.com/112754439/222429242-486525c9-f671-4055-b1fb-e65e967e40e4.png)
+![mobileview](https://user-images.githubusercontent.com/112754439/222429257-01fcb2f7-d0a9-4d48-bcd7-c3633f0d6c81.png)
+![mycropimg](https://user-images.githubusercontent.com/112754439/222429258-9749929e-05df-4e65-9c25-f1b2a614d154.png)
 
 ## Run Locally
 
