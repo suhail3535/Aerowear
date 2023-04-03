@@ -2,7 +2,7 @@
 # Aerowear.com
 
 Aerowear is known for its trendy and affordable clothing, with a focus on casual wear such as t-shirts, hoodies, and jeans. The brand also offers a range of accessories such as bags.
-
+## Deployment Link : https://thinkable-slope.vercel.app/
 
 ## API Reference
 
@@ -41,7 +41,7 @@ Aerowear is known for its trendy and affordable clothing, with a focus on casual
 ## Badges
 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b05289d0-09c8-4f2a-833c-a58d8cd7a1fd/deploy-status)](https://aerowear.netlify.app/)
+
 
 [![](https://img.shields.io/github/last-commit/suhail3535/thinkable-slope-4107?logo=Aerowear&style=for-the-badge)]()
 
