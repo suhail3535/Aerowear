@@ -20,7 +20,7 @@ export const getProductsFailureAction = () => {
 export const getWomenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-      .get("http://localhost:8080/women", obj)
+      .get("https://helpful-gray-rooster.cyclic.app/women", obj)
       .then((res) => {
         dispatch(getProductsSuccessAction(res.data));
       })
@@ -32,7 +32,7 @@ export const getWomenProducts = (obj) => (dispatch) => {
 export const getMenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-      .get("http://localhost:8080/men", obj)
+      .get("https://helpful-gray-rooster.cyclic.app/men", obj)
       .then((res) => {
         console.log(res);
 
@@ -46,7 +46,7 @@ export const getMenProducts = (obj) => (dispatch) => {
 export const getClearanceProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-      .get("http://localhost:8080/clearence", obj)
+      .get("https://helpful-gray-rooster.cyclic.app/clearence", obj)
       .then((res) => {
         dispatch(getProductsSuccessAction(res.data));
       })

@@ -57,7 +57,7 @@ const SingleProduct = () => {
     }
     const getSingleProduct = (id) => {
         axios
-          .get(`http://localhost:8080/women/${id}`)
+          .get(`https://helpful-gray-rooster.cyclic.app/women/${id}`)
           .then((res) => setData(res.data));
     };
     const handleDelivery = () => {};
