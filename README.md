@@ -1,61 +1,169 @@
-# thinkable-slope-4107
-# project Name-AuroWear.com
-Installation needed:-
-1 React-Redux,
-2 react-router-dom,
-3 chakra-UI,
-4 Material icon,
-5 material-UI,
-6 Redux Thunk,
-7 Axios,
-8 React,
-9 Swal alert
+
+# Aerowear.com
+
+Aerowear is known for its trendy and affordable clothing, with a focus on casual wear such as t-shirts, hoodies, and jeans. The brand also offers a range of accessories such as bags.
 
 
-# we are using React Component Libraries
+## API Reference
 
-React-Bootstrap,
-React Router,
-chakra-UI,
-material-icon,
-material-UI,
-materail colours,
-flat icon,
-React Motion
+#### Get all items
 
+```http
+  GET /https://aerowearnew.cyclic.app
+```
 
-# For Backend 
-We use json server (db.json) for backends
+| End Point| Type     | Description                |
+| :-------- | :------- | :---------------------- |
+| `women` | `string` | **Required**. Women page |
+| `men` | `string` | **Required**. men page |
+| `clearence` | `string` | **Required**. clearence page |
+| `cart` | `string` | **Required**. cart page|
+| `address` | `string` | **Required**. user shipping address |
 
 
 
 
+## Tech Stack
 
-# planning
-# Team Member:-
-1-Suhail Khan (Team Lead)
-2-Shantanu 
-3-Nisha Sharma
+**Front-end :** React, Redux, Chakra UI, Material UI
 
-# Responsibilites for our team:-
-# Suhail khan working on
+**Back-end :** JSON-Server
 
-Compleate Admin side 
-Single Product page
-payment page
-payment Method page
-# Nisha Sharma working on
-women page
-men page 
-clearence page
-cart page
-sorting and fitering 
+## Color Reference
 
-# Shantanu working on
-Navbar section
-Fotter Section
-Login & Register for user 
-login & Register for Admin
-home page
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Primary | ![#17274a](https://via.placeholder.com/10/17274a?text=+) #17274a |
+| Secondary | ![#ee5e68](https://via.placeholder.com/10/ee5e68?text=+) #ee5e68 |
 
+
+
+## Badges
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b05289d0-09c8-4f2a-833c-a58d8cd7a1fd/deploy-status)](https://aerowear.netlify.app/)
+
+[![](https://img.shields.io/github/last-commit/suhail3535/thinkable-slope-4107?logo=Aerowear&style=for-the-badge)]()
+
+[![](https://img.shields.io/github/contributors-anon/suhail3535/thinkable-slope-4107?style=for-the-badge)]()
+
+[![](https://img.shields.io/github/languages/count/suhail3535/thinkable-slope-4107?style=for-the-badge)]()
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+npm run build
+npm run deploy
+```
+
+
+## Pages
+
+- Navbar
+- Landing page
+- Women page
+- Men page
+- Clearence page
+- Admin page
+- Landing page
+- Single product page
+- Cart section
+- Payment page
+- Payment method
+- Payment succesfull page
+
+## Features
+- Get Request Api call
+- Post Request Api call
+- Patch Request Api call
+- Delete Request Api call
+- User Register
+- User login 
+- Admin Register
+- Admin login 
+- Add product
+- Delete product
+- Edit product
+- Sorting & filter
+
+## ScreenShots
+### 1. Homepage
+![home](https://user-images.githubusercontent.com/110021464/222483483-7eb2c6ac-b8d7-447d-89e6-19ed1845c597.png)
+### 2. Women Page
+![women](https://user-images.githubusercontent.com/110021464/222483629-c972b512-cdd2-4e13-a10a-d604232c5f44.png)
+### 3. Men Page
+![men](https://user-images.githubusercontent.com/110021464/222483650-88bb0989-9215-4e23-ab68-1476636d09cd.png)
+### Cart Page
+![Screenshot (150)](https://user-images.githubusercontent.com/112754439/222426434-00b4850e-d647-4a01-9d36-40e7baa1e15d.png)
+
+### 4. Payment Page
+![cart](https://user-images.githubusercontent.com/110021464/222483675-eea1d198-a787-423f-92e3-b18c142ae5a6.png)
+<!-- ![Screenshot (137)](https://user-images.githubusercontent.com/112754439/222426239-dee8cd63-3b68-4754-98c1-f4fe8a89e300.png)
+![Screenshot (138)](https://user-images.githubusercontent.com/112754439/222426322-e903ae80-1511-4bf4-bc69-ec2e602cb8ec.png)
+![Screenshot (139)](https://user-images.githubusercontent.com/112754439/222426349-a1b407d5-9ac4-423e-b235-9503142f7dc9.png) -->
+
+### 5. Admin Page
+![adminpannel](https://user-images.githubusercontent.com/112754439/222429357-ecd1712c-8796-4ded-83db-f9a572816f9d.png)
+### 6. Responsive (Tab View)
+![tabveiw](https://user-images.githubusercontent.com/112754439/222456763-37cab0e9-4230-4558-87ba-921ffc450dd2.png)
+### 7. Responsive (Phone View)
+![mobileview](https://user-images.githubusercontent.com/112754439/222429257-01fcb2f7-d0a9-4d48-bcd7-c3633f0d6c81.png)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/suhail3535/thinkable-slope-4107.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-thinkable-slope-4107
+```
+
+Install dependencies
+
+```bash
+  npm install
+  npm i axios 
+  npm i react-redux 
+  npm i redux 
+  npm i thunk
+  npm i json-server 
+  npm i chakra-ui 
+  npm i material-UI 
+  npm i material-icon  
+```
+
+Start the server
+
+```bash
+  npm run server
+  npm start
+```
+
+
+## Demo
+
+https://aerowear.netlify.app/
+
+
+## FAQ
+
+#### What is a clone of Aeropostale?
+
+A clone of Aeropostale is a replica or imitation of the popular clothing brand Aeropostale. It may sell similar styles of clothing or try to emulate the overall aesthetic of the brand.
+
+#### Is a clone of Aeropostale the same as an official Aeropostale store?
+
+No, a clone of Aeropostale is not an official Aeropostale store. It is a separate business that is not affiliated with the original brand.
+
+#### Is this website fully Responsive?
+
+No, As of Now this website isn't fully Responsive. Some of our the part of this website is broken for small screen devices. Our team is working on this soon we will fix this.
 
