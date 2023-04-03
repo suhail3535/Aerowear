@@ -39,7 +39,7 @@ const PaymentMethod = () => {
         setTimeout(() => {
             setIsButLoading(false);
             Swal.fire("Congratulations!", "Payment successfull!", "success");
-            navigate("/ordersuccessfull");
+            navigate("/");
         }, 2000);
     };
 

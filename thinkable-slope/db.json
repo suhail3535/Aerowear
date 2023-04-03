@@ -5,7 +5,7 @@
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw04b13605/80644077_007_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Cutout Convertible Crop Top",
       "price": 1500,
-      "Rating": 3
+      "Rating": 2
     },
     {
       "id": 2,
@@ -19,14 +19,14 @@
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6ba328a2/82739761_366_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Long Sleeve Keyhole Pointelle Crop Top",
       "price": 79.12,
-      "Rating": 5
+      "Rating": 8
     },
     {
       "id": 5,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw36365377/82739719_255_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "'90s Super High-Rise Baggy Premium Air Jean",
       "price": 79.12,
-      "Rating": "3"
+      "Rating": 3
     },
     {
       "id": 6,
@@ -172,29 +172,8 @@
       "image": "https://via.placeholder.com/300",
       "name": "shirt",
       "price": 12000,
-      "Rating": "2",
+      "Rating": 2,
       "id": 28
-    },
-    {
-      "image": "https://via.placeholder.com/300",
-      "name": "shirt",
-      "price": 45,
-      "Rating": "3",
-      "id": 29
-    },
-    {
-      "image": "https://via.placeholder.com/300",
-      "name": "shirt",
-      "price": 123,
-      "Rating": "5",
-      "id": 30
-    },
-    {
-      "image": "https://via.placeholder.com/300",
-      "name": "shirt",
-      "price": 45,
-      "Rating": "1",
-      "id": 31
     }
   ],
   "clearence": [
@@ -624,14 +603,14 @@
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwaaeb84a4/62342651_150_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "Long Sleeve Acid Wash Thermal Crew Tee",
       "Rating": 5,
-      "price": "12.99"
+      "price": 12.99
     },
     {
       "id": 26,
       "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwb5c9b3f3/62342651_493_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
       "name": "New York City Logo Appliqué Graphic Tee",
       "Rating": 4,
-      "price": "14.99"
+      "price": 14.99
     },
     {
       "id": 27,
@@ -706,22 +685,61 @@
   ],
   "address": [
     {
+      "firstname": "GAURAV",
+      "lastname": "KUMAR",
+      "address1": "Moh Khera Balaykot post Shahabad Distt hardoi up India 241124",
+      "zipcode": "241124",
+      "city": "Hardoi",
+      "phone": 8630245788,
+      "id": 8
+    },
+    {
       "firstname": "Suhail",
       "lastname": "khan",
       "address1": "Moh Khera Balaykot post Shahabad Distt hardoi up India 241124",
       "zipcode": "241124",
       "city": "Hardoi",
       "phone": 8630245788,
-      "id": 3
+      "id": 9
+    },
+    {
+      "firstname": "UTTAR",
+      "lastname": "PRADESH",
+      "address1": "MOHALLA KHERA BALAYCOT",
+      "zipcode": "241124",
+      "city": "DISTRICT HARDOI",
+      "phone": 9598125005,
+      "id": 11
     }
   ],
   "cart": [
     {
-      "id": 3,
-      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw815b8428/82739728_541_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "name": "Cropped Full-Zip Hooded Sweater",
-      "price": 70,
-      "Rating": 2
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6ab67931/81063070_244_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Soft Seamless Mock-Neck Cropped Tank  Seriously Soft Seamless Wear 2 Ways Cropped Baby Tee",
+      "price": 17.8,
+      "Rating": 1,
+      "id": 23
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwd4b76dfb/60178348_402_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Striped Tie-Dye Crew Tee",
+      "price": 7.99,
+      "Rating": 3,
+      "id": 24
+    },
+    {
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6ba328a2/82739761_366_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Long Sleeve Keyhole Pointelle Crop Top",
+      "price": 79.12,
+      "Rating": 8,
+      "id": 25
+    },
+    {
+      "id": 4,
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6ba328a2/82739761_366_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "Long Sleeve Keyhole Pointelle Crop Top",
+      "price": 79.12,
+      "Rating": 8
     }
   ]
 }
