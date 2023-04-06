@@ -1,13 +1,13 @@
-import { Button } from "@chakra-ui/react";
+
 import styles from "./admin.module.css";
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { deletedata, getRequest } from "../../Redux/AdminReducer/action";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Swal from "sweetalert2";
 const AdminCard = ({ id, image, name, price, Rating }) => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+
 
     const handleDelete = (id) => {
         // console.log(id)
@@ -55,16 +55,7 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
     return (
         <div id={styles.card}>
             <div>
-                <img
-                    style={{
-                        border: "0px solid green",
-                        width: "100%",
-                        textAlign: "center",
-                        borderRadius:"15px"
-                    }}
-                    src={image}
-                    alt="title"
-                />
+                <img id={styles.img} src={image} alt="title" />
             </div>
             <div style={{ textAlign: "center" }}>
                 <h1>Title : {name} </h1>
@@ -72,17 +63,11 @@ const AdminCard = ({ id, image, name, price, Rating }) => {
                 <p>Rating : {Rating}</p>
                 <div id={styles.button}>
                     <Link to={`/edit/${id}`}>
-                        <button
-                            id={styles.edit}
-                            onClick={handleClick}
-                            >
+                        <button id={styles.edit} onClick={handleClick}>
                             Edit
                         </button>
                     </Link>
-                    <button
-                        id={styles.delete}
-                        onClick={() => handleDelete(id)}
-                        >
+                    <button id={styles.delete} onClick={() => handleDelete(id)}>
                         Delete
                     </button>
                 </div>

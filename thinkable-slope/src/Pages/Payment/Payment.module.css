@@ -79,7 +79,7 @@
 }
 
 .bookbtn2 {
-        background-color: #17274a;
+    background-color: #17274a;
     border: 2px solid transparent;
 
     /* height: 60px; */
@@ -199,7 +199,6 @@
     border-radius: 15px;
 
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
 }
 #container {
     border: 0px solid rgb(106, 105, 105);
@@ -222,7 +221,7 @@
 }
 
 .bookbtn3 {
-        background-color: #17274a;
+    background-color: #17274a;
     border: 2px solid transparent;
 
     /* height: 60px; */
@@ -242,4 +241,43 @@
     color: #17274a;
     border: 2px solid #17274a;
     border-radius: 15px;
+}
+#vs_stack1 {
+    width: 35%;
+    margin: 20px auto;
+    padding-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#deleteButton {
+    width: 100px;
+    padding: 5px 8px;
+    background-color: orange;
+    border-radius: 8px;
+}
+#heading {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+#tab {
+    padding-right: 10px;
+    border: 0px solid red;
+}
+#tablist {
+    display: flex;
+    justify-content: space-around;
+}
+#tabfirst {
+    margin: 30px auto;
+    padding: 10px;
+    border: 2px solid red;
+    background-color: #e8eaf6;
+    width: 25%;
+}
+#tabfirst :hover {
+    border: 2px solid green;
+    color: black;
+
+    border-radius: 5px;
 }

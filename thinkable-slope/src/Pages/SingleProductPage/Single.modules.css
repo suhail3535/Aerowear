@@ -81,7 +81,7 @@
     background-color: rgba(142, 237, 199, 0.527);
 }
 .size {
-    border: 0px solid gray;
+    border: 2px solid gray;
     /* height: 50px; */
     padding: 20px;
     margin-top: 20px;
@@ -92,6 +92,7 @@
     border-radius: 15px;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 }
+
 .add-cart-btn {
     background-color: white;
     width: 45%;
@@ -117,4 +118,14 @@
 .buy-Now:hover {
     background-color: #fff;
     color: rgb(142, 237, 199);
+}
+
+#heading {
+    padding: 10px;
+}
+#btn1 {
+    margin-right: 30px;
+    margin-top: 5px;
+    border: 1px solid red;
+    background-color: blue;
 }
