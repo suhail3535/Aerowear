@@ -9,7 +9,6 @@ import {
     PinInputField,
     Select,
     Spinner,
-    StylesProvider,
     Tab,
     TabList,
     TabPanel,
@@ -24,9 +23,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getRequestAddress } from "../../Redux/UserReducer/action";
 
 import PaymentCard from "./PaymentCard";
-import { Button } from "@mui/material";
+
 import { useNavigate } from "react-router-dom";
-import { width } from "@mui/system";
+
 import Swal from "sweetalert2";
 
 const PaymentMethod = () => {
@@ -45,7 +44,6 @@ const PaymentMethod = () => {
 
     const dispatch = useDispatch();
     const newData = useSelector((store) => {
-        //  console.log(store)
         return {
             address: store.UserReducer.address,
             isLoading: store.isLoading,
@@ -72,28 +70,14 @@ const PaymentMethod = () => {
     // console.log(newData)
     return (
         <div>
-            <Heading
-                as="h2"
-                size="lg"
-                style={{
-                    textAlign: "center",
-                    padding: "10px",
-                    marginTop: "20px",
-                }}>
+            <Heading id={styles.heading} as="h2" size="lg">
                 Payment Method
             </Heading>
             <div id={styles.container}>
                 <div id={styles.address}>
                     {address.map((ele) => {
                         return (
-                            <div
-                                className={styles.single_card_address}
-                                // style={{
-                                //   padding: "10px",
-                                //   marginBottom: "20px",
-                                //   border: "1px solid gray",
-                                // }}
-                            >
+                            <div className={styles.single_card_address}>
                                 <PaymentCard key={ele.id} {...ele} />
                             </div>
                         );
@@ -101,18 +85,10 @@ const PaymentMethod = () => {
                 </div>
 
                 <div id={styles.method}>
-                    <Tabs
-                        style={{
-                            paddingRight: "10px",
-                            border: "0px solid red",
-                        }}
-                        variant="unstyled">
-                        <TabList
-                            style={{
-                                display: "flex",
-                                justifyContent: "space-around",
-                            }}>
+                    <Tabs id={styles.tab} variant="unstyled">
+                        <TabList id={styles.tablist}>
                             <Tab
+                                id={styles.tabfirst}
                                 style={{
                                     margin: "30px auto",
                                     padding: "10px",

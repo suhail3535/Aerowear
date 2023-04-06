@@ -16,16 +16,8 @@ const OrderSuccessfull = () => {
     };
     return (
         <div style={{ backgroundColor: "white" }}>
-            <VStack
-                margin="auto"
-                style={{
-                    border: "0px solid gray",
-                    width: "35%",
-                    margin: " 20px auto",
-                    paddingBottom: "40px",
-                    borderRadius: "15px",
-                    boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
-                }}>
+            <VStack id={styles.vs_stack1}
+             >
                 <div>
                     <img
                         src="https://www.pinkwigscloset.com/images/success-tick.gif"

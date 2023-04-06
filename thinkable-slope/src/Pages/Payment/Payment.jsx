@@ -1,15 +1,13 @@
 import {
     Box,
-    Button,
-    Center,
+
     Divider,
     FormControl,
     FormLabel,
     Heading,
     HStack,
     Input,
-    PinInput,
-    PinInputField,
+
     Radio,
     RadioGroup,
     Select,
@@ -20,8 +18,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
-import CartMap from "../../Components/CartMap/Cartmap";
+
 import styles from "./Payment.module.css";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { postRequestAddress } from "../../Redux/UserReducer/action";

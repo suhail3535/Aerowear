@@ -1,11 +1,4 @@
-import {
-    Box,
-    Button,
-    Heading,
-    Spinner,
-    useToast,
-    WrapItem,
-} from "@chakra-ui/react";
+import { Button, Heading, Spinner, useToast } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -13,7 +6,6 @@ import styles from "./Single.modules.css";
 import StarPurple500Icon from "@mui/icons-material/StarPurple500";
 import { postCartRequest } from "../../Redux/CartReducer/Action";
 import { useDispatch } from "react-redux";
-import Swal from "sweetalert2";
 
 const SingleProduct = () => {
     const [data, setData] = useState({});
@@ -57,8 +49,8 @@ const SingleProduct = () => {
     }
     const getSingleProduct = (id) => {
         axios
-          .get(`https://helpful-gray-rooster.cyclic.app/women/${id}`)
-          .then((res) => setData(res.data));
+            .get(`https://helpful-gray-rooster.cyclic.app/women/${id}`)
+            .then((res) => setData(res.data));
     };
     const handleDelivery = () => {};
 
@@ -107,44 +99,13 @@ const SingleProduct = () => {
                             Free Delivery
                         </button>
                         <div className="size">
-                            <Heading
-                                style={{ padding: "10px" }}
-                                as="h2"
-                                size="sm">
+                            <Heading id={styles.heading} as="h2" size="sm">
                                 Select Size
                             </Heading>
-                            <Button
-                                style={{
-                                    marginRight: "30px",
-                                    marginTop: "5px",
-                                }}
-                                colorScheme="gray">
-                                S
-                            </Button>
-                            <Button
-                                style={{
-                                    marginRight: "30px",
-                                    marginTop: "5px",
-                                }}
-                                colorScheme="gray">
-                                M
-                            </Button>
-                            <Button
-                                style={{
-                                    marginRight: "30px",
-                                    marginTop: "5px",
-                                }}
-                                colorScheme="gray">
-                                X
-                            </Button>
-                            <Button
-                                style={{
-                                    marginRight: "30px",
-                                    marginTop: "5px",
-                                }}
-                                colorScheme="gray">
-                                XL
-                            </Button>
+                            <button id={styles.btn1}>S</button>
+                            <button id={styles.btn1}>M</button>
+                            <button id={styles.btn1}>X</button>
+                            <button id={styles.btn1}>XL</button>
                         </div>
                         <br />
                         <Heading as="h1" size="sm">

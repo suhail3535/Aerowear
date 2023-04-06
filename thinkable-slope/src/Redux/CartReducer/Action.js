@@ -1,5 +1,11 @@
-import { DELETE_CART_SUCCESS, GET_CART_FAILURE, GET_CART_REQUEST, GET_CART_SUCCESS, POST_CART_SUCESS } from "./ActionType";
-import axios from "axios"
+import {
+    DELETE_CART_SUCCESS,
+    GET_CART_FAILURE,
+    GET_CART_REQUEST,
+    GET_CART_SUCCESS,
+    POST_CART_SUCESS,
+} from "./ActionType";
+import axios from "axios";
 
 export const getCartProductsRequestAction = () => {
     return { type: GET_CART_REQUEST };
@@ -18,45 +24,41 @@ export const PostCartSuccess = (payload) => {
 };
 
 export const DeleteCartSuccess = () => {
-    return { type: DELETE_CART_SUCCESS};
+    return { type: DELETE_CART_SUCCESS };
 };
 
 export const getCartProducts = () => (dispatch) => {
     dispatch(getCartProductsRequestAction());
-   return axios
-     .get("https://helpful-gray-rooster.cyclic.app/cart")
-     .then((res) => {
-       dispatch(getCartProductsSuccessAction(res.data));
-     })
-     .catch((err) => {
-       dispatch(getCartProductsFailureAction());
-     });
+    return axios
+        .get("https://helpful-gray-rooster.cyclic.app/cart")
+        .then((res) => {
+            dispatch(getCartProductsSuccessAction(res.data));
+        })
+        .catch((err) => {
+            dispatch(getCartProductsFailureAction());
+        });
 };
 
 export const postCartRequest = (payload) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     axios
-      .post("https://helpful-gray-rooster.cyclic.app/cart", payload)
-      .then((res) => {
-        dispatch(PostCartSuccess(res.data));
-      })
-      .then((err) => {
-        dispatch(getCartProductsFailureAction());
-      });
+        .post("https://helpful-gray-rooster.cyclic.app/cart", payload)
+        .then((res) => {
+            dispatch(PostCartSuccess(res.data));
+        })
+        .then((err) => {
+            dispatch(getCartProductsFailureAction());
+        });
 };
-
 
 export const deleteCartdata = (id) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     return axios
-      .delete(`https://helpful-gray-rooster.cyclic.app/cart/${id}`)
-      .then((res) => {
-        dispatch(DeleteCartSuccess());
-      })
-      .catch((err) => {
-        dispatch(getCartProductsFailureAction());
-      });
-  
-  }
-
-
+        .delete(`https://helpful-gray-rooster.cyclic.app/cart/${id}`)
+        .then((res) => {
+            dispatch(DeleteCartSuccess());
+        })
+        .catch((err) => {
+            dispatch(getCartProductsFailureAction());
+        });
+};

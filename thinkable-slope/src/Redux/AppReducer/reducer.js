@@ -1,4 +1,3 @@
-
 import {
     GET_PRODUCTS_FAILURE,
     GET_PRODUCTS_REQUEST,

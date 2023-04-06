@@ -1,9 +1,8 @@
-import { Button, useToast } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 import styles from "./Payment.module.css";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+
 import {
     deletedataAdd,
     getRequestAddress,
@@ -19,8 +18,8 @@ const PaymentCard = ({
     zipcode,
 }) => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
-    const [isButLoading, setIsButLoading] = useState(false);
+
+    const [setIsButLoading] = useState(false);
     const toast = useToast();
     const handleDelete = (id) => {
         // console.log(id)
@@ -59,13 +58,8 @@ const PaymentCard = ({
                 <input type="checkbox" />
                 <div>
                     <button
-                        onClick={() => handleDelete(id)}
-                        style={{
-                          width: "100px",
-                          padding:"5px 8px",
-                            backgroundColor: "orange",
-                            borderRadius: "8px",
-                        }}>
+                        id={styles.deleteButton}
+                        onClick={() => handleDelete(id)}>
                         Remove
                     </button>
                 </div>
