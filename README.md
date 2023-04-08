@@ -95,9 +95,14 @@ npm run deploy
 ### 1. Homepage
 ![home](https://user-images.githubusercontent.com/110021464/222483483-7eb2c6ac-b8d7-447d-89e6-19ed1845c597.png)
 ### 2. Women Page
-![women](https://user-images.githubusercontent.com/110021464/222483629-c972b512-cdd2-4e13-a10a-d604232c5f44.png)
+
+
+
+
+
+![women page](https://user-images.githubusercontent.com/112754439/230735194-96b2d41e-9905-4d4e-99a9-428d9c9590b6.png)
 ### 3. Men Page
-![men](https://user-images.githubusercontent.com/110021464/222483650-88bb0989-9215-4e23-ab68-1476636d09cd.png)
+![men page](https://user-images.githubusercontent.com/112754439/230735192-56b02fa9-a0c5-45f9-a49e-453b565cbbad.png)
 ### Cart Page
 ![Screenshot (150)](https://user-images.githubusercontent.com/112754439/222426434-00b4850e-d647-4a01-9d36-40e7baa1e15d.png)
 
