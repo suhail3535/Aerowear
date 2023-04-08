@@ -2,11 +2,11 @@
 .Navbar2_maindiv{
     height: 80px;
     border: 0px solid red;
-    width: 85%;
+    width: 60%;
     display: flex;
     align-items: center;
     float: right;
-    justify-content:space-around ;
+    justify-content:space-evenly ;
 }
 .Navbar2_maindiv p{
     padding: 0.5rem;

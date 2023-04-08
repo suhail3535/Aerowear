@@ -64,10 +64,12 @@
     border-radius: 5px;
 }
 .wrapperProfile {
-    /* border: 1px solid red; */
+ border: 0px solid red;
     padding: 0px 0px 0px 20px;
     display: flex;
+    width: 20%;
     align-items: center;
+    margin-right: 50px;
     justify-content: space-between;
 }
 

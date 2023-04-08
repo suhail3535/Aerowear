@@ -1,5 +1,5 @@
 .product-all {
-    border: 0px solid gray;
+    border: 5px solid gray;
     width: 80%;
     padding: 20px;
     display: flex;
@@ -32,14 +32,14 @@
     justify-content: space-between;
 }
 .product-detail {
-    border: 0px solid green;
+    border:2px solid green;
     padding: 20px;
     /* width: 80%; */
     border-radius: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .product-card {
-    border: 0px solid yellow;
+    border: 2px solid yellow;
     /* width: 95%; */
     margin-right: 20px;
     cursor: pointer;
@@ -128,4 +128,13 @@
     margin-top: 5px;
     border: 1px solid red;
     background-color: blue;
+}
+
+@media screen and (max-width: 980px) {
+  #product-all{
+    display: flex;
+    flex-direction: column;
+
+
+  }
 }

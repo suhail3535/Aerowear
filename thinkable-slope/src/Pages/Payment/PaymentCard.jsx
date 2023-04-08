@@ -19,7 +19,7 @@ const PaymentCard = ({
 }) => {
     const dispatch = useDispatch();
 
-    const [setIsButLoading] = useState(false);
+    const [isButLoading,setIsButLoading] = useState(false);
     const toast = useToast();
     const handleDelete = (id) => {
         // console.log(id)
