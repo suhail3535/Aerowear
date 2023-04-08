@@ -1,6 +1,6 @@
 import styles from "./Cartmap.module.css";
 
-function CartMap({ image, price, name, id, HandleCartDelete }) {
+function CartMap({ image, price, name, id, HandleCartDelete, setquantity }) {
     return (
         <>
             <div className={styles.cart_main_div}>
@@ -31,6 +31,7 @@ function CartMap({ image, price, name, id, HandleCartDelete }) {
                         style={{
                             borderRadius: "15px",
                         }}
+                        onChange={(e) => setquantity(e.target.value)}
                         name=""
                         id="">
                         <option value="">1</option>

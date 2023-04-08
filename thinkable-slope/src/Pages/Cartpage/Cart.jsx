@@ -12,6 +12,7 @@ import {
 import { Spinner, useToast } from "@chakra-ui/react";
 
 const Cart = () => {
+    const [quantity1, setquantity] = useState(1);
     const navigate = useNavigate();
     const [isButLoading, setIsButLoading] = useState(false);
     const toast = useToast();
@@ -28,14 +29,16 @@ const Cart = () => {
         dispatch(getCartProducts());
     }, []);
 
-    let totalprice;
-    if (products.length == 0) {
-        totalprice = 0;
-    } else {
-        totalprice = products.reduce((acc, el) => {
-            return acc + Number(el.price);
-        }, 0);
-    }
+      let totalprice = 0;
+      for (var i = 0; i < products.length; i++) {
+          if (quantity1[i] === undefined) {
+              totalprice =(totalprice) + Number(products[i].price);
+          } else {
+              totalprice += +products[i].price * Number(quantity1[i]);
+              console.log(quantity1[i]);
+          }
+          console.log(products[i].price, quantity1[i]);
+      }
 
     function HandleCartDelete(id) {
         dispatch(deleteCartdata(id)).then(() => {
@@ -65,14 +68,7 @@ const Cart = () => {
             {products.length === 0 ? (
                 <EmptyCart />
             ) : (
-                <div
-                    style={{
-                        boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
-                        width: "85%",
-                        margin: "20px auto",
-                        padding: "20px",
-                        borderRadius: "15px",
-                    }}>
+                <div id={styles.cart} >
                     <div className={styles.Shopping_cart_heading}>
                         <p>Shopping Bag</p>
                         <p>{products.length} Items</p>
@@ -81,6 +77,7 @@ const Cart = () => {
                         <div style={{ width: "75%" }}>
                             {products.map((el, i) => (
                                 <CartMap
+                                    setquantity={setquantity}
                                     key={i}
                                     {...el}
                                     HandleCartDelete={HandleCartDelete}

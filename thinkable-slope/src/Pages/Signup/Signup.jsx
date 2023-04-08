@@ -61,14 +61,16 @@ const Signup = () => {
         e.preventDefault();
         if (userData.email !== "" && userData.password !== "") {
             localStorage.setItem("userData", JSON.stringify(userData));
+            localStorage.setItem("isAuth", JSON.stringify(false));
+
             setFormData(userData);
             toast({
                 title: "Registration Successful",
                 description: "You are redirected to login page.",
                 status: "success",
+                position: "top",
                 duration: 2500,
                 isClosable: true,
-                position: "bottom-right",
             });
             dispatch({ type: "reset" });
             navigate("/login");
