@@ -97,9 +97,6 @@ const Women = () => {
                                     margin: "auto",
 
                                     border: "0px solid gray",
-
-
-
                                 }}>
                                 <input
                                     type="checkbox"
@@ -155,16 +152,25 @@ const Women = () => {
 
                             <p>Sort By Size</p>
                             <div style={{ width: "50%", margin: "auto" }}>
-                                <input name="size" type="radio" defaultChecked={true} />
-                                <label >XS</label><br />
+                                <input
+                                    name="size"
+                                    type="radio"
+                                    defaultChecked={true}
+                                />
+                                <label>XS</label>
+                                <br />
                                 <input name="size" type="radio" />
-                                <label >Small</label><br />
+                                <label>Small</label>
+                                <br />
                                 <input name="size" type="radio" />
-                                <label >Large</label><br />
+                                <label>Large</label>
+                                <br />
                                 <input name="size" type="radio" />
-                                <label >Medium</label><br />
+                                <label>Medium</label>
+                                <br />
                                 <input name="size" type="radio" />
-                                <label >XL</label><br />
+                                <label>XL</label>
+                                <br />
                             </div>
                         </div>
                     </div>
@@ -172,13 +178,9 @@ const Women = () => {
 
                 <div className={styles.product_div}>
                     {products.map((el) => (
-
-
                         <Link to={`/women/${el.id}`}>
                             <ProductCard {...el} />
                         </Link>
-
-
                     ))}
                 </div>
             </div>

@@ -9,25 +9,37 @@ import {
     InputRightElement,
     useToast,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import style from "./Login.css";
 
-let userReg = JSON.parse(localStorage.getItem("userData"));
+let userReg = JSON.parse(localStorage.getItem("userData")) || [];
+
+
+
+
+
+
 
 const Login = () => {
     const [show, setShow] = React.useState(false);
     const handleClick = () => setShow(!show);
+
+
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const toast = useToast();
 
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email !== "" && password !== "") {
             if (userReg.email === email && userReg.password === password) {
+                localStorage.setItem("isAuth",true)
                 toast({
                     title: "Login Successful",
                     description: "",
@@ -37,7 +49,8 @@ const Login = () => {
                     position: "top",
                 });
                 navigate("/");
-               
+                window.location.reload();
+
             } else {
                 toast({
                     title: "Wrong Credentials",

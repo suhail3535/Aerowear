@@ -1,9 +1,13 @@
 import React from 'react'
+import { LOGIN_REQUEST } from './ActionType'
 
-const Action = () => {
-  return (
-    <div>Action</div>
-  )
+const login = (payload)=>async(dispatch) => {
+  dispatch({ type: LOGIN_REQUEST });
+  try {
+    
+  } catch (error) {
+
+  }
 }
 
-export default Action
+export default login
