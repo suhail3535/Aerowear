@@ -82,12 +82,14 @@ npm run deploy
 - Delete Request Api call
 - User Register
 - User login 
+- User profile show after login
 - Admin Register
 - Admin login 
 - Add product
 - Delete product
 - Edit product
 - Sorting & filter
+- Search functionality (Women page and Men Page)
 
 ## ScreenShots
 ### 1. Homepage
