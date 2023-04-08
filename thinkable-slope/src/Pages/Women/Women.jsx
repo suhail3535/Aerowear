@@ -2,15 +2,20 @@ import FilterNavbar from "../../Components/FilterNavbar/FilterNavbar";
 import Navbar2 from "../../Components/Navbar2/Navbar2";
 import styles from "./Women.module.css";
 import { useEffect, useState } from "react";
-import { getWomenProducts } from "../../Redux/AppReducer/Action";
+
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
+import axios from "axios";
+import { SearchIcon } from "@chakra-ui/icons";
 
 const Women = () => {
     const [sidebar, setSidebar] = useState(false);
+
+    const [data, setData] = useState([]);
+    const [value, setValue] = useState("");
     const { products, isLoading, isError } = useSelector((store) => {
         return {
             products: store.AppReducer.products,
@@ -57,7 +62,7 @@ const Women = () => {
                 Rating: searchParams.getAll("rating"),
             },
         };
-        dispatch(getWomenProducts(queryParams));
+        dispatch(allData(queryParams));
     }, [location.search]);
 
     function handleSort(e) {
@@ -68,13 +73,53 @@ const Women = () => {
         setSidebar(!sidebar);
     }
 
+    // <-------------for Search products start----------->
+    const handleSearch = async (e) => {
+        e.preventDefault();
+        return await axios
+            .get(`http://localhost:8080/women?q=${value}`)
+            .then((res) => {
+                setData(res.data);
+                setValue("");
+            })
+            .catch((err) => console.log(err));
+    };
+    console.log("search", data);
+
+    const allData = (obj) => (dispatch) => {
+        axios
+            .get("http://localhost:8080/women", obj)
+            .then((res) => {
+                setData(res.data);
+            })
+            .catch((err) => console.log(err));
+    };
+
+    // <-------------for Search products End----------->
+
     return (
         <>
             <div className={styles.Navbar2_mainalignment_div}>
                 <div className={styles.Women_Title_div}>
-                    <p>Women</p>
+                    <p>Women Page</p>
                 </div>
-                <Navbar2 />
+                <div id={styles.form}>
+                    <form id={styles.form_wrapper}>
+                        <input
+                            id={styles.input}
+                            type="text"
+                            placeholder="Search by name"
+                            className="seacrh"
+                            value={value}
+                            onChange={(e) => setValue(e.target.value)}
+                        />
+                    </form>
+                    <button id={styles.btn} onClick={handleSearch}>
+                        <SearchIcon />
+                        Search
+                    </button>
+                </div>
+                {/* <Navbar2 /> */}
             </div>
             <FilterNavbar handleSort={handleSort} Sidebar={Sidebar} />
 
@@ -176,13 +221,24 @@ const Women = () => {
                     </div>
                 ) : null}
 
-                <div className={styles.product_div}>
-                    {products.map((el) => (
-                        <Link to={`/women/${el.id}`}>
-                            <ProductCard {...el} />
-                        </Link>
-                    ))}
-                </div>
+                {data.length > 0 ? (
+                    <div className={styles.product_div}>
+                        {data.map((el) => (
+                            <Link to={`/women/${el.id}`}>
+                                <ProductCard {...el} />
+                            </Link>
+                        ))}
+                    </div>
+                ) : (
+                    <h1
+                        style={{
+                            fontSize: "50px",
+                            textAlign: "center",
+                            color: "blue",
+                        }}>
+                        No result found Please refresh
+                    </h1>
+                )}
             </div>
             <ExtraInfo />
         </>

@@ -9,7 +9,7 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
     Drawer,
     DrawerBody,
@@ -33,6 +33,7 @@ let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 let userReg = JSON.parse(localStorage.getItem("userData")) || [];
 let isAuth = JSON.parse(localStorage.getItem("isAuth")) || false;
 const Navbar = () => {
+    const navigate=useNavigate()
     const openLink = (url) => {
         window.open(url);
     };
@@ -49,6 +50,7 @@ const Navbar = () => {
     const handlelogout = () => {
         window.localStorage.clear();
         window.location.reload();
+        navigate("/");
     };
     return (
         <div>
@@ -174,7 +176,7 @@ const Navbar = () => {
                             bg="gray.300"
                             color="black">
                             <VStack>
-                                <InputGroup>
+                                {/* <InputGroup>
                                     <Input
                                         pr="1rem"
                                         variant="outline"
@@ -196,7 +198,7 @@ const Navbar = () => {
                                             <SearchIcon />
                                         </Button>
                                     </InputRightElement>
-                                </InputGroup>
+                                </InputGroup> */}
                             </VStack>
                         </Tooltip>
                         <div className="dropdown-menu">

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
     GET_PRODUCTS_FAILURE,
     GET_PRODUCTS_REQUEST,
@@ -20,7 +21,7 @@ export const getProductsFailureAction = () => {
 export const getWomenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("https://helpful-gray-rooster.cyclic.app/women", obj)
+        .get("http://localhost:8080/women", obj)
         .then((res) => {
             dispatch(getProductsSuccessAction(res.data));
         })
@@ -28,6 +29,7 @@ export const getWomenProducts = (obj) => (dispatch) => {
             dispatch(getProductsFailureAction());
         });
 };
+
 
 export const getMenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());

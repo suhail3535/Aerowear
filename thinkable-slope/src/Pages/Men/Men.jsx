@@ -7,8 +7,12 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
 import { useLocation, useSearchParams } from "react-router-dom";
 import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
+import axios from "axios";
+import { SearchIcon } from "@chakra-ui/icons";
 
 const Men = () => {
+    const [data, setData] = useState([]);
+    const [value, setValue] = useState("");
     const [sidebar, setSidebar] = useState(false);
     const { products, isLoading, isError } = useSelector((store) => {
         return {
@@ -58,7 +62,7 @@ const Men = () => {
                 Rating: searchParams.getAll("rating"),
             },
         };
-        dispatch(getMenProducts(queryParams));
+        dispatch(allData(queryParams));
     }, [location.search]);
 
     function handleSort(e) {
@@ -69,14 +73,53 @@ const Men = () => {
         setSidebar(!sidebar);
     }
 
-    // console.log(products);
+    // <-------------for Search products start----------->
+    const handleSearch = async (e) => {
+        e.preventDefault();
+        return await axios
+            .get(`http://localhost:8080/men?q=${value}`)
+            .then((res) => {
+                setData(res.data);
+                setValue("");
+            })
+            .catch((err) => console.log(err));
+    };
+    console.log("search", data);
+
+    const allData = (obj) => (dispatch) => {
+        axios
+            .get("http://localhost:8080/men", obj)
+            .then((res) => {
+                setData(res.data);
+            })
+            .catch((err) => console.log(err));
+    };
+
+    // <-------------for Search products End----------->
+
     return (
         <>
             <div className={styles.Navbar2_mainalignment_div}>
                 <div className={styles.men_Title_div}>
-                    <p>Men</p>
+                    <p>Men Page</p>
                 </div>
-                <Navbar2 />
+                <div id={styles.form}>
+                    <form id={styles.form_wrapper}>
+                        <input
+                            id={styles.input}
+                            type="text"
+                            placeholder="Search by name"
+                            className="seacrh"
+                            value={value}
+                            onChange={(e) => setValue(e.target.value)}
+                        />
+                    </form>
+                    <button id={styles.btn} onClick={handleSearch}>
+                        <SearchIcon />
+                        Search
+                    </button>
+                </div>
+                {/* <Navbar2 /> */}
             </div>
             <FilterNavbar handleSort={handleSort} Sidebar={Sidebar} />
 
@@ -175,11 +218,22 @@ const Men = () => {
                         </div>
                     </div>
                 ) : null}
-                <div className={styles.product_div}>
-                    {products.map((el) => (
-                        <ProductCard {...el} key={el.key} />
-                    ))}
-                </div>
+                {data.length === 0 ? (
+                    <h1
+                        style={{
+                            fontSize: "50px",
+                            textAlign: "center",
+                            color: "blue",
+                        }}>
+                        No result found Please refresh
+                    </h1>
+                ) : (
+                    <div className={styles.product_div}>
+                        {data.map((el) => (
+                            <ProductCard {...el} key={el.key} />
+                        ))}
+                    </div>
+                )}
             </div>
 
             <ExtraInfo />
