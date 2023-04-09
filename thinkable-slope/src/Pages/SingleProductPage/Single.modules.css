@@ -134,13 +134,45 @@
 }
 
 /* <----------For Tablet screen---------> */
+
+@media screen and (max-width: 1280px) {
+    .product-all {
+        display: flex;
+    }
+
+    .product-two {
+        border: 0px solid rgb(128, 0, 119);
+        width: 100%;
+        display: flex;
+        margin: auto;
+    }
+
+    .product-detail {
+        border: 0px solid green;
+        margin: 20px auto;
+        width: 60%;
+    }
+
+    .btn {
+        border: 0px solid red;
+        display: flex;
+        height: auto;
+        width: 100%;
+    }
+}
+/* <----------For Tablet screen---------> */
 @media screen and (max-width: 768px) {
     .product-all {
         display: block;
     }
     .size {
         width: 100%;
-        display: block;
+        display: flex;
+        border: 0px solid yellow;
+    }
+    .product-one {
+        border: 0px solid blue;
+        display: none;
     }
     .product-two {
         border: 0px solid rgb(128, 0, 119);
@@ -179,7 +211,7 @@
         background-color: #17274a;
         width: 100%;
         color: white;
-        height: auto;
+        height: 70px;
 
         margin-right: 10px;
     }
@@ -205,20 +237,20 @@
     }
     .product-card {
         border: 0px solid yellow;
-        width: 50%;
+        width: 100%;
         margin: 20px auto;
     }
     .product-detail {
         border: 0px solid green;
         margin: 20px auto;
-        width: 50%;
+        width: 100%;
     }
     .product-detail :nth-child(5) {
         border: 0px solid rgb(128, 0, 23);
         margin: auto;
         font-size: 12px;
         width: 100%;
-        height: auto;
+        height: 50px;
 
         margin-right: 10px;
     }
@@ -229,18 +261,19 @@
         background-color: #17274a;
         width: 100%;
         color: white;
-        height: auto;
+        height: 50px;
 
         margin-right: 10px;
     }
     .btn {
-        border: 0px solid yellow;
+        border: 0px solid rgb(4, 255, 0);
         display: block;
         height: auto;
         margin: auto;
+        width: 100%;
     }
     .btn button {
-        border: 0px solid yellow;
+        border: 0px solid rgb(0, 255, 208);
         padding: 10px;
         text-indent: 0cap;
         width: 100%;
