@@ -72,9 +72,10 @@ const Cart = () => {
                     <div className={styles.Shopping_cart_heading}>
                         <p>Shopping Bag</p>
                         <p>{products.length} Items</p>
-                    </div>
-                    <div style={{ display: "flex", width: "100%" }}>
-                        <div style={{ width: "75%" }}>
+                        </div>
+                        
+                    <div className={styles.parent}>
+                        <div className={styles.card_div}>
                             {products.map((el, i) => (
                                 <CartMap
                                     setquantity={setquantity}

@@ -1,6 +1,7 @@
 .Shopping_cart_heading p:nth-child(1) {
     letter-spacing: 1.2px;
     color: #17274a;
+    border: 0px solid red;
     font: normal normal bold 24px/24px "Visuelt Pro", sans-serif;
     margin: 0;
 }
@@ -12,6 +13,7 @@
     text-transform: capitalize;
     position: relative;
     top: -1px;
+    border: 0px solid rgb(0, 225, 255);
     margin-left: 8px;
 }
 #cart {
@@ -20,12 +22,31 @@
     margin: 20px auto;
     padding: 20px;
     border-radius: 15px;
+    border: 1px dotted rgb(141, 141, 141);
 }
 .Shopping_cart_heading {
     height: 80px;
     display: flex;
     align-items: center;
     padding: 20px;
+    border: 0px solid yellow;
+}
+.Order_summmary_div {
+    border: 0px solid blue;
+    padding: 10px;
+}
+.card_div {
+    border: 0px solid black;
+    width: 75%;
+    padding: 10px;
+}
+.parent {
+    border: 0px solid green;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    gap: 20px;
 }
 
 .Order_summmary_div p:nth-child(1) {
@@ -35,6 +56,7 @@
     letter-spacing: 1.2px;
     color: #1e3352;
     text-transform: uppercase;
+    order: 0px solid pink;
 }
 .Order_summmary_div p:nth-child(2),
 .Order_summmary_div p:nth-child(3),
@@ -61,6 +83,7 @@
     background: #17274a;
     margin: 0 0 30px 0;
     font-weight: 500;
+    border: 0px solid teal;
     font-size: 1rem;
     /* font-family: "Visuelt Pro"; */
     box-sizing: border-box;
@@ -95,6 +118,7 @@
 }
 
 .deliveryinfo_div label {
+    /* border: 2px solid; */
     padding-left: 30px;
     width: auto;
     font: normal normal normal 14px/21px "Visuelt Pro", sans-serif;
@@ -107,6 +131,7 @@
     font-family: Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica,
         sans-serif;
     text-align: left;
+
     color: #17120f;
     font-size: 12px;
     font-weight: 400;
@@ -117,4 +142,58 @@
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+/* <--------------for teblet veiw------------> */
+@media screen and (max-width: 768px) {
+    .parent {
+      padding: 20px;
+        display: block;
+            border: 1px dotted gray;
+
+    }
+    .Order_summmary_div {
+    border: 0px solid blue;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+}
+.card_div {
+    border: 1px dotted black;
+    width: 100%;
+        margin: 20px auto;
+}
+.Shopping_cart_heading {
+
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+}
+
+/* <--------------for mobile veiw------------> */
+@media screen and (max-width: 400px) {
+    .parent {
+      padding: 20px;
+        display: block;
+
+    }
+    .Order_summmary_div {
+    border: 0px solid blue;
+    width: 100%;
+    margin: 20px auto;
+    padding: 5px;
+    text-align: center;
+}
+.card_div {
+    border: 0px solid black;
+    width: 100%;
+    margin: 20px auto;
+}
+.Shopping_cart_heading {
+
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
 }
