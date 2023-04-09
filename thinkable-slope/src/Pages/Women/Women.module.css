@@ -23,25 +23,25 @@
     line-height: 2.25rem;
     color: #1d3451;
 }
-#form_wrapper{
-    border:0px solid black;
-    width:40%;
+#form_wrapper {
+    border: 0px solid black;
+    width: 40%;
 }
-#form{
+#form {
     border: 0px solid blue;
-display: flex;
-justify-content: space-around;
-width: 60%;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
 }
-#input{
+#input {
     border: 1px solid gray;
-    width: 155%;
+    width: 150%;
     height: 50px;
     text-align: center;
     border-radius: 25px;
 }
-#btn{
-    border:0px solid blue;
+#btn {
+    border: 0px solid blue;
     border-radius: 20px 20px;
     width: 100px;
     background-color: #1d3451;

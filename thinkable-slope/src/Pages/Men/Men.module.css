@@ -27,11 +27,11 @@
     border: 0px solid blue;
 display: flex;
 justify-content: space-around;
-width: 60%;
+width: 55%;
 }
 #input{
     border: 1px solid gray;
-    width: 155%;
+    width: 150%;
     height: 50px;
     text-align: center;
     border-radius: 25px;

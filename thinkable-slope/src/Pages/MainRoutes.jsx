@@ -35,7 +35,10 @@ const MainRoutes = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/paymentmethod" element={<PaymentMethod />} />
-                <Route path="/ordersuccessfull" element={<OrderSuccessfull />} />
+                <Route
+                    path="/ordersuccessfull"
+                    element={<OrderSuccessfull />}
+                />
             </Routes>
         </div>
     );
