@@ -82,34 +82,49 @@ npm run deploy
 - Delete Request Api call
 - User Register
 - User login 
+- User profile show after login
 - Admin Register
 - Admin login 
 - Add product
 - Delete product
 - Edit product
 - Sorting & filter
+- Search functionality (Women page and Men Page)
 
 ## ScreenShots
 ### 1. Homepage
 ![home](https://user-images.githubusercontent.com/110021464/222483483-7eb2c6ac-b8d7-447d-89e6-19ed1845c597.png)
 ### 2. Women Page
-![women](https://user-images.githubusercontent.com/110021464/222483629-c972b512-cdd2-4e13-a10a-d604232c5f44.png)
+![women page](https://user-images.githubusercontent.com/112754439/230735194-96b2d41e-9905-4d4e-99a9-428d9c9590b6.png)
 ### 3. Men Page
-![men](https://user-images.githubusercontent.com/110021464/222483650-88bb0989-9215-4e23-ab68-1476636d09cd.png)
-### Cart Page
-![Screenshot (150)](https://user-images.githubusercontent.com/112754439/222426434-00b4850e-d647-4a01-9d36-40e7baa1e15d.png)
+![men page](https://user-images.githubusercontent.com/112754439/230735192-56b02fa9-a0c5-45f9-a49e-453b565cbbad.png)
 
-### 4. Payment Page
-![cart](https://user-images.githubusercontent.com/110021464/222483675-eea1d198-a787-423f-92e3-b18c142ae5a6.png)
+### 4.Single Product Page
+![single product default](https://user-images.githubusercontent.com/112754439/230758459-89464b40-f393-4a0c-8eff-8623fe3a491a.png)
+### 5. Responsive Tab View
+![single product page](https://user-images.githubusercontent.com/112754439/230758460-b8fdaf50-525a-4b51-8aed-4b61559d6e97.png)
+
+
+### 6.Cart Page
+![cartpage laptopview](https://user-images.githubusercontent.com/112754439/230758458-a5c9994a-5b5b-44fe-8b68-e84dce4d0028.png)
+
+### 7.Responsive Tab View
+![cart page](https://user-images.githubusercontent.com/112754439/230758457-64438120-71c1-4079-ad75-4c876c268990.png)
+### 8. Payment Page
+<!-- ![cart](https://user-images.githubusercontent.com/110021464/222483675-eea1d198-a787-423f-92e3-b18c142ae5a6.png) -->
+![PAY](https://user-images.githubusercontent.com/112754439/230759851-0a564379-592f-4508-8ed5-e1235766fd77.png)
+### 9. Responsive Tab View
+![PAYMENT](https://user-images.githubusercontent.com/112754439/230759852-a13f74ee-1714-4bed-b17e-b103e9c95fe7.png)
+
 <!-- ![Screenshot (137)](https://user-images.githubusercontent.com/112754439/222426239-dee8cd63-3b68-4754-98c1-f4fe8a89e300.png)
 ![Screenshot (138)](https://user-images.githubusercontent.com/112754439/222426322-e903ae80-1511-4bf4-bc69-ec2e602cb8ec.png)
 ![Screenshot (139)](https://user-images.githubusercontent.com/112754439/222426349-a1b407d5-9ac4-423e-b235-9503142f7dc9.png) -->
 
-### 5. Admin Page
+### 10. Admin Page
 ![adminpannel](https://user-images.githubusercontent.com/112754439/222429357-ecd1712c-8796-4ded-83db-f9a572816f9d.png)
-### 6. Responsive (Tab View)
+### 11. Responsive Tab View
 ![tabveiw](https://user-images.githubusercontent.com/112754439/222456763-37cab0e9-4230-4558-87ba-921ffc450dd2.png)
-### 7. Responsive (Phone View)
+### 12. Responsive (Phone View)
 ![mobileview](https://user-images.githubusercontent.com/112754439/222429257-01fcb2f7-d0a9-4d48-bcd7-c3633f0d6c81.png)
 
 ## Run Locally
