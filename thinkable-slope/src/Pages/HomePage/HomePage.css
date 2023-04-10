@@ -339,3 +339,298 @@
     background-color: #1e3352;
     color: white;
 }
+
+
+/* <----------for Tab view-------------> */
+@media screen and (max-width: 768px) {
+    .hlf-slide {
+        display: block;
+        margin: 30px auto;
+        border: 0px solid blue;
+        /* grid-template-columns: 1fr 1fr 2fr; */
+        justify-content: space-between;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+    .left-girl-card {
+        width: 90%;
+        border: 0px solid red;
+        margin: 10px auto;
+    }
+    .mid-text-wrap {
+        background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwbd05b839/images/homepage/2020/060420/060420%20DESKTOP%20GIRLS%20SHORTS@2x.jpg);
+        border-radius: 21px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 90%;
+        margin: 10px auto;
+        border: 0px solid red;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .end-crs {
+        width: 90%;
+        border: 0px solid red;
+        margin: 10px auto;
+    }
+    .snd-hlf-slide {
+        display: block;
+        border: 0px solid green;
+        margin: 30px auto;
+        /* grid-template-columns: 1fr 1fr 2fr; */
+        justify-content: space-between;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+    .start-crs {
+        width: 90%;
+        border: 0px solid blue;
+        margin: 10px auto;
+    }
+    .snd-text-wrap {
+        background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwf7488dfd/images/homepage/2020/060420/060420%20DESKTOP%20GUYS%20SHORTS@2x.jpg);
+        border-radius: 21px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px auto;
+        width: 90%;
+        margin: 10px auto;
+        border: 0px solid blue;
+
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .right-boy-card {
+        margin: 10px auto;
+        width: 90%;
+        margin: 10px auto;
+        border: 0px solid blue;
+    }
+}
+
+/* <----------for Mobile view-------------> */
+@media screen and (max-width: 400px) {
+    .hlf-slide {
+        display: block;
+        margin: 30px auto;
+        border: 0px solid blue;
+        /* grid-template-columns: 1fr 1fr 2fr; */
+        justify-content: space-between;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+    .left-girl-card {
+        width: 90%;
+        border: 0px solid red;
+        margin: 10px auto;
+    }
+    .mid-text-wrap {
+        background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwbd05b839/images/homepage/2020/060420/060420%20DESKTOP%20GIRLS%20SHORTS@2x.jpg);
+        border-radius: 21px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 90%;
+        margin: 10px auto;
+        border: 0px solid red;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .end-crs {
+        width: 90%;
+        border: 0px solid red;
+        margin: 10px auto;
+    }
+    .snd-hlf-slide {
+        display: block;
+        border: 0px solid green;
+        margin: 30px auto;
+        /* grid-template-columns: 1fr 1fr 2fr; */
+        justify-content: space-between;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+    .start-crs {
+        width: 90%;
+        border: 0px solid blue;
+        margin: 10px auto;
+    }
+    .snd-text-wrap {
+        background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwf7488dfd/images/homepage/2020/060420/060420%20DESKTOP%20GUYS%20SHORTS@2x.jpg);
+        border-radius: 21px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px auto;
+        width: 90%;
+        margin: 10px auto;
+        border: 0px solid blue;
+
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .right-boy-card {
+        margin: 10px auto;
+        width: 90%;
+        margin: 10px auto;
+        border: 0px solid blue;
+    }
+
+    .ads-all {
+        border: 0px solid rgb(64, 255, 0);
+        text-align: center;
+        background-image: url(https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwc9e72c6c/images/homepage/2020/060420/060420%20DESKTOP%20STORE%20ASSET@2x.jpg);
+        background-size: cover;
+        /* object-fit: cover; */
+        background-repeat: no-repeat;
+        padding: 20px;
+        height: 100%;
+
+        display: block;
+        position: relative;
+    }
+
+    .ads-all-img-wrapper {
+        border: 0px solid rgb(0, 13, 128);
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+    .ads-all-img-wrapper img {
+        border: 0px solid rgb(0, 13, 128);
+        align-items: center;
+        padding: 10px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .ads-all-text-2 {
+        font-size: 30px;
+        border: 0px solid blue;
+        font-weight: 700;
+        line-height: 60px;
+        color: white;
+    }
+    .ads-all-text-3 {
+        font-size: 23px;
+        font-weight: 500;
+        line-height: 26px;
+        color: white;
+        border: 0px solid blue;
+    }
+    .ads-all-cta-wrap {
+        margin: 10px auto;
+        display: block;
+        border: 0px solid yellow;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .ads-all-cta-wrap a {
+        margin: 10px auto;
+        display: block;
+        border: 0px solid yellow;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .banner {
+        border: 0px solid green;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-add {
+        border: 0px solid yellow;
+        width: 90%;
+        margin: 10px auto;
+        font-size: 40px;
+        text-align: center;
+        word-spacing: normal;
+        padding: 20px;
+    }
+    .grid-cat {
+        border: 0px solid rebeccapurple;
+        width: 90%;
+        display: grid;
+        margin: 10px auto;
+        gap: 20px;
+        padding: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .add-text-2 {
+        color: #ee5e68;
+        font-size: 77px;
+        font-weight: 700;
+    }
+    .add-text-3 {
+        color: #ee5e68;
+        font-size: 46px;
+        font-weight: 400;
+        line-height: 1.2;
+        /* te */
+    }
+    .add-text-4 {
+        font-family: Visuelt Pro, sans-serif;
+        font-size: 9px;
+        font-weight: 500;
+        color: #ee5e68;
+    }
+
+    .cat-button {
+        text-align: center;
+        border: 0px solid #ee5e68;
+        padding: 15px 20px;
+        border-radius: 4.5px;
+        font-size: 18px;
+        font-weight: 300;
+        color: #ee5e68;
+        transition: all 0.2s ease-in-out;
+    }
+    .main-add {
+        display: none;
+    }
+
+    .lit-bgc-all {
+        border: 0px solid #5eee8c;
+        border-radius: 12px;
+        background-color: #ee5e68;
+        padding: 20px;
+        color: white;
+        display: block;
+    }
+    .lit-left {
+        border: 0px solid yellow;
+        width: 95%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+    .lit-left-text-1 {
+        font-size: 25px;
+        font-weight: 700;
+        /* line-height: 34px; */
+        text-decoration: underline;
+    }
+    .lit-left-text-2 {
+        font-size: 25px;
+        font-weight: 100;
+        /* line-height: 34px; */
+    }
+    .lit-right {
+        border: 0px solid rgb(255, 255, 255);
+        padding: 15px;
+        width: 95%;
+        margin: 10px auto;
+        font-size: 22px;
+        font-weight: 300;
+        text-align: center;
+        border-radius: 7.5px;
+        transition: all 0.2s ease-in-out;
+    }
+    .lit-right:hover {
+        background-color: white;
+        border: 0px solid #17244a;
+        color: #17244a;
+    }
+}

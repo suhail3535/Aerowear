@@ -19,7 +19,7 @@ import {
 import React, { useEffect, useState } from "react";
 import styles from "./Payment.module.css";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
-import { useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getRequestAddress } from "../../Redux/UserReducer/action";
 
 import PaymentCard from "./PaymentCard";
@@ -31,6 +31,8 @@ import Swal from "sweetalert2";
 const PaymentMethod = () => {
     const [isButLoading, setIsButLoading] = useState(false);
 
+
+
     const navigate = useNavigate();
 
     const handlePay = () => {
@@ -38,10 +40,19 @@ const PaymentMethod = () => {
         setTimeout(() => {
             setIsButLoading(false);
             Swal.fire("Congratulations!", "Payment successfull!", "success");
+            
             navigate("/");
+
         }, 2000);
     };
 
+        const { products } = useSelector((store) => {
+            return {
+                products: store.CartReducer.products,
+                isLoading: store.CartReducer.isLoading,
+                isError: store.CartReducer.isError,
+            };
+        }, shallowEqual);
     const dispatch = useDispatch();
     const newData = useSelector((store) => {
         return {
@@ -53,6 +64,7 @@ const PaymentMethod = () => {
         };
     });
 
+
     let totalprice;
     if (newData.products.length === 0) {
         totalprice = 0;
@@ -63,6 +75,10 @@ const PaymentMethod = () => {
     }
 
     const { address } = newData;
+
+
+
+
 
     useEffect(() => {
         dispatch(getRequestAddress());
