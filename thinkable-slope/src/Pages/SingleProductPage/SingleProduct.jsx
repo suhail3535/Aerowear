@@ -31,7 +31,7 @@ const SingleProduct = () => {
                 isClosable: true,
                 position: "top",
             });
-            navigate("/cart");
+            // navigate("/cart");
         }, 2000);
     }
     function handleBuy() {
@@ -45,7 +45,7 @@ const SingleProduct = () => {
             variant: "left-accent",
             position: "top",
         });
-        navigate("/cart");
+        // navigate("/cart");
     }
     const getSingleProduct = (id) => {
         axios
