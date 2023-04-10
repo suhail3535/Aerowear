@@ -9,7 +9,7 @@ function CartMap({ image, price, name, id, HandleCartDelete, setquantity }) {
                     <img width="90%" src={image} alt="" />
                 </div>
 
-                <div className={styles.productInfo_div}>
+              <div className={styles.productInfo_div}>
                     <p>{name}</p>
                     <p>Color - Black Fox</p>
                     <p>Size - x-small</p>
