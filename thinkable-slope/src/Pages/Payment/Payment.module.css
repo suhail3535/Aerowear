@@ -274,11 +274,12 @@ border: 1px solid gray;
 #tablist {
     display: flex;
     justify-content: space-around;
+        border: 0px solid red;
 }
 #tabfirst {
     margin: 30px auto;
     padding: 10px;
-    border: 2px solid red;
+
     background-color: #e8eaf6;
     width: 25%;
 }
@@ -316,7 +317,7 @@ border: 1px solid gray;
 #input {
     /* border: 1px solid rgb(255, 0, 170); */
     border: 2px solid gray;
-    height: 50px;
+    height: 40px;
     width: 400px;
     gap: 20px;
 }
@@ -412,7 +413,7 @@ border: 1px solid gray;
     #input {
 
         border: 2px solid gray;
-        height: 50px;
+        height: 40px;
         width: 100%;
         gap: 10px;
         border-radius: 10px;
@@ -459,7 +460,7 @@ border: 1px solid gray;
         width: 70%;
         margin: 20px auto;
         padding: 20px;
-    
+
         font-size: 20px;
         font-weight: bold;
     }
@@ -529,7 +530,7 @@ border: 1px solid gray;
     #input {
 
         border: 2px solid gray;
-        height: 50px;
+        height: 40px;
         width: 100%;
         gap: 10px;
         border-radius: 10px;
@@ -621,4 +622,12 @@ border: 1px solid gray;
         margin: auto;
         padding: 5px;
     }
+    #tablist {
+    display: flex;
+    justify-content: space-around;
+        border: 0px solid rgb(30, 0, 255);
+        width: 100%;
+        padding: 0px 20px;
+        margin: auto;
+}
 }

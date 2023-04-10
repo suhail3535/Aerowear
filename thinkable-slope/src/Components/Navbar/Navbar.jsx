@@ -32,8 +32,12 @@ import { shallowEqual, useSelector } from "react-redux";
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 let userReg = JSON.parse(localStorage.getItem("userData")) || [];
 let isAuth = JSON.parse(localStorage.getItem("isAuth")) || false;
+let admin = JSON.parse(localStorage.getItem("adminData")) || [];
+let isAuthadmin = JSON.parse(localStorage.getItem("isAuthadmin")) || false;
+console.log(admin);
+console.log(isAuthadmin);
 const Navbar = () => {
-    const navigate=useNavigate()
+    const navigate = useNavigate();
     const openLink = (url) => {
         window.open(url);
     };
@@ -48,6 +52,11 @@ const Navbar = () => {
     }, shallowEqual);
 
     const handlelogout = () => {
+        window.localStorage.clear();
+        window.location.reload();
+        navigate("/");
+    };
+    const handlelogoutAdmin = () => {
         window.localStorage.clear();
         window.location.reload();
         navigate("/");
@@ -249,7 +258,6 @@ const Navbar = () => {
                                 </ul>
                             )}
                         </div>
-
                         <div className="navCart">
                             <Tooltip
                                 hasArrow
@@ -283,31 +291,44 @@ const Navbar = () => {
                                     color="black">
                                     <AdminPanelSettingsOutlinedIcon />
                                 </Tooltip>
+                                {isAuthadmin === true ? admin.email : ""}
                             </button>
-                            <ul className="all-log">
-                                <li className="log">
-                                    <Link
-                                        to="/adminlogin"
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={500}
-                                        className="nav-link ">
-                                        Admin Login
-                                        {/* <AdminPanelSettingsOutlinedIcon /> */}
-                                    </Link>
-                                </li>
-                                <li className="reg">
-                                    <Link
-                                        to="/adminsignup"
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={500}
-                                        className="nav-link">
-                                        Admin Signup
-                                        {/* <GrUserAdmin /> */}
-                                    </Link>
-                                </li>
-                            </ul>
+                            {isAuthadmin === true ? (
+                                <ul className="all-log">
+                                    <li className="reg">
+                                        <Link
+                                            to="/adminsignup"
+                                            smooth={true}
+                                            offset={-100}
+                                            duration={500}
+                                            className="nav-link">
+                                            Admin Signup
+                                            {/* <GrUserAdmin /> */}
+                                        </Link>
+                                    </li>
+                                    <ul
+                                        onClick={handlelogoutAdmin}
+                                        className="all-log">
+                                        <li className="log">Logout</li>
+                                    </ul>
+                                </ul>
+                            ) : (
+                                <ul
+                                    onClick={handlelogoutAdmin}
+                                    className="all-log">
+                                    <li className="log">
+                                        <Link
+                                            to="/adminlogin"
+                                            smooth={true}
+                                            offset={-100}
+                                            duration={500}
+                                            className="nav-link ">
+                                            Admin Login
+                                            {/* <AdminPanelSettingsOutlinedIcon /> */}
+                                        </Link>
+                                    </li>
+                                </ul>
+                            )}
                         </div>
                     </div>
 

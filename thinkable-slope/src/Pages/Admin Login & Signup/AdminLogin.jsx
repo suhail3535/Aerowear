@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import style from "./AdminLogin.css";
 import {
     Checkbox,
@@ -23,18 +23,48 @@ const AdminLogin = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const toast = useToast();
-   
-    const handleRegister = () => {
-        navigate("/adminsignup");
-        
+
+    const initialState = {
+        email: "admin@gmail.com",
+        password: "12345",
     };
 
+    const reducer = (state, action) => {
+        switch (action.type) {
+            case "email": {
+                return { ...state, email: action.payload };
+            }
+            case "password": {
+                return { ...state, password: action.payload };
+            }
+            case "reset": {
+                return initialState;
+            }
+            default: {
+                return state;
+            }
+        }
+    };
+
+    const handleRegister = () => {
+        navigate("/adminsignup");
+    };
+
+    /* <----admin Credential---->*/
+    let x = "admin@gmail.com";
+    let y = "12345";
+    /* <----admin Credential---->*/
+
+    const [adminData, dispatch] = useReducer(reducer, initialState);
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email !== "" && password !== "") {
             console.log("34", data);
 
-            if (data.email === email && data.password === password) {
+            if (x === email && y === password) {
+                localStorage.setItem("adminData", JSON.stringify(adminData));
+                localStorage.setItem("isAuthadmin", JSON.stringify(true));
+
                 toast({
                     title: "Login Successful",
                     description: "",
@@ -44,7 +74,7 @@ const AdminLogin = () => {
                     position: "top",
                 });
                 navigate("/admin");
-                 
+                window.location.reload();
             } else {
                 toast({
                     title: "Wrong Credentials",
