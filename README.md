@@ -90,6 +90,9 @@ npm run deploy
 - Edit product
 - Sorting & filter
 - Search functionality (Women page and Men Page)
+# Note-For admin login we set a preRegister email and password after admin login,only Admin can register new admin.
+email-admin@gmail.com
+password-12345
 
 ## ScreenShots
 ### 1. Homepage
