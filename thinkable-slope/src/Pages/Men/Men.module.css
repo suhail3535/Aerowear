@@ -36,6 +36,10 @@ width: 55%;
     text-align: center;
     border-radius: 25px;
 }
+#sidebar {
+    border: 1px solid yellow;
+
+}
 #btn{
     border:0px solid blue;
     border-radius: 20px 20px;
@@ -107,6 +111,26 @@ width: 55%;
     .sidebar_div {
         width: 40%;
     }
+    #form {
+        border: 0px solid blue;
+        display: flex;
+        padding: 0px 0px 0px 20px;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+        gap: 70px;
+    }
+    #form_wrapper {
+        border: 0px solid black;
+        width: 55%;
+    }
+    #btn {
+        border: 0px solid blue;
+margin-left: 20px;
+        width: 40%;
+        background-color: #1d3451;
+        color: white;
+    }
 }
 
 @media all and (max-width: 601px) and (min-width: 100px) {
@@ -120,4 +144,10 @@ width: 55%;
     .sidebar_div {
         width: 50%;
     }
+    #sidebar {
+    border: 0px solid yellow;
+    width: 90%;
+    margin: 50px auto;
+
+}
 }

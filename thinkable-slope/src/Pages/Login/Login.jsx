@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 let userReg = JSON.parse(localStorage.getItem("userData")) || [];
@@ -23,6 +23,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const location = useLocation();
     const toast = useToast();
 
     const handleSubmit = (e) => {
@@ -30,6 +31,7 @@ const Login = () => {
         if (email !== "" && password !== "") {
             if (userReg.email === email && userReg.password === password) {
                 localStorage.setItem("isAuth", true);
+
                 toast({
                     title: "Login Successful",
                     description: "",
@@ -38,7 +40,8 @@ const Login = () => {
                     isClosable: true,
                     position: "top",
                 });
-                navigate("/");
+                navigate(location.state, { replace: true });
+                navigate("/cart");
                 window.location.reload();
             } else {
                 toast({

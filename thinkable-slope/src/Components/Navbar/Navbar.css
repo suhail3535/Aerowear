@@ -64,7 +64,7 @@
     border-radius: 5px;
 }
 .wrapperProfile {
- border: 0px solid red;
+    border: 0px solid red;
     padding: 0px 0px 0px 20px;
     display: flex;
     width: 20%;
@@ -220,11 +220,13 @@
 }
 .post-all > p {
     display: inline;
+    border: 0px solid red;
 }
 .post-all > a {
     padding: 0px 10px;
     color: #809aaa;
     text-decoration: underline;
+    border: 0px solid red;
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -274,5 +276,15 @@
     .drawerbody a:hover {
         cursor: pointer;
         color: #6a6a6a;
+    }
+    .post-all {
+        border: 0px solid green;
+        width: 100%;
+
+        align-items: center;
+    }
+    .post-nav {
+        display: none;
+
     }
 }
