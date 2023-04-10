@@ -1,11 +1,11 @@
 .cart_main_div {
     border: 2.5px solid transparent;
     border-radius: 15px;
-    height: 300px;
+    height: auto;
     width: 90%;
     display: flex;
     margin: 20px auto;
-    border: 0px solid red;
+
     padding: 20px;
     cursor: pointer;
     justify-content: space-between;
@@ -25,6 +25,7 @@
 .productInfo_div {
     width: 35%;
     height: 300px;
+    border: 0px solid blue;
 
 }
 #btn {
@@ -35,6 +36,7 @@
 .Quantity_div {
     width: 15%;
     height: 300px;
+    border: 0px solid yellow;
 }
 
 .Price_div {
@@ -132,11 +134,42 @@
     border: 0px solid blue;
 }
 
+/* -------------for mobile screen--------------- */
 @media screen and (max-width: 450px) {
     .cart_main_div {
-        display: flex;
+        display:block;
 
         height: 600px;
         width: 100%;
     }
+    .cart_image_div {
+    width: 100%;
+    /* height: 300px; */
+    border: 0px solid pink;
+    margin: auto;
+}
+.productInfo_div {
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border: 0px solid blue;
+
+}
+.Quantity_div{
+    display: none;
+}
+
+
+.Price_div  {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 10px;
+    border: 0px solid greenyellow;
+}
+.subdiv_headings {
+    border: 0px solid rgb(252, 38, 0);
+    width: 100%;
+    margin: auto;
+}
 }

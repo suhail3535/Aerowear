@@ -1,4 +1,12 @@
-#second {
+#container {
+    border: 1px solid rgb(122, 126, 122);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5px auto;
+}
+
+#second_div {
     border: 0px solid gray;
     padding: 10px 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -6,15 +14,14 @@
     margin: 20px auto;
     border-radius: 15px;
 }
-#img{
-border: 0px solid green;
-        width: "100%";
-        text-align: center;
-        border-radius: 15px;
+#img {
+    border: 0px solid green;
+    width: "100%";
+    text-align: center;
+    border-radius: 15px;
 }
 
-
-#first {
+#first_div {
     border: 0px solid rgb(0, 47, 255);
     padding: 10px 20px;
     gap: 10px;
@@ -92,13 +99,7 @@ border: 0px solid green;
     border: 2px solid tomato;
     border-radius: 15px;
 }
-#container {
-    border: 0px solid green;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 5px auto;
-}
+
 #heading {
     border: 0px solid red;
     padding: 5px;
@@ -107,17 +108,7 @@ border: 0px solid green;
     color: #17274a;
     font-family: "Visuelt Pro", sans-serif;
 }
-/* #navadmin {
-    border: 0px solid green;
-    width: 90%;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-    align-items: center;
-    height: 50px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-} */
+
 
 #card {
     border: 0px solid green;
@@ -151,15 +142,92 @@ border: 0px solid green;
     margin-left: 160px;
 }
 
-@media all and (max-width: 1200px) and (min-width: 800px) {
+
+/* <---------For Laptop  View--------> */
+@media all and (max-width: 1280px){
     #container {
-        flex-direction: column;
-        grid-template-columns: repeat(2, 1fr);
+    display: flex;
+gap: 30px;
+    padding: 10px;
     }
+#first_div {
+    border: 1px solid rgb(80, 81, 83);
+    padding: 20px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-@media all and (max-width: 799px) and (min-width: 300px) {
+#second_div {
+    border: 1px solid gray;
+    padding: 10px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+}
+
+/* <---------For Tab  View--------> */
+@media all and (max-width: 768px){
     #container {
-        flex-direction: column;
-        grid-template-columns: repeat(1, 1fr);
+    display: block;
+
+    padding: 40px;
     }
+#first_div {
+    border: 0px solid rgb(114, 115, 119);
+    padding: 20px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+#second_div {
+    border: 0px solid gray;
+    padding: 10px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+}
+
+/* <---------For Mobile View--------> */
+@media all and (max-width:500px){
+    #container {
+    display: block;
+
+    padding: 40px;
+    }
+#first_div {
+border: 1px solid gray;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+    display: block;
+}
+#first_div :nth-child(4){
+
+    width: 100%;
+
+}
+#second_div {
+    border: 1px solid gray;
+    padding: 10px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+}
+

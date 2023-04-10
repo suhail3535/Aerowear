@@ -23,6 +23,7 @@
     padding: 20px;
     border-radius: 15px;
     border: 1px dotted rgb(141, 141, 141);
+    border: 0px solid red;
 }
 .Shopping_cart_heading {
     height: 80px;
@@ -32,12 +33,13 @@
     border: 0px solid yellow;
 }
 .Order_summmary_div {
-    border: 0px solid blue;
+    border: 1px dotted gray;
     padding: 10px;
 }
 .card_div {
-    border: 0px solid black;
+    border: 1px dotted gray;
     width: 75%;
+    height :auto;
     padding: 10px;
 }
 .parent {
@@ -176,24 +178,27 @@
     .parent {
       padding: 20px;
         display: block;
+        border: 0px solid yellow;
 
     }
     .Order_summmary_div {
-    border: 0px solid blue;
+    border: 1px dotted gray;
     width: 100%;
     margin: 20px auto;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }
 .card_div {
-    border: 0px solid black;
+    border: 1px dotted black;
     width: 100%;
     margin: 20px auto;
+    padding: 20px;
+
 }
 .Shopping_cart_heading {
 
     display: flex;
     align-items: center;
-    margin: 20px auto;
+    margin:  auto;
 }
 }

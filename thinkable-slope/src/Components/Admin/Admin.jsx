@@ -48,13 +48,18 @@ export const Admin = () => {
         dispatch(getRequest());
     }, []);
     // console.log(women);
+    let x = women.length;
+    console.log(x)
     return (
         <div>
             <Heading size="lg" style={{ textAlign: "center", margin: "20px" }}>
                 Welcome Admin😎
             </Heading>
+            <p style={{marginLeft:"20px"}}>
+                Total Products:{x}
+            </p>
             <div id={styles.container}>
-                <Box id={styles.first}>
+                <div id={styles.first_div}>
                     {women.map((ele) => {
                         return (
                             <div>
@@ -62,8 +67,8 @@ export const Admin = () => {
                             </div>
                         );
                     })}
-                </Box>
-                <Box id={styles.second}>
+                </div>
+                <div id={styles.second_div}>
                     <Heading id={styles.heading} as={"h4"} size="md">
                         Add Product
                     </Heading>
@@ -107,7 +112,7 @@ export const Admin = () => {
                             </button>
                         </Stack>
                     </form>
-                </Box>
+                </div>
             </div>
         </div>
     );
