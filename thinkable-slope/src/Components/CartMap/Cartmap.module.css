@@ -57,6 +57,7 @@
     text-transform: uppercase;
     padding: 8px 8px 8px 0;
     background: transparent;
+    margin-top: 30px;
     border-bottom: 1px solid #f7f7f7;
 }
 .productInfo_div p:nth-child(1) {
@@ -132,6 +133,17 @@
     white-space: nowrap;
     line-height: normal !important;
     border: 0px solid blue;
+}
+
+.cart_remove{
+    margin-top: 30px;
+    font: normal normal bold 16px/21px "Visuelt Pro", sans-serif;
+    letter-spacing: 0.8px;
+    border: 0px solid violet;
+    color: #1e3352;
+    text-transform: uppercase;
+    padding: 8px 8px 8px 0;
+    background: transparent;
 }
 
 /* -------------for mobile screen--------------- */

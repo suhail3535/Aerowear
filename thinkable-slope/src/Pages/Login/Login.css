@@ -60,12 +60,12 @@
     border: 0px solid purple;
     width: 42%;
 }
-.order-account>h1{
+.order-account > h1 {
     font-size: 28px;
     font-weight: 700;
     margin: revert;
 }
-.order-account>h4{
+.order-account > h4 {
     font-size: 16px;
     font-weight: 400;
     color: gray;
@@ -84,4 +84,18 @@
 .order-btn:hover {
     color: white;
     background-color: #17274a;
+}
+@media all and (min-width: 320px) and (max-width: 768px) {
+    .login-main {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .log-form {
+        width: 100%;
+    }
+    .order-account {
+        border-top: 0.5px solid #aaadb2;
+        width: 100%;
+        margin-top: 40px;
+    }
 }
