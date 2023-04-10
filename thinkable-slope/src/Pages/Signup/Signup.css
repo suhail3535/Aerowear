@@ -66,7 +66,7 @@
     /* height: 110vh; */
     border: 0px solid purple;
 }
-.sign-form>h1{
+.sign-form > h1 {
     font-size: 28px;
     font-weight: 500;
 }
@@ -75,13 +75,13 @@
     margin-top: 23px;
     width: 40%;
 }
-.connect-account>h2{
-        font-size: 18px;
+.connect-account > h2 {
+    font-size: 18px;
     margin: 20px auto;
     font-weight: 700;
     text-transform: uppercase;
 }
-.connect-account>p{
+.connect-account > p {
     font-size: 16px;
     font-weight: 100;
 }
@@ -89,10 +89,50 @@
     font-size: 12px;
     font-weight: 400;
 }
-.name-tag{
+.name-tag {
     font-size: 18px;
     margin: 20px auto;
     font-weight: 700;
     text-transform: uppercase;
 }
-/* style={{fontSize:"18px",fontWeight:"700"}} */
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+    .sign-main {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .sign-left {
+        width: 100%;
+    }
+    .sign-right {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .sign-form {
+        width: 100%;
+    }
+    .connect-account {
+        width: 100%;
+        padding: 0%;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1200px) {
+    .sign-main {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .sign-left {
+        width: 100%;
+    }
+    .sign-right {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .sign-form {
+        width: 48%;
+    }
+    .connect-account {
+        width: 48%;
+    }
+}

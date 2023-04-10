@@ -9,10 +9,10 @@ import {
     InputRightElement,
     useToast,
 } from "@chakra-ui/react";
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import style from "./Login.css";
+import "./Login.css";
 
 let userReg = JSON.parse(localStorage.getItem("userData")) || [];
 
@@ -154,10 +154,10 @@ const Login = () => {
                             </Button>
                         </Link>
                         <p className="policy-line">
-                            Please see our <a href=""> Privacy Policy </a> .
+                            Please see our <Link> Privacy Policy </Link> .
                             California residents, see our
-                            <a href=""> California Privacy Notice</a> and
-                            <a href=""> Do Not Sell My Personal Information </a>
+                            <Link> California Privacy Notice</Link> and
+                            <Link> Do Not Sell My Personal Information </Link>
                             page.
                         </p>
                     </FormControl>

@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "./Signup.css";
+import "./Signup.css";
 import { FaFacebook } from "react-icons/fa";
 
 import {
@@ -20,7 +20,6 @@ import {
     Button,
     Select,
     Checkbox,
-    Toast,
     useToast,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -274,6 +273,12 @@ const Signup = () => {
                             <Checkbox
                                 style={{
                                     margin: "15px auto",
+                                }}
+                                sx={{
+                                    "@media (max-width: 767px)": {
+                                        w: "100%",
+                                        display: "block",
+                                    },
                                 }}
                                 required>
                                 <span className="req-check">
