@@ -328,6 +328,7 @@ const Payment = () => {
                         </button>
                     </div>
                 </div>
+
                 <div id={styles.two}>
                     <div id={styles.third}>
                         <div className={styles.Order_summmary_div}>

@@ -382,7 +382,7 @@ border: 1px solid gray;
     }
     #method {
         border: 0px solid rgb(102, 225, 20);
-        width: 100%;
+        width: 80%;
         height: auto;
         padding: 10px;
         border-radius: 15px;
@@ -390,7 +390,7 @@ border: 1px solid gray;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
     .bookbtn2 {
-        width: 80%;
+        width: 30%;
     }
 
     #main {
@@ -480,7 +480,7 @@ border: 1px solid gray;
     }
     #review_order button{
     border: 0px solid green;
-    width: 90%;
+    width: 50%;
 }
 }
 /* <---------for Tab View--------> */

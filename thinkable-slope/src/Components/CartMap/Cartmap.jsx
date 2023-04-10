@@ -11,7 +11,7 @@ function CartMap({ image, price, name, id, HandleCartDelete, setquantity }) {
 
 
 
-                
+
                 <div className={styles.productInfo_div}>
                     <p>{name}</p>
                     <p>Color - Black Fox</p>
