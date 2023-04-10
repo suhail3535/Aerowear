@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     width: 92%;
+    border: 0px solid cyan;
 }
 .Women_Title_div p {
     margin: 0 2rem 0 0;
@@ -51,6 +52,10 @@
 .product_sidebar_main_div {
     /* height: 800px; */
     display: flex;
+    border: 0px solid yellow;
+}
+#sidebar {
+    border: 0px solid yellow;
 }
 .sidebar_div {
     width: 20%;
@@ -108,6 +113,26 @@
     .sidebar_div {
         width: 40%;
     }
+    #form {
+        border: 0px solid blue;
+        display: flex;
+        padding: 0px 0px 0px 20px;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+        gap: 70px;
+    }
+    #form_wrapper {
+        border: 0px solid black;
+        width: 55%;
+    }
+    #btn {
+        border: 0px solid blue;
+
+        width: 40%;
+        background-color: #1d3451;
+        color: white;
+    }
 }
 
 @media all and (max-width: 601px) and (min-width: 100px) {
@@ -121,4 +146,21 @@
     .sidebar_div {
         width: 50%;
     }
+    .Navbar2_mainalignment_div {
+        border: 0px solid blue;
+    }
+    #sidebar {
+        border: 0px solid yellow;
+        display: block;
+
+        width: 90%;
+        margin: 50px auto;
+    }
+        #sidebar:nth-child(4) {
+        border: 0px solid rgb(0, 255, 123);
+
+
+
+    }
+
 }
