@@ -2,7 +2,7 @@
 # Aerowear.com
 
 Aerowear is known for its trendy and affordable clothing, with a focus on casual wear such as t-shirts, hoodies, and jeans. The brand also offers a range of accessories such as bags.
-## Deployment Link : https://thinkable-slope.vercel.app/
+## Deployment Link :https://thinkable-slope-suhail3535.vercel.app/
 
 ## API Reference
 
@@ -81,10 +81,10 @@ npm run deploy
 - Patch Request Api call
 - Delete Request Api call
 - User Register
-- User login 
+- User login
 - User profile show after login
 - Admin Register
-- Admin login 
+- Admin login
 - Add product
 - Delete product
 - Edit product
@@ -148,14 +148,14 @@ Install dependencies
 
 ```bash
   npm install
-  npm i axios 
-  npm i react-redux 
-  npm i redux 
+  npm i axios
+  npm i react-redux
+  npm i redux
   npm i thunk
-  npm i json-server 
-  npm i chakra-ui 
-  npm i material-UI 
-  npm i material-icon  
+  npm i json-server
+  npm i chakra-ui
+  npm i material-UI
+  npm i material-icon
 ```
 
 Start the server
