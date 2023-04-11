@@ -316,7 +316,7 @@ border: 1px solid gray;
 
 #input {
     /* border: 1px solid rgb(255, 0, 170); */
-    border: 2px solid gray;
+    border: 1px solid gray;
     height: 40px;
     width: 400px;
     gap: 20px;
@@ -398,6 +398,7 @@ border: 1px solid gray;
         /* height: 1200px; */
         display: flex;
         width: 90%;
+        gap:50px;
         margin: 20px auto;
     }
 
@@ -412,7 +413,7 @@ border: 1px solid gray;
 
     #input {
 
-        border: 2px solid gray;
+        border: 1px solid gray;
         height: 40px;
         width: 100%;
         gap: 10px;
@@ -457,7 +458,7 @@ border: 1px solid gray;
     }
     #two {
         border: 1px solid gray;
-        width: 70%;
+        width: 50%;
         margin: 20px auto;
         padding: 20px;
 
@@ -529,7 +530,7 @@ border: 1px solid gray;
 
     #input {
 
-        border: 2px solid gray;
+        border: 1px solid gray;
         height: 40px;
         width: 100%;
         gap: 10px;

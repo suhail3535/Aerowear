@@ -28,6 +28,11 @@
     border: 0px solid blue;
 
 }
+#span{
+    border: 0px solid green;
+    margin-left: 20px;
+    
+}
 #btn {
     background-color: red;
     border: 0px solid red;

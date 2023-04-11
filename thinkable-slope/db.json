@@ -175,7 +175,6 @@
       "Rating": 2,
       "id": 28
     }
-
   ],
   "clearence": [
     {
@@ -714,6 +713,12 @@
     }
   ],
   "cart": [
-
+    {
+      "id": 6,
+      "image": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwdef1ffc1/87018352_176_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
+      "name": "High-Rise Flare Jean",
+      "price": 79.12,
+      "Rating": 4
+    }
   ]
 }

@@ -100,6 +100,10 @@
     .sign-main {
         flex-direction: column;
         flex-wrap: wrap;
+        border: 0px solid green;
+        width: 70%;
+        margin: 140px auto;
+        padding: 10px;
     }
     .sign-left {
         width: 100%;

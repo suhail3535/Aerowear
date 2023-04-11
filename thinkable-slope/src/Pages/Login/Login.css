@@ -89,6 +89,10 @@
     .login-main {
         flex-wrap: wrap;
         flex-direction: column;
+        border: 0px solid blue;
+        width: 70%;
+        padding: 20px;
+        margin: 120px auto;
     }
     .log-form {
         width: 100%;
