@@ -63,14 +63,7 @@ export const deleteCartdata = (id) => (dispatch) => {
         });
 };
 
-export const updateCartdata = () => (dispatch) => {
-    dispatch(getCartProductsRequestAction());
-    return axios
-        .put("http://localhost:8080/cart")
-        .then((res) => {
-            dispatch(DeleteCartSuccess());
-        })
-        .catch((err) => {
-            dispatch(getCartProductsFailureAction());
-        });
-};
+
+
+
+

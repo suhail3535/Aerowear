@@ -1,5 +1,5 @@
 import styles from "./Cartmap.module.css";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+
 function CartMap({ image, price, name, id, HandleCartDelete, setquantity }) {
     return (
         <div>
@@ -32,9 +32,7 @@ function CartMap({ image, price, name, id, HandleCartDelete, setquantity }) {
                         onClick={() => HandleCartDelete(id)}>
                         Remove
                     </p>
-                    <span id={styles.span}>
-                        <DeleteForeverIcon />
-                    </span>
+
                 </div>
                 <div className={styles.Price_div}>
                     <p className={styles.subdiv_headings}>PRICE</p>

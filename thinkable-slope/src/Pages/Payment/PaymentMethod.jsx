@@ -28,6 +28,7 @@ import { useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 
+
 const PaymentMethod = () => {
     const [isButLoading, setIsButLoading] = useState(false);
 
@@ -40,19 +41,12 @@ const PaymentMethod = () => {
         setTimeout(() => {
             setIsButLoading(false);
             Swal.fire("Congratulations!", "Payment successfull!", "success");
-            
-            navigate("/");
 
+            navigate("/");
+            window.location.reload();
         }, 2000);
     };
 
-        const { products } = useSelector((store) => {
-            return {
-                products: store.CartReducer.products,
-                isLoading: store.CartReducer.isLoading,
-                isError: store.CartReducer.isError,
-            };
-        }, shallowEqual);
     const dispatch = useDispatch();
     const newData = useSelector((store) => {
         return {
@@ -64,7 +58,8 @@ const PaymentMethod = () => {
         };
     });
 
-
+    let x = newData.products.length
+    console.log(x)
     let totalprice;
     if (newData.products.length === 0) {
         totalprice = 0;
@@ -82,6 +77,7 @@ const PaymentMethod = () => {
 
     useEffect(() => {
         dispatch(getRequestAddress());
+
     }, []);
     // console.log(newData)
     return (
