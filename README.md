@@ -9,7 +9,7 @@ Aerowear is known for its trendy and affordable clothing, with a focus on casual
 #### Get all items
 
 ```http
-  GET /https://aerowearnew.cyclic.app
+  GET https://thinkable-slope-suhail3535.vercel.app/
 ```
 
 | End Point| Type     | Description                |
