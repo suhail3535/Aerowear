@@ -16,8 +16,7 @@ const OrderSuccessfull = () => {
     };
     return (
         <div style={{ backgroundColor: "white" }}>
-            <VStack id={styles.vs_stack1}
-             >
+            <VStack id={styles.vs_stack1}>
                 <div>
                     <img
                         src="https://www.pinkwigscloset.com/images/success-tick.gif"

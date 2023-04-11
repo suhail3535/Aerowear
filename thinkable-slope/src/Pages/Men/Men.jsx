@@ -77,7 +77,7 @@ const Men = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         return await axios
-            .get(`http://localhost:8080/men?q=${value}`)
+            .get(`https://helpful-gray-rooster.cyclic.app/men?q=${value}`)
             .then((res) => {
                 setData(res.data);
                 setValue("");
@@ -88,7 +88,7 @@ const Men = () => {
 
     const allData = (obj) => (dispatch) => {
         axios
-            .get("http://localhost:8080/men", obj)
+            .get("https://helpful-gray-rooster.cyclic.app/men", obj)
             .then((res) => {
                 setData(res.data);
             })

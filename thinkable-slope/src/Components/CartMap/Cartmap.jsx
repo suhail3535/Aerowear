@@ -32,7 +32,6 @@ function CartMap({ image, price, name, id, HandleCartDelete, setquantity }) {
                         onClick={() => HandleCartDelete(id)}>
                         Remove
                     </p>
-
                 </div>
                 <div className={styles.Price_div}>
                     <p className={styles.subdiv_headings}>PRICE</p>

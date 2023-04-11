@@ -49,15 +49,13 @@ export const Admin = () => {
     }, []);
     // console.log(women);
     let x = women.length;
-    console.log(x)
+    console.log(x);
     return (
         <div>
             <Heading size="lg" style={{ textAlign: "center", margin: "20px" }}>
                 Welcome Admin😎
             </Heading>
-            <p style={{marginLeft:"20px"}}>
-                Total Products:{x}
-            </p>
+            <p style={{ marginLeft: "20px" }}>Total Products:{x}</p>
             <div id={styles.container}>
                 <div id={styles.first_div}>
                     {women.map((ele) => {

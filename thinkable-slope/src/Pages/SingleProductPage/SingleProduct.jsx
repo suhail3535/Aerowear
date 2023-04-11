@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 
 const SingleProduct = () => {
     const [data, setData] = useState({});
-    const navigate = useNavigate();
+
     const param = useParams();
 
     const toast = useToast();

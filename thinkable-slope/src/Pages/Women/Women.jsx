@@ -77,7 +77,7 @@ const Women = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         return await axios
-            .get(`http://localhost:8080/women?q=${value}`)
+            .get(`https://helpful-gray-rooster.cyclic.app/women?q=${value}`)
             .then((res) => {
                 setData(res.data);
                 setValue("");
@@ -88,7 +88,7 @@ const Women = () => {
 
     const allData = (obj) => (dispatch) => {
         axios
-            .get("http://localhost:8080/women", obj)
+            .get("https://helpful-gray-rooster.cyclic.app/women", obj)
             .then((res) => {
                 setData(res.data);
             })
@@ -134,7 +134,7 @@ const Women = () => {
                 )}
                 {isError && <h1>Error...</h1>}
             </div>
-            
+
             <div className={styles.product_sidebar_main_div}>
                 {sidebar ? (
                     <div className={styles.sidebar_div}>

@@ -19,7 +19,7 @@ import {
 import React, { useEffect, useState } from "react";
 import styles from "./Payment.module.css";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import {useDispatch, useSelector } from "react-redux";
 import { getRequestAddress } from "../../Redux/UserReducer/action";
 
 import PaymentCard from "./PaymentCard";
@@ -28,11 +28,8 @@ import { useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 
-
 const PaymentMethod = () => {
     const [isButLoading, setIsButLoading] = useState(false);
-
-
 
     const navigate = useNavigate();
 
@@ -45,6 +42,8 @@ const PaymentMethod = () => {
             navigate("/");
             window.location.reload();
         }, 2000);
+
+
     };
 
     const dispatch = useDispatch();
@@ -58,8 +57,8 @@ const PaymentMethod = () => {
         };
     });
 
-    let x = newData.products.length
-    console.log(x)
+    let x = newData.products.length;
+    console.log(x);
     let totalprice;
     if (newData.products.length === 0) {
         totalprice = 0;
@@ -71,13 +70,8 @@ const PaymentMethod = () => {
 
     const { address } = newData;
 
-
-
-
-
     useEffect(() => {
         dispatch(getRequestAddress());
-
     }, []);
     // console.log(newData)
     return (

@@ -21,7 +21,6 @@
     margin: 0px 10px;
     padding: 10px;
     border-radius: 5px;
-
 }
 .buttonpay {
     border: 1px solid black;
@@ -109,7 +108,7 @@
 }
 
 #third {
-border: 1px solid gray;
+    border: 1px solid gray;
 
     height: auto;
     padding: 20px;
@@ -274,7 +273,7 @@ border: 1px solid gray;
 #tablist {
     display: flex;
     justify-content: space-around;
-        border: 0px solid red;
+    border: 0px solid red;
 }
 #tabfirst {
     margin: 30px auto;
@@ -364,7 +363,7 @@ border: 1px solid gray;
     padding: 20px;
     background-color: #f7f7f7;
 }
-#review_order{
+#review_order {
     border: 0px solid green;
 }
 /* <---------for laptop View--------> */
@@ -399,7 +398,7 @@ border: 1px solid gray;
         /* height: 1200px; */
         display: flex;
         width: 90%;
-        gap:50px;
+        gap: 50px;
         margin: 20px auto;
     }
 
@@ -413,7 +412,6 @@ border: 1px solid gray;
     }
 
     #input {
-
         border: 1px solid gray;
         height: 40px;
         width: 100%;
@@ -480,10 +478,10 @@ border: 1px solid gray;
         font-size: 20px;
         font-weight: bold;
     }
-    #review_order button{
-    border: 0px solid green;
-    width: 50%;
-}
+    #review_order button {
+        border: 0px solid green;
+        width: 50%;
+    }
 }
 /* <---------for Tab View--------> */
 @media screen and (max-width: 768px) {
@@ -530,7 +528,6 @@ border: 1px solid gray;
     }
 
     #input {
-
         border: 1px solid gray;
         height: 40px;
         width: 100%;
@@ -597,10 +594,10 @@ border: 1px solid gray;
         font-size: 20px;
         font-weight: bold;
     }
-    #review_order button{
-    border: 0px solid green;
-    width: 90%;
-}
+    #review_order button {
+        border: 0px solid green;
+        width: 90%;
+    }
 }
 /* <---------for Mobile View--------> */
 @media screen and (max-width: 400px) {
@@ -625,11 +622,11 @@ border: 1px solid gray;
         padding: 5px;
     }
     #tablist {
-    display: flex;
-    justify-content: space-around;
+        display: flex;
+        justify-content: space-around;
         border: 0px solid rgb(30, 0, 255);
         width: 100%;
         padding: 0px 20px;
         margin: auto;
-}
+    }
 }

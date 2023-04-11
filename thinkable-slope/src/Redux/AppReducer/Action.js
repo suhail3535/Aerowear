@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import {
     GET_PRODUCTS_FAILURE,
     GET_PRODUCTS_REQUEST,
@@ -21,7 +21,7 @@ export const getProductsFailureAction = () => {
 export const getWomenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("http://localhost:8080/women", obj)
+        .get("https://helpful-gray-rooster.cyclic.app/women", obj)
         .then((res) => {
             dispatch(getProductsSuccessAction(res.data));
         })
