@@ -565,11 +565,13 @@ margin-top: 7rem
     }
     .add-text-2 {
         color: #ee5e68;
+            /* border: 2px solid rgb(153, 51, 97); */
         font-size: 77px;
         font-weight: 700;
     }
     .add-text-3 {
         color: #ee5e68;
+            /* border: 2px solid rebeccapurple; */
         font-size: 46px;
         font-weight: 400;
         line-height: 1.2;
@@ -584,12 +586,14 @@ margin-top: 7rem
 
     .cat-button {
         text-align: center;
-        border: 0px solid #ee5e68;
+        border: 1px solid gray;
+        background-color: lightseagreen;
         padding: 15px 20px;
         border-radius: 4.5px;
         font-size: 18px;
         font-weight: 300;
-        color: #ee5e68;
+
+        color: white;
         transition: all 0.2s ease-in-out;
     }
     .main-add {

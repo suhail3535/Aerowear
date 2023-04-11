@@ -1,0 +1,8 @@
+.bttBtn{
+    background-color: rgb(6, 103, 187);
+    color: red;
+}
+
+.bttBtn:hover{
+    background-color: red;
+}
