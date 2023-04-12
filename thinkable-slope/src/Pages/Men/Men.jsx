@@ -9,9 +9,12 @@ import { useLocation, useSearchParams } from "react-router-dom";
 import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
 import axios from "axios";
 import { SearchIcon } from "@chakra-ui/icons";
+import Pagination from "../../Components/Pagination";
 
 const Men = () => {
     const [data, setData] = useState([]);
+         const [page, setPage] = useState(1);
+         const [itemsPerPage, setItemsPerPage] = useState(8);
     const [value, setValue] = useState("");
     const [sidebar, setSidebar] = useState(false);
     const { products, isLoading, isError } = useSelector((store) => {
@@ -45,7 +48,7 @@ const Men = () => {
         if (rating || order) {
             let param = {};
             order && (param.order = order);
-
+            page && (param.page = page);
             rating && (param.rating = rating);
             setSearchParama(param);
         }
@@ -59,11 +62,13 @@ const Men = () => {
             params: {
                 _sort: order && "price",
                 _order: order,
+                _page: page,
+                _limit: itemsPerPage,
                 Rating: searchParams.getAll("rating"),
             },
         };
         dispatch(allData(queryParams));
-    }, [location.search]);
+    }, [location.search, page, itemsPerPage]);
 
     function handleSort(e) {
         setOrder(e.target.value);
@@ -72,6 +77,9 @@ const Men = () => {
     function Sidebar() {
         setSidebar(!sidebar);
     }
+  const handlePageChange = (pageNumber) => {
+      setPage(pageNumber);
+  };
 
     // <-------------for Search products start----------->
     const handleSearch = async (e) => {
@@ -237,7 +245,14 @@ const Men = () => {
                     </div>
                 )}
             </div>
-
+            <div mt={10}>
+                <Pagination
+                    itemsPerPage={itemsPerPage}
+                    totalItems={data.length}
+                    page={page}
+                    onPageChange={handlePageChange}
+                />
+            </div>
             <ExtraInfo />
         </>
     );
