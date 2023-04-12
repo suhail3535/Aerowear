@@ -10,9 +10,13 @@ import { Link } from "react-router-dom";
 import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
 import axios from "axios";
 import { SearchIcon } from "@chakra-ui/icons";
+import Pagination from "../../Components/Pagination";
+
 
 const Women = () => {
     const [sidebar, setSidebar] = useState(false);
+     const [page, setPage] = useState (1);
+     const [itemsPerPage, setItemsPerPage] = useState (8)
 
     const [data, setData] = useState([]);
     const [value, setValue] = useState("");
@@ -47,6 +51,7 @@ const Women = () => {
             let param = {};
             order && (param.order = order);
             rating && (param.rating = rating);
+               page && (param.page = page);
             setSearchParama(param);
         }
     }, [rating, order, setSearchParama]);
@@ -60,10 +65,12 @@ const Women = () => {
                 _sort: order && "price",
                 _order: order && order,
                 Rating: searchParams.getAll("rating"),
+                _page: page,
+                _limit: itemsPerPage,
             },
         };
         dispatch(allData(queryParams));
-    }, [location.search]);
+    }, [location.search, page,itemsPerPage]);
 
     function handleSort(e) {
         setOrder(e.target.value);
@@ -72,6 +79,9 @@ const Women = () => {
     function Sidebar() {
         setSidebar(!sidebar);
     }
+      const handlePageChange = (pageNumber) => {
+          setPage(pageNumber);
+      };
 
     // <-------------for Search products start----------->
     const handleSearch = async (e) => {
@@ -243,6 +253,14 @@ const Women = () => {
                         No result found Please refresh
                     </h1>
                 )}
+            </div>
+            <div mt={10}>
+                <Pagination
+                    itemsPerPage={itemsPerPage}
+                    totalItems={data.length}
+                    page={page}
+                    onPageChange={handlePageChange}
+                />
             </div>
             <ExtraInfo />
         </>
