@@ -245,7 +245,7 @@ const Men = () => {
                     </div>
                 )}
             </div>
-            <div mt={10}>
+            <div>
                 <Pagination
                     itemsPerPage={itemsPerPage}
                     totalItems={data.length}
