@@ -1,5 +1,5 @@
 
-# Aerowear.com
+# Aerowear
 
 Aerowear is known for its trendy and affordable clothing, with a focus on casual wear such as t-shirts, hoodies, and jeans. The brand also offers a range of accessories such as bags.
 ## Deployment Link :https://thinkable-slope-suhail3535.vercel.app/
