@@ -4,6 +4,9 @@
 
 .App {
   word-wrap: break-word;
+    width: 100%;
+    overflow: hidden; 
+  margin: auto;
 }
 
 
