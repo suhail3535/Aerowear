@@ -20,10 +20,10 @@
     color: #1d3451;
 }
 #page {
-    border: 5px solid green;
-    width: 10%;
+    border: 2px dotted rgb(68, 68, 68)n;
+    width: 20%;
     margin: 50px auto;
-    background-color: cyan;
+    /* background-color: cyan; */
     border-radius: 5px;
 }
 #form_wrapper {
@@ -104,7 +104,7 @@
     text-align: center;
 }
 
-@media all and (max-width: 1280px) and (min-width: 601px) {
+@media all and (max-width: 1280px) and (min-width: 768px) {
     .product_div {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -137,15 +137,15 @@
     }
     #page {
         border: 0px solid green;
-        width: 18%;
+        width: 50%;
 
         margin: 50px auto;
-        background-color: cyan;
+
         border-radius: 5px;
     }
 }
 
-@media all and (max-width: 601px) and (min-width: 100px) {
+@media all and (max-width: 767px) and (min-width: 300px) {
     .product_div {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -163,10 +163,10 @@
     }
     #page {
         border: 0px solid green;
-        width: 35%;
+        width: 25%;
 
         margin: 50px auto;
-        background-color: cyan;
+
         border-radius: 5px;
     }
 }
