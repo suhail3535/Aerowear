@@ -230,6 +230,8 @@
 @media screen and (max-width: 460px) {
     .product-all {
         display: block;
+        border: 0px solid yellow;
+        margin-top: 150px;
     }
     .product-two {
         border: 0px solid rgb(128, 0, 119);

@@ -246,7 +246,7 @@
     }
 }
 
-@media all and (min-width: 280px) and (max-width: 767px) {
+@media all and (min-width: 300px) and (max-width: 767px) {
     .wrapperLeft {
         display: none;
     }
@@ -279,4 +279,5 @@
         display: none;
 
     }
+
 }
