@@ -167,8 +167,8 @@ Start the server
 
 ## Demo
 
-https://aerowear.netlify.app/
 
+https://thinkable-slope-suhail3535.vercel.app/
 
 ## FAQ
 
@@ -182,5 +182,5 @@ No, a clone of Aeropostale is not an official Aeropostale store. It is a separat
 
 #### Is this website fully Responsive?
 
-No, As of Now this website isn't fully Responsive. Some of our the part of this website is broken for small screen devices. Our team is working on this soon we will fix this.
+Yes, As of Now this website isn't fully Responsive for all the media screen. 
 
