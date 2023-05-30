@@ -182,5 +182,5 @@ No, a clone of Aeropostale is not an official Aeropostale store. It is a separat
 
 #### Is this website fully Responsive?
 
-Yes, As of Now this website isn't fully Responsive for all the media screen. 
+Yes, As of Now this website is fully Responsive for all the media screen. 
 
