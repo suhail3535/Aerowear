@@ -53,13 +53,15 @@ const Navbar = () => {
 
     const handlelogout = () => {
         window.localStorage.clear();
+             navigate("/");
         window.location.reload();
-        navigate("/");
+   
     };
     const handlelogoutAdmin = () => {
         window.localStorage.clear();
+              navigate("/");
         window.location.reload();
-        navigate("/");
+  
     };
     return (
         <div>
