@@ -9,7 +9,7 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 
-import { Link,useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
     Drawer,
     DrawerBody,
@@ -17,14 +17,16 @@ import {
     DrawerContent,
     DrawerCloseButton,
     useDisclosure,
-
+    Input,
     Tooltip,
     VStack,
-
+    InputGroup,
+    InputRightElement,
+    Button,
     Badge,
 } from "@chakra-ui/react";
 import {} from "@mui/material";
-
+import { SearchIcon } from "@chakra-ui/icons";
 import { shallowEqual, useSelector } from "react-redux";
 
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
@@ -184,7 +186,29 @@ navigate("/");
                             bg="gray.300"
                             color="black">
                             <VStack>
-
+                                {/* <InputGroup>
+                                    <Input
+                                        pr="1rem"
+                                        variant="outline"
+                                        focusBorderColor="gray"
+                                        placeholder="Search"
+                                        borderRadius="25px"
+                                        _focusVisible={{
+                                            BorderColor: "gray",
+                                        }}
+                                    />
+                                    <InputRightElement width="4rem">
+                                        <Button
+                                            h={{ base: "1rem", lg: "1.7rem" }}
+                                            color="#17274a"
+                                            bg={"white"}
+                                            _hover={{
+                                                bg: "#ffffff",
+                                            }}>
+                                            <SearchIcon />
+                                        </Button>
+                                    </InputRightElement>
+                                </InputGroup> */}
                             </VStack>
                         </Tooltip>
                         <div className="dropdown-menu">
@@ -275,21 +299,12 @@ navigate("/");
                                     <ul
                                         onClick={handlelogoutAdmin}
                                         className="all-log">
-                                        <li className="log">
-                                            <Link
-                                                to="/"
-                                                smooth={true}
-                                                offset={-100}
-                                                duration={500}
-                                                className="nav-link ">
-                                                Logout
-                                            </Link>
-                                        </li>
+                                        <li className="log">Logout</li>
                                     </ul>
                                 </ul>
                             ) : (
                                 <ul
-
+                                    onClick={handlelogoutAdmin}
                                     className="all-log">
                                     <li className="log">
                                         <Link
@@ -299,6 +314,7 @@ navigate("/");
                                             duration={500}
                                             className="nav-link ">
                                             Admin Login
+                                            {/* <AdminPanelSettingsOutlinedIcon /> */}
                                         </Link>
                                     </li>
                                 </ul>
