@@ -91,8 +91,7 @@ npm run deploy
 - Sorting & filter
 - Search functionality (Women page and Men Page)
 # Note-For admin login we set a preRegister email and password after admin login,only Admin can register new admin.
-email-admin@gmail.com
-password-12345
+
 
 ## ScreenShots
 ### 1. Homepage
@@ -168,8 +167,8 @@ Start the server
 
 ## Demo
 
-https://aerowear.netlify.app/
 
+https://thinkable-slope-suhail3535.vercel.app/
 
 ## FAQ
 
@@ -183,5 +182,5 @@ No, a clone of Aeropostale is not an official Aeropostale store. It is a separat
 
 #### Is this website fully Responsive?
 
-No, As of Now this website isn't fully Responsive. Some of our the part of this website is broken for small screen devices. Our team is working on this soon we will fix this.
+Yes, As of Now this website is fully Responsive for all the media screen. 
 
