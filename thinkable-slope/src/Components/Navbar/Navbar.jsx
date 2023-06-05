@@ -185,31 +185,7 @@ navigate("/");
                             label="Search"
                             bg="gray.300"
                             color="black">
-                            <VStack>
-                                {/* <InputGroup>
-                                    <Input
-                                        pr="1rem"
-                                        variant="outline"
-                                        focusBorderColor="gray"
-                                        placeholder="Search"
-                                        borderRadius="25px"
-                                        _focusVisible={{
-                                            BorderColor: "gray",
-                                        }}
-                                    />
-                                    <InputRightElement width="4rem">
-                                        <Button
-                                            h={{ base: "1rem", lg: "1.7rem" }}
-                                            color="#17274a"
-                                            bg={"white"}
-                                            _hover={{
-                                                bg: "#ffffff",
-                                            }}>
-                                            <SearchIcon />
-                                        </Button>
-                                    </InputRightElement>
-                                </InputGroup> */}
-                            </VStack>
+                            <VStack></VStack>
                         </Tooltip>
                         <div className="dropdown-menu">
                             <button className="hover-account">
@@ -299,12 +275,21 @@ navigate("/");
                                     <ul
                                         onClick={handlelogoutAdmin}
                                         className="all-log">
-                                        <li className="log">Logout</li>
+                                        <li className="log">
+                                            <Link
+                                                to="/"
+                                                smooth={true}
+                                                offset={-100}
+                                                duration={500}
+                                                className="nav-link ">
+                                                 LogOut
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </ul>
                             ) : (
                                 <ul
-                                    onClick={handlelogoutAdmin}
+                                    
                                     className="all-log">
                                     <li className="log">
                                         <Link
@@ -314,7 +299,6 @@ navigate("/");
                                             duration={500}
                                             className="nav-link ">
                                             Admin Login
-                                            {/* <AdminPanelSettingsOutlinedIcon /> */}
                                         </Link>
                                     </li>
                                 </ul>
