@@ -91,7 +91,8 @@ npm run deploy
 - Sorting & filter
 - Search functionality (Women page and Men Page)
 # Note-For admin login we set a preRegister email and password after admin login,only Admin can register new admin.
-
+##Demo Video
+https://github.com/suhail3535/Aerowear/assets/112754439/28eb6520-5166-4bed-a234-42aa6f233297
 
 ## ScreenShots
 ### 1. Homepage
