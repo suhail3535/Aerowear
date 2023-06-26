@@ -93,6 +93,11 @@ npm run deploy
 # Note-For admin login we set a preRegister email and password after admin login,only Admin can register new admin.
 
 
+
+
+
+
+
 ## ScreenShots
 ### 1. Homepage
 ![home](https://user-images.githubusercontent.com/110021464/222483483-7eb2c6ac-b8d7-447d-89e6-19ed1845c597.png)
