@@ -248,7 +248,7 @@ const Women = () => {
                         style={{
                             fontSize: "50px",
                             textAlign: "center",
-                            color: "blue",
+                            
                         }}>
                         No result found Please refresh
                     </h1>
