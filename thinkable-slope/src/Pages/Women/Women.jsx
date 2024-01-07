@@ -248,9 +248,9 @@ const Women = () => {
                         style={{
                             fontSize: "50px",
                             textAlign: "center",
-                            
+
                         }}>
-                        No result found Please refresh
+                        No result found Please wait......
                     </h1>
                 )}
             </div>
