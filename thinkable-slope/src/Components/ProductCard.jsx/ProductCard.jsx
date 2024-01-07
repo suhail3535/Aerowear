@@ -30,10 +30,10 @@ const ProductCard = ({ image, name, price, Rating, id }) => {
             <div className={styles.parent_card}
               >
 
-         
-                <Link to={`/women/${id}`}>
+
+
                     <img className={styles.product_image} src={image} alt="" />
-                </Link>
+
 
                 <div className={styles.limited_Edition_div}>
                     <p>Limited Edition</p>

@@ -16,6 +16,7 @@ import Payment from "./Payment/Payment";
 import PaymentMethod from "./Payment/PaymentMethod";
 import OrderSuccessfull from "./Payment/OderSuccessfull";
 import PrivateRoute from "./PrivateRoute";
+import SingleProductMen from "./SingleProductPage/SingleProductMen.jsx";
 
 const MainRoutes = () => {
     return (
@@ -30,6 +31,7 @@ const MainRoutes = () => {
                 <Route path="/cart" element={<PrivateRoute> <Cart /></PrivateRoute>} />
                 <Route path="/edit/:id" element={<Edit />} />
                 <Route path="/women/:id" element={<SingleProduct />} />
+                <Route path="/men/:id" element={<SingleProductMen />} />
                 <Route path="/adminlogin" element={<AdminLogin />} />
                 <Route path="/adminsignup" element={<AdminSignup />} />
                 <Route path="/payment" element={<Payment />} />

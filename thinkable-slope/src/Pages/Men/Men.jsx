@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { getMenProducts } from "../../Redux/AppReducer/Action";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../Components/ProductCard.jsx/ProductCard";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
 import axios from "axios";
 import { SearchIcon } from "@chakra-ui/icons";
@@ -92,7 +92,7 @@ const Men = () => {
             })
             .catch((err) => console.log(err));
     };
-    console.log("search", data);
+    // console.log("search", data);
 
     const allData = (obj) => (dispatch) => {
         axios
@@ -233,15 +233,20 @@ const Men = () => {
                         style={{
                             fontSize: "50px",
                             textAlign: "center",
-                        
+
                         }}>
                         No result found Please refresh
                     </h1>
                 ) : (
-                    <div className={styles.product_div}>
+                        <div className={styles.product_div}>
                         {data.map((el) => (
+                            <Link to={`/men/${el.id}`}>
                             <ProductCard {...el} key={el.key} />
+                            </Link>
                         ))}
+
+
+
                     </div>
                 )}
             </div>
