@@ -49,7 +49,7 @@ const SingleProduct = () => {
     }
     const getSingleProduct = (id) => {
         axios
-            .get(`https://helpful-gray-rooster.cyclic.app/women/${id}`)
+            .get(`https://rct-211project.onrender.com/women/${id}`)
             .then((res) => setData(res.data));
     };
     const handleDelivery = () => {};

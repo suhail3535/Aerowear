@@ -34,7 +34,7 @@ export const deldatasuccess = () => {
 export const postRequest = (payload) => (dispatch) => {
     dispatch(getpostRequest());
     axios
-        .post("https://helpful-gray-rooster.cyclic.app/women", payload)
+        .post("https://rct-211project.onrender.com/women", payload)
         .then((res) => {
             console.log(res.data);
             dispatch(getpostSuccess(res.data));
@@ -47,7 +47,7 @@ export const postRequest = (payload) => (dispatch) => {
 export const getRequest = () => (dispatch) => {
     dispatch(getpostRequest());
     axios
-        .get("https://helpful-gray-rooster.cyclic.app/women")
+        .get("https://rct-211project.onrender.com/women")
         .then((res) => {
             // console.log(res.data);
             dispatch(getdataSuccess(res.data));
@@ -60,7 +60,7 @@ export const getRequest = () => (dispatch) => {
 export const deletedata = (id) => (dispatch) => {
     dispatch(getpostRequest());
     return axios
-        .delete(`https://helpful-gray-rooster.cyclic.app/women/${id}`)
+        .delete(`https://rct-211project.onrender.com/women/${id}`)
         .then((res) => {
             // console.log(res.data);
             dispatch(deldatasuccess());
@@ -73,7 +73,7 @@ export const deletedata = (id) => (dispatch) => {
 export const editProduct = (id, newData) => (dispatch) => {
     dispatch(getpostRequest());
     axios
-        .patch(`https://helpful-gray-rooster.cyclic.app/women/${id}`, newData)
+        .patch(`https://rct-211project.onrender.com/women/${id}`, newData)
         .then((res) => {
             dispatch({ type: PATCH_SUCCESS });
         })

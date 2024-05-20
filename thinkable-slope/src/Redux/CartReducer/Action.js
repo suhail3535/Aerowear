@@ -30,7 +30,7 @@ export const DeleteCartSuccess = () => {
 export const getCartProducts = () => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     return axios
-        .get("https://helpful-gray-rooster.cyclic.app/cart")
+        .get("https://rct-211project.onrender.com/cart")
         .then((res) => {
             dispatch(getCartProductsSuccessAction(res.data));
         })
@@ -42,7 +42,7 @@ export const getCartProducts = () => (dispatch) => {
 export const postCartRequest = (payload) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     axios
-        .post("https://helpful-gray-rooster.cyclic.app/cart", payload)
+        .post("https://rct-211project.onrender.com/cart", payload)
         .then((res) => {
             dispatch(PostCartSuccess(res.data));
         })
@@ -54,7 +54,7 @@ export const postCartRequest = (payload) => (dispatch) => {
 export const deleteCartdata = (id) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     return axios
-        .delete(`https://helpful-gray-rooster.cyclic.app/cart/${id}`)
+        .delete(`https://rct-211project.onrender.com/cart/${id}`)
         .then((res) => {
             dispatch(DeleteCartSuccess());
         })

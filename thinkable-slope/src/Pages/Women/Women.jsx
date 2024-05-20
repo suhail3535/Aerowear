@@ -87,7 +87,7 @@ const Women = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         return await axios
-            .get(`https://helpful-gray-rooster.cyclic.app/women?q=${value}`)
+            .get(`https://rct-211project.onrender.com/women?q=${value}`)
             .then((res) => {
                 setData(res.data);
                 setValue("");
@@ -98,7 +98,7 @@ const Women = () => {
 
     const allData = (obj) => (dispatch) => {
         axios
-            .get("https://helpful-gray-rooster.cyclic.app/women", obj)
+            .get("https://rct-211project.onrender.com/women", obj)
             .then((res) => {
                 setData(res.data);
             })
