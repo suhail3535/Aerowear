@@ -11,12 +11,13 @@ import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
 import axios from "axios";
 import { SearchIcon } from "@chakra-ui/icons";
 import Pagination from "../../Components/Pagination";
+import Loder from "../Loder";
 
 
 const Women = () => {
     const [sidebar, setSidebar] = useState(false);
-     const [page, setPage] = useState (1);
-     const [itemsPerPage, setItemsPerPage] = useState (8)
+    const [page, setPage] = useState(1);
+    const [itemsPerPage, setItemsPerPage] = useState(8)
 
     const [data, setData] = useState([]);
     const [value, setValue] = useState("");
@@ -35,7 +36,7 @@ const Women = () => {
     const [order, setOrder] = useState(initOrder || "");
     const location = useLocation();
 
-    function handleChange(e) {
+    function handleChange (e) {
         let newRating = [...rating];
         let value = e.target.value;
         if (newRating.includes(value)) {
@@ -51,7 +52,7 @@ const Women = () => {
             let param = {};
             order && (param.order = order);
             rating && (param.rating = rating);
-               page && (param.page = page);
+            page && (param.page = page);
             setSearchParama(param);
         }
     }, [rating, order, setSearchParama]);
@@ -70,18 +71,18 @@ const Women = () => {
             },
         };
         dispatch(allData(queryParams));
-    }, [location.search, page,itemsPerPage]);
+    }, [location.search, page, itemsPerPage]);
 
-    function handleSort(e) {
+    function handleSort (e) {
         setOrder(e.target.value);
     }
 
-    function Sidebar() {
+    function Sidebar () {
         setSidebar(!sidebar);
     }
-      const handlePageChange = (pageNumber) => {
-          setPage(pageNumber);
-      };
+    const handlePageChange = (pageNumber) => {
+        setPage(pageNumber);
+    };
 
     // <-------------for Search products start----------->
     const handleSearch = async (e) => {
@@ -244,14 +245,15 @@ const Women = () => {
                         ))}
                     </div>
                 ) : (
-                    <h1
+                    <div
                         style={{
-                            fontSize: "50px",
-                            textAlign: "center",
+                            width: "50%",
+                                margin: "auto ",
+                            textAlign:"center"
 
                         }}>
-                        No result found Please wait......
-                    </h1>
+                        <Loder />
+                    </div>
                 )}
             </div>
             <div mt={10}>

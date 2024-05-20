@@ -10,6 +10,7 @@ import ExtraInfo from "../../Components/ExtraInfo/ExtraInfo";
 import axios from "axios";
 import { SearchIcon } from "@chakra-ui/icons";
 import Pagination from "../../Components/Pagination";
+import Loder from "../Loder";
 
 const Men = () => {
     const [data, setData] = useState([]);
@@ -229,14 +230,15 @@ const Men = () => {
                     </div>
                 ) : null}
                 {data.length === 0 ? (
-                    <h1
+                    <div
                         style={{
-                            fontSize: "50px",
-                            textAlign: "center",
+                            width: "50%",
+                            margin: "auto ",
+                            textAlign: "center"
 
                         }}>
-                        No result found Please refresh
-                    </h1>
+                        <Loder />
+                    </div>
                 ) : (
                         <div className={styles.product_div}>
                         {data.map((el) => (
