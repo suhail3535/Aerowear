@@ -49,7 +49,7 @@ const SingleProduct = () => {
     }
     const getSingleProduct = (id) => {
         axios
-            .get(`https://rct-211project.onrender.com/women/${id}`)
+            .get(`https://json-server-vercel-rosy-eight.vercel.app/women/${id}`)
             .then((res) => setData(res.data));
     };
     const handleDelivery = () => {};

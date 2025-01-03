@@ -21,7 +21,7 @@ export const getProductsFailureAction = () => {
 export const getWomenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("https://rct-211project.onrender.com/women", obj)
+        .get("https://json-server-vercel-rosy-eight.vercel.app/women", obj)
         .then((res) => {
             dispatch(getProductsSuccessAction(res.data));
         })
@@ -34,7 +34,7 @@ export const getWomenProducts = (obj) => (dispatch) => {
 export const getMenProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("https://rct-211project.onrender.com/men", obj)
+        .get("https://json-server-vercel-rosy-eight.vercel.app/men", obj)
         .then((res) => {
             console.log(res);
 
@@ -48,7 +48,7 @@ export const getMenProducts = (obj) => (dispatch) => {
 export const getClearanceProducts = (obj) => (dispatch) => {
     dispatch(getProductsRequestAction());
     axios
-        .get("https://rct-211project.onrender.com/clearence", obj)
+        .get("https://json-server-vercel-rosy-eight.vercel.app/clearence", obj)
         .then((res) => {
             dispatch(getProductsSuccessAction(res.data));
         })

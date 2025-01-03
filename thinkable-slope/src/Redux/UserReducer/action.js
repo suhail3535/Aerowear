@@ -28,7 +28,7 @@ export const deldatasuccess = () => {
 export const postRequestAddress = (payload) => (dispatch) => {
     dispatch(getpostRequest());
     axios
-        .post("https://rct-211project.onrender.com/address", payload)
+        .post("https://json-server-vercel-rosy-eight.vercel.app/address", payload)
         .then((res) => {
             console.log("post", res.data);
             dispatch(getpostSuccessAddress(res.data));
@@ -41,7 +41,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 export const getRequestAddress = () => (dispatch) => {
     dispatch(getpostRequest());
     axios
-        .get("https://rct-211project.onrender.com/address")
+        .get("https://json-server-vercel-rosy-eight.vercel.app/address")
         .then((res) => {
             dispatch(getdataSuccessAddress(res.data));
         })
@@ -53,7 +53,7 @@ export const getRequestAddress = () => (dispatch) => {
 export const deletedataAdd = (id) => (dispatch) => {
     dispatch(getpostRequest());
     return axios
-        .delete(`https://rct-211project.onrender.com/address/${id}`)
+        .delete(`https://json-server-vercel-rosy-eight.vercel.app/address/${id}`)
         .then((res) => {
             console.log(res.data);
             dispatch(deldatasuccess());

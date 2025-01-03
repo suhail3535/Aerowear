@@ -86,7 +86,7 @@ const Men = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         return await axios
-            .get(`https://rct-211project.onrender.com/men?q=${value}`)
+            .get(`https://json-server-vercel-rosy-eight.vercel.app/men?q=${value}`)
             .then((res) => {
                 setData(res.data);
                 setValue("");
@@ -97,7 +97,7 @@ const Men = () => {
 
     const allData = (obj) => (dispatch) => {
         axios
-            .get("https://rct-211project.onrender.com/men", obj)
+            .get("https://json-server-vercel-rosy-eight.vercel.app/men", obj)
             .then((res) => {
                 setData(res.data);
             })
